@@ -5,21 +5,154 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637608317688276284
-    m_Hash: 3288995077
+      ticks: 637608333433029601
+    m_Hash: 3746713006
   m_LockFileStatus:
     m_FilePath: D:/Git/Hell_of_a_Management/HellOfAManagement/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637608317932192093
-    m_Hash: 860447179
+      ticks: 637608333434495056
+    m_Hash: 180179031
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.cinemachine@2.6.5
+      testable: 0
+      isDirectDependency: 1
+      version: 2.6.5
+      source: 1
+      resolvedPath: D:\Git\Hell_of_a_Management\HellOfAManagement\Library\PackageCache\com.unity.cinemachine@2.6.5
+      assetPath: Packages/com.unity.cinemachine
+      name: com.unity.cinemachine
+      displayName: Cinemachine
+      author:
+        name: 
+        email: 
+        url: 
+      category: cinematography
+      type: 
+      description: "Smart camera tools for passionate creators. \n\nIMPORTANT NOTE:
+        If you are upgrading from the Asset Store version of Cinemachine, delete
+        the Cinemachine asset from your project BEFORE installing this version from
+        the Package Manager."
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 2.1.11-beta.1
+        - 2.1.12
+        - 2.1.13
+        - 2.2.0
+        - 2.2.7
+        - 2.2.8
+        - 2.2.9
+        - 2.2.10-preview.3
+        - 2.2.10-preview.4
+        - 2.3.1
+        - 2.3.3
+        - 2.3.4
+        - 2.3.5-preview.3
+        - 2.4.0-preview.3
+        - 2.4.0-preview.4
+        - 2.4.0-preview.6
+        - 2.4.0-preview.7
+        - 2.4.0-preview.8
+        - 2.4.0-preview.9
+        - 2.4.0-preview.10
+        - 2.4.0
+        - 2.5.0
+        - 2.6.0-preview.2
+        - 2.6.0-preview.3
+        - 2.6.0-preview.5
+        - 2.6.0-preview.8
+        - 2.6.0
+        - 2.6.1-preview.6
+        - 2.6.1
+        - 2.6.2-preview.1
+        - 2.6.2
+        - 2.6.3-preview.2
+        - 2.6.3
+        - 2.6.4
+        - 2.6.5
+        - 2.7.1
+        - 2.7.2
+        - 2.7.3
+        - 2.7.4
+        - 2.8.0-exp.1
+        - 2.8.0-exp.2
+        - 2.8.0-pre.1
+        compatible:
+        - 2.5.0
+        - 2.6.0-preview.2
+        - 2.6.0-preview.3
+        - 2.6.0-preview.5
+        - 2.6.0-preview.8
+        - 2.6.0
+        - 2.6.1-preview.6
+        - 2.6.1
+        - 2.6.2-preview.1
+        - 2.6.2
+        - 2.6.3-preview.2
+        - 2.6.3
+        - 2.6.4
+        - 2.6.5
+        - 2.7.1
+        - 2.7.2
+        - 2.7.3
+        - 2.7.4
+        - 2.8.0-exp.1
+        - 2.8.0-exp.2
+        - 2.8.0-pre.1
+        verified: 2.6.5
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - camera
+      - follow
+      - rig
+      - fps
+      - cinematography
+      - aim
+      - orbit
+      - cutscene
+      - cinematic
+      - collision
+      - freelook
+      - cinemachine
+      - compose
+      - composition
+      - dolly
+      - track
+      - clearshot
+      - noise
+      - framing
+      - handheld
+      - lens
+      - impulse
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637578244570000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/com.unity.cinemachine.git
+        revision: c12b97ec35ab5091c685e729b76980a69a6d39a1
+        path: 
     - packageId: com.unity.collab-proxy@1.3.9
       testable: 0
       isDirectDependency: 1
@@ -59,6 +192,7 @@ m_PackageAssets:
         - 1.3.7
         - 1.3.8
         - 1.3.9
+        - 1.4.9
         - 1.5.7
         - 2.0.0-preview.6
         - 2.0.0-preview.8
@@ -72,6 +206,7 @@ m_PackageAssets:
         - 2.1.0-preview.6
         compatible:
         - 1.3.9
+        - 1.4.9
         - 1.5.7
         - 2.0.0-preview.6
         - 2.0.0-preview.8
@@ -246,10 +381,36 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
         - 2.0.7
+        - 2.0.8
+        - 2.0.9
         compatible:
+        - 1.0.2
+        - 1.0.3
+        - 1.0.4
+        - 1.0.9
+        - 1.0.10
+        - 1.0.11
+        - 2.0.0
+        - 2.0.1
+        - 2.0.2
+        - 2.0.3
+        - 2.0.5
         - 2.0.7
-        verified: 2.0.7
+        - 2.0.8
+        - 2.0.9
+        verified: 2.0.9
       dependencies:
       - name: com.unity.test-framework
         version: 1.1.9
@@ -275,7 +436,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637486638490000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -393,6 +554,7 @@ m_PackageAssets:
         - 7.5.2
         - 7.5.3
         - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -410,9 +572,11 @@ m_PackageAssets:
         - 10.3.2
         - 10.4.0
         - 10.5.0
+        - 10.5.1
         compatible:
         - 10.5.0
-        verified: 10.5.0
+        - 10.5.1
+        verified: 10.5.1
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
@@ -510,9 +674,13 @@ m_PackageAssets:
         - 1.1.20
         - 1.1.22
         - 1.1.24
+        - 1.1.26
+        - 1.1.27
         compatible:
         - 1.1.24
-        verified: 1.1.24
+        - 1.1.26
+        - 1.1.27
+        verified: 1.1.27
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -788,6 +956,7 @@ m_PackageAssets:
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         - 1.6.0-pre.5
+        - 1.6.1
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -806,6 +975,7 @@ m_PackageAssets:
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         - 1.6.0-pre.5
+        - 1.6.1
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -2888,6 +3058,7 @@ m_PackageAssets:
         - 7.5.2
         - 7.5.3
         - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -2906,9 +3077,11 @@ m_PackageAssets:
         - 10.3.2
         - 10.4.0
         - 10.5.0
+        - 10.5.1
         compatible:
         - 10.5.0
-        verified: 10.5.0
+        - 10.5.1
+        verified: 10.5.1
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -3034,6 +3207,7 @@ m_PackageAssets:
         - 7.5.2
         - 7.5.3
         - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -3051,9 +3225,11 @@ m_PackageAssets:
         - 10.3.2
         - 10.4.0
         - 10.5.0
+        - 10.5.1
         compatible:
         - 10.5.0
-        verified: 10.5.0
+        - 10.5.1
+        verified: 10.5.1
       dependencies:
       - name: com.unity.render-pipelines.core
         version: 10.5.0
