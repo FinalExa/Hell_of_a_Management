@@ -27,17 +27,12 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     }
     public virtual void Start()
     {
-        SetBaseColor();
         Weight = throwableObjectData.objectWeight;
         this.gameObject.transform.SetParent(baseContainer.transform);
     }
     void FixedUpdate()
     {
         if (isFlying) FlightTime();
-    }
-    public void SetBaseColor()
-    {
-        throwableObjectData.baseColor = thisGraphicsObject.GetComponent<Renderer>().material.color;
     }
     public virtual void AttachToPlayer(GameObject playerHand)
     {

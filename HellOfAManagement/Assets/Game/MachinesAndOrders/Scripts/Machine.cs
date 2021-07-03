@@ -4,6 +4,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
 {
     [HideInInspector] public List<SoulType.SoulColor> recipe;
     [HideInInspector] public GameObject Self { get; set; }
+    [HideInInspector] public bool IsInsidePlayerRange { get; set; }
     [SerializeField] int recipeMaxLimit;
     [SerializeField] private GameObject thisOrder;
     [SerializeField] GameObject orderOutputPosition;
