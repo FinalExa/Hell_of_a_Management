@@ -49,6 +49,8 @@ public class SoulSpawner : Spawner
         else soulIndex = Random.Range(0, sc.soulTypes.Length);
         sc.thisSoulTypeIndex = soulIndex;
         sc.soulReferences.highlightable.thisGraphicsObject = sc.soulTypes[soulIndex].soulMeshContainer;
+        sc.soulReferences.highlightable.outline = sc.soulTypes[soulIndex].soulModelOutline;
+        sc.soulReferences.highlightable.outline.OutlineColor = sc.soulReferences.highlightable.throwableObjectData.highlightColor;
         sc.soulReferences.soulThrowableObject.thisGraphicsObject = sc.soulTypes[soulIndex].soulMeshContainer;
         sc.soulReferences.soulThrowableObject.SetBaseColor();
         sc.DeactivateAllSoulModels();

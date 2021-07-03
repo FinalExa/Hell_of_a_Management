@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SoulThrowableData
   m_EditorClassIdentifier: 
   objectWeight: 1
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
-  baseColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  highlightColor: {r: 1, g: 0, b: 0, a: 1}
+  baseColor: {r: 0.39622638, g: 0, b: 0.39622638, a: 1}

@@ -97,7 +97,7 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     public virtual void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player") && isAttachedToHand) Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), physicsCollider);
-        if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("ThrowableObject"))
+        if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Ground"))
         {
             StopForce();
             DeactivateConstraintsTotally();

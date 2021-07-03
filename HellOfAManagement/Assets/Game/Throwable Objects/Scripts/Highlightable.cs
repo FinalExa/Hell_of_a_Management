@@ -3,14 +3,13 @@
 public class Highlightable : MonoBehaviour
 {
     private MouseData mouseData;
-    private Renderer thisRenderer;
     private ThrowableObject throwableObject;
+    public Outline outline;
     public ThrowableObjectData throwableObjectData;
     public GameObject thisGraphicsObject;
     private void Awake()
     {
         mouseData = FindObjectOfType<MouseData>();
-        thisRenderer = thisGraphicsObject.GetComponent<Renderer>();
         throwableObject = this.gameObject.GetComponent<ThrowableObject>();
     }
     void Update()
@@ -21,7 +20,7 @@ public class Highlightable : MonoBehaviour
     public void HighlightSelf()
     {
         Collider collider = mouseData.GetMousePosition().collider;
-        if (collider != null && GameObject.ReferenceEquals(collider.gameObject, this.gameObject) && throwableObject.IsInsidePlayerRange) thisRenderer.material.color = throwableObjectData.highlightColor;
-        else thisRenderer.material.color = throwableObjectData.baseColor;
+        if (collider != null && GameObject.ReferenceEquals(collider.gameObject, this.gameObject) && throwableObject.IsInsidePlayerRange) outline.enabled = true;
+        else outline.enabled = false;
     }
 }
