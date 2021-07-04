@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace HOM
 {
-    [CreateAssetMenu(fileName = "New Levels Data", menuName = "Hell Of Management/Data/Levels Data")]
+    [CreateAssetMenu(fileName = "New Levels Data", menuName = "ScriptableObjects/Levels Data", order = 6)]
     public sealed class LevelData : ScriptableObject
     {
         [System.Serializable]
