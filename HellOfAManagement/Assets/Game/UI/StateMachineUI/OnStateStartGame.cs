@@ -10,7 +10,7 @@ namespace HOM
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             GUIHandler.DeactivatesMenu("Main Menu");
-            LevelManager.LoadLevel("Blockout");
+            LevelManager.LoadLevel("Level");
         }
     }
 }

@@ -587,7 +587,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2436235258901452726}
   - component: {fileID: 2436235258901452727}
-  - component: {fileID: 4491870928202402050}
   m_Layer: 0
   m_Name: ToDoList
   m_TagString: Untagged
@@ -624,27 +623,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2436235258901452725}
   m_CullTransparentMesh: 0
---- !u!114 &4491870928202402050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2436235258901452725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad939911a9a607545b8a6a62be7f30e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  task1text: {fileID: 2436235257673081678}
-  task2text: {fileID: 2436235259010417619}
-  task3text: {fileID: 2436235257779095435}
-  task1info: {fileID: 7617653393485048602}
-  task2info: {fileID: 7957353220441418455}
-  task3info: {fileID: 1411911266635444780}
-  numberOfOrders: 0
-  numberOfPools: 0
-  numberOfDrunken: 0
 --- !u!1 &2436235259010417617
 GameObject:
   m_ObjectHideFlags: 0

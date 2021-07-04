@@ -15,7 +15,7 @@ namespace HOM
         public void Restart()
         {
             animator.SetTrigger("EndGame");
-            LevelManager.LoadLevel("Blockout");
+            LevelManager.LoadLevel("Level");
         }
 
         public void GoToMainMenu()

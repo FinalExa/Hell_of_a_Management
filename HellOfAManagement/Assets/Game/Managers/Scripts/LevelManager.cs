@@ -35,7 +35,7 @@ namespace HOM
                 case "Main Menu":
                     self.StartCoroutine(self.ExecuteLevelTransition(self.loadingDuration, 0));
                     break;
-                case "Blockout":
+                case "Level":
                     self.StartCoroutine(self.ExecuteLevelTransition(self.loadingDuration, 1));
                     break;
             }    
