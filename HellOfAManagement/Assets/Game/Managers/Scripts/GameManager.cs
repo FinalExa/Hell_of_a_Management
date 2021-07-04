@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HOM;
 
-[RequireComponent(typeof (Animator))]
 public class GameManager : MonoBehaviour
 {
     Animator animator;
@@ -36,13 +34,13 @@ public class GameManager : MonoBehaviour
 
     public void LoseLevel()
     {
-        if(!LevelManager.self.isLoading)
+        if(!LevelManager.levelManagerInstance.isLoading)
             ui_animator.SetTrigger("Defeat");
     }
 
     public void WinLevel()
     {
-        if (!LevelManager.self.isLoading)
+        if (!LevelManager.levelManagerInstance.isLoading)
             ui_animator.SetTrigger("Victory");
     }
 }

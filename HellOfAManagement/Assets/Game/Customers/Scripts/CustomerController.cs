@@ -30,6 +30,8 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     public GameObject Self { get; set; }
     private GameObject selectedModel;
 
+
+
     private void Awake()
     {
         customerReferences = this.gameObject.GetComponent<CustomerReferences>();

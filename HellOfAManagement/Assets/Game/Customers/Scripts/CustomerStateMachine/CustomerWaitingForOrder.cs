@@ -1,5 +1,7 @@
-﻿public class CustomerWaitingForOrder : CustomerState
+﻿using System;
+public class CustomerWaitingForOrder : CustomerState
 {
+    public static Action<float> addScore;
     public CustomerWaitingForOrder(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
     }
@@ -18,6 +20,7 @@
 
     private void EndOrder()
     {
+        addScore(_customerStateMachine.customerController.customerReferences.customerScoreData.scoresGiven[_customerStateMachine.customerController.chosenIngredients.Count - 1]);
         _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette();
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
         _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableId);

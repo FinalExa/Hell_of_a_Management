@@ -1,9 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace HOM
-{
     public class CreditsMenu : MonoBehaviour
     {
         Animator animator;
@@ -18,4 +15,3 @@ namespace HOM
                 animator.SetTrigger("Back");
         }
     }
-}

@@ -1,12 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-namespace HOM
-{
     public class UI_Manager : MonoBehaviour
     {
-        public static UI_Manager self;
+        public static UI_Manager uiManagerInstance;
         Animator animator;
 
         #region UnityCallbacks
@@ -26,9 +23,15 @@ namespace HOM
 
         void Init()
         {
-            self = this;
+            DontDestroyOnLoad(this);
+
+            if (uiManagerInstance == null)
+                uiManagerInstance = this;
+            else
+                DestroyObject(gameObject);
+
             animator = gameObject.GetComponent<Animator>();
-            animator.SetInteger("Index", LevelManager.self.currentIndex);
+            animator.SetInteger("Index", LevelManager.levelManagerInstance.currentIndex);
         }
 
         /// <summary>
@@ -36,7 +39,7 @@ namespace HOM
         /// </summary>
         void CheckStatus()
         {
-            if (Input.GetKeyDown(KeyCode.Escape) && !LevelManager.self.isLoading)
+            if (Input.GetKeyDown(KeyCode.Escape) && !LevelManager.levelManagerInstance.isLoading)
             {
                 if (animator.GetBool("Paused"))
                 {
@@ -62,4 +65,3 @@ namespace HOM
             }
         }
     }
-}
