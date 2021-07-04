@@ -4,6 +4,4 @@
 public class ThrowableObjectData : ScriptableObject
 {
     public float objectWeight;
-    public Color highlightColor;
-    [HideInInspector] public Color baseColor;
 }

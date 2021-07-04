@@ -5,8 +5,9 @@ using UnityEngine.AI;
 
 public class CustomerController : MonoBehaviour, ICanBeInteracted
 {
+    public bool IsInsidePlayerRange { get; set; }
     public static Action<Table, int, CustomerController> customerLeft;
-    [SerializeField] private GameObject[] customerModels;
+    [SerializeField] private CustomerGraphics[] customerGraphics;
     [SerializeField] private float maxInteractionTimer;
     private float interactionTimer;
     [HideInInspector] public GameObject exitDoor;
@@ -52,9 +53,11 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     }
     public void RandomizeModel()
     {
-        int randIndex = UnityEngine.Random.Range(0, customerModels.Length);
-        selectedModel = customerModels[randIndex];
+        int randIndex = UnityEngine.Random.Range(0, customerGraphics.Length);
+        selectedModel = customerGraphics[randIndex].customerModel;
         selectedModel.SetActive(true);
+        customerReferences.highlightable.outline = customerGraphics[randIndex].customerOutline;
+        customerReferences.highlightable.outline.OutlineColor = customerReferences.highlightable.outlineData.highlightColor;
     }
     public void Interaction()
     {
@@ -79,4 +82,10 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
             this.gameObject.SetActive(false);
         }
     }
+}
+[System.Serializable]
+public class CustomerGraphics
+{
+    public GameObject customerModel;
+    public Outline customerOutline;
 }

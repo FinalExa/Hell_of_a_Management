@@ -63,4 +63,5 @@ public class SoulType
     public GameObject soulMainModelObject;
     public GameObject soulMeshContainer;
     public Animator soulAnimator;
+    public Outline soulModelOutline;
 }
