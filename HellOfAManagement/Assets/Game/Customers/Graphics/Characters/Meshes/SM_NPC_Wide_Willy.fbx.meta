@@ -1,11 +1,29 @@
 fileFormatVersion: 2
-guid: 17aa953dc27c6f64bb4732a6c02809e9
+guid: 67bd99021fefe324d811c2572bb119bd
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
-  externalObjects: {}
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wide_Willy_Rig_DO_NOT_MODIFY_BODY
+    second: {fileID: 2100000, guid: 0775ba1d5c9a5ed47b87ac58bd7593ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wide_Willy_Rig_DO_NOT_MODIFY_CLOTHES
+    second: {fileID: 2100000, guid: a5b8993ab95a6244f9d8d4c8d92aa352, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wide_Willy_Rig_DO_NOT_MODIFY_HEAD
+    second: {fileID: 2100000, guid: 19a4301f7f9acb64380279cf4977b7e5, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -95,7 +113,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
