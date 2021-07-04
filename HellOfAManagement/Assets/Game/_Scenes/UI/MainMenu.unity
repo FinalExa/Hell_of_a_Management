@@ -450,6 +450,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8103410637608936309, guid: 416e7a2e9835bce48bc1392141fc28fa, type: 3}
+      propertyPath: currentIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103410637608936309, guid: 416e7a2e9835bce48bc1392141fc28fa, type: 3}
       propertyPath: loadingScreen
       value: 
       objectReference: {fileID: 183477617}
