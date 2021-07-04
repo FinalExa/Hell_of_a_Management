@@ -1,5 +1,4 @@
-﻿using HOM;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_Score : MonoBehaviour
@@ -42,9 +41,9 @@ public class UI_Score : MonoBehaviour
 
     void Activate()
     {
-        if (LevelManager.self != null)
+        if (LevelManager.levelManagerInstance != null)
         {
-            if (!LevelManager.self.isLoading && LevelManager.self.currentIndex == 1 && isActive == false)
+            if (!LevelManager.levelManagerInstance.isLoading && LevelManager.levelManagerInstance.currentIndex == 1 && isActive == false)
             {
                 scoreBar.SetActive(true);
                 scoreNumber.SetActive(true);

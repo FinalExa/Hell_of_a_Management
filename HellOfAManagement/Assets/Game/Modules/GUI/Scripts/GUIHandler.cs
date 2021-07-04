@@ -6,10 +6,6 @@ namespace HOM
    public class GUIHandler : MonoBehaviour{
 
        #region Unity Callbacks
-        void Start(){
-
-            //DontDestroyOnLoad(this);
-        }
        #endregion
 
         ///<summary> Activates one interface calling GUI module </summary>
