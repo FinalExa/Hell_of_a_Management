@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642128117fd8a164c98e7b65b310aa22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customerScoreData: {fileID: 11400000, guid: 6ad54767e18bd864eaf451f305800cc7, type: 2}
   customerVignette: {fileID: 0}
   highlightable: {fileID: 0}
 --- !u!114 &3557013024554415402

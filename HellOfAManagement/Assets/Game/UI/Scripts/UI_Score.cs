@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using HOM;
+using UnityEngine;
 using UnityEngine.UI;
-using HOM;
 
 public class UI_Score : MonoBehaviour
 {
@@ -37,7 +37,7 @@ public class UI_Score : MonoBehaviour
         fillImg.fillAmount = 0;
         scoreText.text = $"Score: {0}";
 
-        Score.OnProgressChanged+=UpdateGraphics;
+        Score.OnProgressChanged += UpdateGraphics;
     }
 
     void Activate()
@@ -77,7 +77,7 @@ public class UI_Score : MonoBehaviour
 
         else if (score < levelData.GetLevel(0).secondStarScore && score >= levelData.GetLevel(0).firstStarScore)
         {
-            if(star1.color != Color.white)
+            if (star1.color != Color.white)
                 LightStar(ref star1, Color.white);
 
             return;
