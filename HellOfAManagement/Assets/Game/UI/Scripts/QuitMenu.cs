@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HOM;
-
 public class QuitMenu : MonoBehaviour
 {
     Animator animator;

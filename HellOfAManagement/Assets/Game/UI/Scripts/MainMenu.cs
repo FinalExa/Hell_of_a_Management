@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HOM
-{
     public class MainMenu : MonoBehaviour
     {
         Animator animator;
@@ -52,4 +50,3 @@ namespace HOM
             animator.SetTrigger("QuitGame");
         }
     }
-}
