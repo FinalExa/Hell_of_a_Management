@@ -60,6 +60,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
         selectedModel.SetActive(true);
         customerReferences.highlightable.outline = customerGraphics[randIndex].customerOutline;
         customerReferences.highlightable.outline.OutlineColor = customerReferences.highlightable.outlineData.highlightColor;
+        customerReferences.highlightable.outline.OutlineWidth = customerReferences.highlightable.outlineData.outlineWidth;
     }
     public void Interaction()
     {

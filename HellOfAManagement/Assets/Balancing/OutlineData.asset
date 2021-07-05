@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: OutlineData
   m_EditorClassIdentifier: 
   highlightColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 4
