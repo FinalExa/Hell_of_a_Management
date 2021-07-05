@@ -26,10 +26,10 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     [HideInInspector] public bool waitingForOrder;
     [HideInInspector] public bool leave;
     public NavMeshAgent thisNavMeshAgent;
-    public Order.OrderType[] possibleTypes;
-    public SoulType.SoulColor[] possibleIngredients;
-    [HideInInspector] public Order.OrderType chosenType;
-    [HideInInspector] public List<SoulType.SoulColor> chosenIngredients;
+    public OrdersData.OrderTypes[] possibleTypes;
+    public OrdersData.OrderIngredients[] possibleIngredients;
+    [HideInInspector] public OrdersData.OrderTypes chosenType;
+    [HideInInspector] public List<OrdersData.OrderIngredients> chosenIngredients;
     private Vector3 startingPos;
 
     [HideInInspector] public CustomerReferences customerReferences;

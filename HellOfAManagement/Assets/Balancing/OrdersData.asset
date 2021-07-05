@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 333b789d0dfae5c4e98b2e0d8cef6e00, type: 3}
-  m_Name: CustomerData
+  m_Script: {fileID: 11500000, guid: 9ef316c30da7fc14b890617dfe79fd91, type: 3}
+  m_Name: OrdersData
   m_EditorClassIdentifier: 
-  customerMovementSpeed: 5
-  customerAcceleration: 5
+  orderTypes: 0000000001000000
+  orderIngredients: 0000000001000000020000000300000004000000

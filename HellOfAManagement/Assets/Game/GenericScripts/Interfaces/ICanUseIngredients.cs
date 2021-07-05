@@ -1,4 +1,4 @@
 ﻿public interface ICanUseIngredients
 {
-    void RecipeFill(SoulType.SoulColor ingredientType, SoulController source);
+    void RecipeFill(OrdersData.OrderIngredients ingredientType, SoulController source);
 }
