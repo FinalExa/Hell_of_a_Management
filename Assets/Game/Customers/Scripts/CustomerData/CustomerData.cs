@@ -16,4 +16,5 @@ public class CustomerData : ScriptableObject
 
     public int maxActiveOrdersAtATime;
     [HideInInspector] public int activeOrders;
+    public float timeBetweenSpawns;
 }

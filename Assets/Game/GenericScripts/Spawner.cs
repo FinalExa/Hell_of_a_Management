@@ -20,7 +20,7 @@ public abstract class Spawner : MonoBehaviour
     public virtual void Start()
     {
         CreateObjects();
-        SetObjectsToSpawnNumber();
+        if (spawnerData != null) SetObjectsToSpawnNumber();
     }
 
     public virtual void CreateObjects()
