@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-namespace HOM
-{
     public class LevelManager : MonoBehaviour
     {
-        public static LevelManager self;
+        public static LevelManager levelManagerInstance;
         public GameObject loadingScreen;
         public bool isLoading;
         public float loadingDuration;
@@ -23,8 +21,13 @@ namespace HOM
 
         void Init()
         {
-            self = this;
             DontDestroyOnLoad(this);
+
+            if (levelManagerInstance == null)
+            levelManagerInstance = this;
+            else
+                DestroyObject(gameObject);
+
             ui_Animator = GameObject.Find("UI_Manager").GetComponent<Animator>();
         }
 
@@ -33,10 +36,10 @@ namespace HOM
             switch(levelName)
             {
                 case "Main Menu":
-                    self.StartCoroutine(self.ExecuteLevelTransition(self.loadingDuration, 0));
+                levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 0));
                     break;
                 case "Level":
-                    self.StartCoroutine(self.ExecuteLevelTransition(self.loadingDuration, 1));
+                levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 1));
                     break;
             }    
         }
@@ -70,4 +73,3 @@ namespace HOM
             ui_Animator.SetTrigger("SceneChanged");
         }
     }
-}

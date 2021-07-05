@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingScreen: {fileID: 0}
+  isLoading: 0
   loadingDuration: 5
+  currentIndex: 1

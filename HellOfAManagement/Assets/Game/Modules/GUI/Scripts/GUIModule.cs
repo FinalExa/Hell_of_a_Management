@@ -14,7 +14,6 @@ namespace HOM.Modules
         [SerializeField] GameObject ClockAsset;
         [SerializeField] GameObject DialogueBoxAsset;
         [SerializeField] GameObject ScoreAsset;
-        //[SerializeField] GameObject ThrowDropAsset;
         [SerializeField] GameObject ToDoListAsset;
         [SerializeField] GameObject VictoryScreenAsset;
         [SerializeField] GameObject LoseScreenAsset;
@@ -27,10 +26,7 @@ namespace HOM.Modules
         #region UnityCallbacks
         private void Start()
         {
-            //DontDestroyOnLoad(this);
-
             Initialize();
-
         }
         #endregion
 
@@ -47,7 +43,6 @@ namespace HOM.Modules
             SetMenuResource("Clock", ref ClockAsset);
             SetMenuResource("DialogueBox", ref DialogueBoxAsset);
             SetMenuResource("Score", ref ScoreAsset);
-            //SetMenuResource("Throw Drop", ref ThrowDropAsset);
             SetMenuResource("ToDoList", ref ToDoListAsset);
             SetMenuResource("VictoryScreen", ref VictoryScreenAsset);
             SetMenuResource("LoseScreen", ref LoseScreenAsset);

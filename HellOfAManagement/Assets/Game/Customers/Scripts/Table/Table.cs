@@ -55,8 +55,8 @@ public class Table : MonoBehaviour
 public class SeatInfo
 {
     public GameObject seatTarget;
-    public Order.OrderType orderType;
-    public List<SoulType.SoulColor> ingredients;
+    public OrdersData.OrderTypes orderType;
+    public List<OrdersData.OrderIngredients> ingredients;
     public CustomerController customer;
     public Table thisTable;
     public int thisId;

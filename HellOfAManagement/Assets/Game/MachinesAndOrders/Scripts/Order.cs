@@ -3,16 +3,15 @@ using UnityEngine;
 
 public class Order : MonoBehaviour
 {
-    public enum OrderType { Dish, Drink }
-    public OrderType thisOrderType;
-    public List<SoulType.SoulColor> thisOrderIngredients;
+    public OrdersData.OrderTypes thisOrderType;
+    public List<OrdersData.OrderIngredients> thisOrderIngredients;
     private ThrowableObject throwableObject;
 
     private void Awake()
     {
         throwableObject = this.gameObject.GetComponent<ThrowableObject>();
     }
-    public void SetupOrderIngredients(List<SoulType.SoulColor> ingredients)
+    public void SetupOrderIngredients(List<OrdersData.OrderIngredients> ingredients)
     {
         for (int i = 0; i < ingredients.Count; i++)
         {
