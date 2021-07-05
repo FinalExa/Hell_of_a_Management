@@ -3,16 +3,16 @@
 public class PlayerInRange : MonoBehaviour
 {
     private SoulController soulController;
-    private SphereCollider thisTrigger;
+    private BoxCollider thisTrigger;
 
     private void Awake()
     {
         soulController = this.gameObject.transform.parent.GetComponent<SoulController>();
-        thisTrigger = this.gameObject.GetComponent<SphereCollider>();
+        thisTrigger = this.gameObject.GetComponent<BoxCollider>();
     }
     private void Start()
     {
-        thisTrigger.radius = soulController.soulReferences.soulData.soulDetectionRange;
+        thisTrigger.size = new Vector3(soulController.soulReferences.soulData.soulDetectionRange, thisTrigger.size.y, soulController.soulReferences.soulData.soulDetectionRange);
     }
 
     private void OnTriggerEnter(Collider other)
