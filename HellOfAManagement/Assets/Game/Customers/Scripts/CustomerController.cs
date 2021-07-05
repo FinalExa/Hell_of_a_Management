@@ -7,11 +7,18 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
 {
     public bool IsInsidePlayerRange { get; set; }
     public static Action<Table, int, CustomerController> customerLeft;
+    [System.Serializable]
+    public struct CustomerGraphics
+    {
+        public GameObject customerModel;
+        public Outline customerOutline;
+    }
+    [SerializeField] private CustomerData customerData;
     [SerializeField] private CustomerGraphics[] customerGraphics;
     [SerializeField] private float maxInteractionTimer;
     private float interactionTimer;
+    [HideInInspector] public GameObject seatToTake;
     [HideInInspector] public GameObject exitDoor;
-    public GameObject seatToTake;
     [HideInInspector] public GameObject targetedLocation;
     [HideInInspector] public Table thisTable;
     [HideInInspector] public int thisTableId;
@@ -30,14 +37,18 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     public GameObject Self { get; set; }
     private GameObject selectedModel;
 
-
-
     private void Awake()
     {
         customerReferences = this.gameObject.GetComponent<CustomerReferences>();
         Self = this.gameObject;
         exitDoor = GameObject.FindGameObjectWithTag("Exit");
+    }
+
+    private void Start()
+    {
         startingPos = this.gameObject.transform.position;
+        thisNavMeshAgent.speed = customerData.customerMovementSpeed;
+        thisNavMeshAgent.acceleration = customerData.customerAcceleration;
     }
     private void OnEnable()
     {
@@ -85,10 +96,4 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
             this.gameObject.SetActive(false);
         }
     }
-}
-[System.Serializable]
-public class CustomerGraphics
-{
-    public GameObject customerModel;
-    public Outline customerOutline;
 }

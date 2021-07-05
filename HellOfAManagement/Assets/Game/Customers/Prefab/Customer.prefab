@@ -70,14 +70,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae5dd0bcfde81c429e7165e32218429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customerData: {fileID: 11400000, guid: 57de14e80b8a67443821c297a91f8e15, type: 2}
   customerGraphics:
   - customerModel: {fileID: 1986430114044108516}
     customerOutline: {fileID: 1448477364520883675}
   - customerModel: {fileID: 2311981440701223623}
     customerOutline: {fileID: 1150539086831136906}
   maxInteractionTimer: 1
-  exitDoor: {fileID: 0}
   seatToTake: {fileID: 0}
+  exitDoor: {fileID: 0}
   targetedLocation: {fileID: 0}
   thisTable: {fileID: 0}
   thisTableId: 0
