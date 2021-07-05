@@ -10,6 +10,15 @@ public class SoulController : MonoBehaviour
     [HideInInspector] public GameObject playerIsInRange;
     [HideInInspector] public SoulReferences soulReferences;
     [HideInInspector] public GameObject exit;
+    [System.Serializable]
+    public struct SoulType
+    {
+        public OrdersData.OrderIngredients soulColor;
+        public GameObject soulMainModelObject;
+        public GameObject soulMeshContainer;
+        public Animator soulAnimator;
+        public Outline soulModelOutline;
+    }
     public SoulType[] soulTypes;
     [HideInInspector] public int thisSoulTypeIndex;
     private void Awake()
@@ -54,13 +63,4 @@ public class SoulController : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Soul")) collidedWithOther = false;
     }
-}
-[System.Serializable]
-public class SoulType
-{
-    public enum SoulColor { Red, Blue, Yellow, Green, Purple };
-    public SoulColor soulColor;
-    public GameObject soulMainModelObject;
-    public GameObject soulMeshContainer;
-    public Animator soulAnimator;
 }

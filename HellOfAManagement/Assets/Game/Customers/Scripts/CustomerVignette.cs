@@ -11,7 +11,7 @@ public class CustomerVignette : MonoBehaviour
     [SerializeField] private GameObject typeOfOrder;
     [SerializeField] private GameObject[] orderSizes;
 
-    public void SetupVignette(Order.OrderType type, List<SoulType.SoulColor> ingredients)
+    public void SetupVignette(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
         canvas.transform.rotation = Quaternion.Euler(fixRotationX, fixRotationY, 0f);
         canvas.transform.position = new Vector3(this.gameObject.transform.position.x + fixPositionX, canvas.transform.position.y, this.gameObject.transform.position.z + fixPositionZ);

@@ -43,6 +43,7 @@ public class PlayerRange : MonoBehaviour
             Collider otherCol = otherObject.Self.GetComponent<Collider>();
             if (!playerController.interactablesInPlayerRange.Contains(otherCol))
             {
+                otherObject.IsInsidePlayerRange = true;
                 playerController.interactablesInPlayerRange.Add(otherCol);
             }
         }
@@ -75,6 +76,7 @@ public class PlayerRange : MonoBehaviour
             Collider otherCol = otherObject.Self.GetComponent<Collider>();
             if (playerController.interactablesInPlayerRange.Contains(otherCol))
             {
+                otherObject.IsInsidePlayerRange = false;
                 playerController.interactablesInPlayerRange.Remove(otherCol);
             }
         }

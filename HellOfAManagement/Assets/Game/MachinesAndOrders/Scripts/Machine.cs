@@ -2,8 +2,9 @@
 using UnityEngine;
 public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
 {
-    [HideInInspector] public List<SoulType.SoulColor> recipe;
+    [HideInInspector] public List<OrdersData.OrderIngredients> recipe;
     [HideInInspector] public GameObject Self { get; set; }
+    [HideInInspector] public bool IsInsidePlayerRange { get; set; }
     [SerializeField] int recipeMaxLimit;
     [SerializeField] private GameObject thisOrder;
     [SerializeField] GameObject orderOutputPosition;
@@ -18,7 +19,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
         Self = this.gameObject;
     }
 
-    public void RecipeFill(SoulType.SoulColor ingredientType, SoulController source)
+    public void RecipeFill(OrdersData.OrderIngredients ingredientType, SoulController source)
     {
         if (source.soulReferences.soulThrowableObject.isFlying && recipe.Count < recipeMaxLimit)
         {

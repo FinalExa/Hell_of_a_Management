@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 public class Throw : PlayerState
 {
+    private Vector3 clickedPos;
     public Throw(PlayerCharacter playerCharacter) : base(playerCharacter)
     {
     }
     public override void Start()
     {
+        clickedPos = _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().point;
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = false;
         _playerCharacter.playerController.playerReferences.playerRb.velocity = Vector3.zero;
         _playerCharacter.playerController.playerReferences.playerAnimations.waitForAnimation = true;
@@ -42,7 +44,7 @@ public class Throw : PlayerState
     }
     private void LaunchObject(IThrowable iThrowable)
     {
-        _playerCharacter.playerController.playerReferences.rotation.RotateObjectToLaunch(iThrowable.Self.transform, _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().point);
+        _playerCharacter.playerController.playerReferences.rotation.RotateObjectToLaunch(iThrowable.Self.transform, clickedPos);
         iThrowable.DetachFromPlayer(_playerCharacter.playerController.playerReferences.playerData.throwDistance, _playerCharacter.playerController.playerReferences.playerData.throwFlightTime);
     }
     private void SetHandFree()
