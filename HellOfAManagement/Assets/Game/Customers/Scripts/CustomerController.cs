@@ -13,10 +13,13 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
         public GameObject customerModel;
         public Outline customerOutline;
     }
-    [SerializeField] private CustomerData customerData;
+
+    [SerializeField] private OrdersData ordersData;
     [SerializeField] private CustomerGraphics[] customerGraphics;
     [SerializeField] private float maxInteractionTimer;
+    public NavMeshAgent thisNavMeshAgent;
     private float interactionTimer;
+    private Vector3 startingPos;
     [HideInInspector] public GameObject seatToTake;
     [HideInInspector] public GameObject exitDoor;
     [HideInInspector] public GameObject targetedLocation;
@@ -25,15 +28,11 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     [HideInInspector] public bool interactionReceived;
     [HideInInspector] public bool waitingForOrder;
     [HideInInspector] public bool leave;
-    public NavMeshAgent thisNavMeshAgent;
-    public OrdersData.OrderTypes[] possibleTypes;
-    public OrdersData.OrderIngredients[] possibleIngredients;
+    [HideInInspector] public OrdersData.OrderTypes[] possibleTypes;
+    [HideInInspector] public OrdersData.OrderIngredients[] possibleIngredients;
     [HideInInspector] public OrdersData.OrderTypes chosenType;
     [HideInInspector] public List<OrdersData.OrderIngredients> chosenIngredients;
-    private Vector3 startingPos;
-
     [HideInInspector] public CustomerReferences customerReferences;
-
     public GameObject Self { get; set; }
     private GameObject selectedModel;
 
@@ -47,8 +46,9 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     private void Start()
     {
         startingPos = this.gameObject.transform.position;
-        thisNavMeshAgent.speed = customerData.customerMovementSpeed;
-        thisNavMeshAgent.acceleration = customerData.customerAcceleration;
+        thisNavMeshAgent.speed = customerReferences.customerData.customerMovementSpeed;
+        thisNavMeshAgent.acceleration = customerReferences.customerData.customerAcceleration;
+        InitializeOrderInfos();
     }
     private void OnEnable()
     {
@@ -63,6 +63,12 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     private void Update()
     {
         if (interactionReceived) InteractionTimer();
+    }
+
+    private void InitializeOrderInfos()
+    {
+        possibleTypes = ordersData.orderTypes;
+        possibleIngredients = ordersData.orderIngredients;
     }
     public void RandomizeModel()
     {

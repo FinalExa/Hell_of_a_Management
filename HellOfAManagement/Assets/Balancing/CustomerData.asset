@@ -14,3 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerMovementSpeed: 5
   customerAcceleration: 5
+  orderSizesProbabilitiesAndScores:
+  - probabilityOfThisOrderSize: 80
+    scoreGivenByThisOrderSize: 100
+  - probabilityOfThisOrderSize: 35
+    scoreGivenByThisOrderSize: 200
+  - probabilityOfThisOrderSize: 5
+    scoreGivenByThisOrderSize: 300
