@@ -3,21 +3,28 @@ using UnityEngine;
 public class CustomerSpawner : Spawner
 {
     [SerializeField] private CustomerData customerData;
-    [SerializeField] private float timeBetweenSpawns;
+    private float timeBetweenSpawns;
     private float spawnerTimer;
+    private bool firstSpawn;
     private bool spawnerIsFilled;
     [HideInInspector] public List<SeatInfo> freeSeats;
     [HideInInspector] public List<MonoBehaviour> inactiveCustomers;
     private Table[] tablesList;
+    public override void Awake()
+    {
+        CustomerController.customerLeft += CustomerLeft;
+        base.Awake();
+    }
     public override void Start()
     {
         customerData.activeOrders = 0;
+        timeBetweenSpawns = customerData.timeBetweenSpawns;
         spawnerTimer = timeBetweenSpawns;
+        firstSpawn = true;
         CalculateObjectsToInstantiate();
         base.Start();
         AddInactiveCustomers();
         SetupFreeSeats();
-        CustomerController.customerLeft += CustomerLeft;
     }
     private void Update()
     {
@@ -45,13 +52,22 @@ public class CustomerSpawner : Spawner
 
     private void SpawnerTimer()
     {
+        if (firstSpawn)
+        {
+            SpawnCustomer();
+            firstSpawn = false;
+        }
         if (spawnerTimer > 0) spawnerTimer -= Time.deltaTime;
         else
         {
-            SearchForFreeSeat();
-            spawnerTimer = timeBetweenSpawns;
-            if (activeObjects.Count == objects.Count) spawnerIsFilled = true;
+            SpawnCustomer();
         }
+    }
+    private void SpawnCustomer()
+    {
+        SearchForFreeSeat();
+        spawnerTimer = timeBetweenSpawns;
+        if (activeObjects.Count == objects.Count) spawnerIsFilled = true;
     }
 
     private void SearchForFreeSeat()
