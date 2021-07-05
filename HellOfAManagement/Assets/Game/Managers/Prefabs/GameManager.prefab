@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6675644844481605144}
-  - component: {fileID: 4044797226211146194}
   - component: {fileID: 6425856126060921226}
   m_Layer: 0
   m_Name: GameManager
@@ -32,25 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4044797226211146194
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9166747630183467370}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 485a1d016d74a944096bf07565734a85, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6425856126060921226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f891566c5c1ebab4e9cf0ee16633f1e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelsData: {fileID: 0}

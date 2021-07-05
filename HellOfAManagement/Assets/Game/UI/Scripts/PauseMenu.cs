@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-namespace HOM
-{
     public class PauseMenu : MonoBehaviour
     {
         Animator animator;
@@ -55,4 +52,3 @@ namespace HOM
             LevelManager.LoadLevel("Main Menu");
         }
     }
-}

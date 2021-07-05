@@ -4,4 +4,5 @@
 public class OutlineData : ScriptableObject
 {
     public Color highlightColor;
+    [SerializeField, Range(0f, 10f)] public float outlineWidth;
 }

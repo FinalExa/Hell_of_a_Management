@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using HOM;
 
 public class UI_Score : MonoBehaviour
 {
@@ -37,14 +36,14 @@ public class UI_Score : MonoBehaviour
         fillImg.fillAmount = 0;
         scoreText.text = $"Score: {0}";
 
-        Score.OnProgressChanged+=UpdateGraphics;
+        Score.OnProgressChanged += UpdateGraphics;
     }
 
     void Activate()
     {
-        if (LevelManager.self != null)
+        if (LevelManager.levelManagerInstance != null)
         {
-            if (!LevelManager.self.isLoading && LevelManager.self.currentIndex == 1 && isActive == false)
+            if (!LevelManager.levelManagerInstance.isLoading && LevelManager.levelManagerInstance.currentIndex == 1 && isActive == false)
             {
                 scoreBar.SetActive(true);
                 scoreNumber.SetActive(true);
@@ -77,7 +76,7 @@ public class UI_Score : MonoBehaviour
 
         else if (score < levelData.GetLevel(0).secondStarScore && score >= levelData.GetLevel(0).firstStarScore)
         {
-            if(star1.color != Color.white)
+            if (star1.color != Color.white)
                 LightStar(ref star1, Color.white);
 
             return;

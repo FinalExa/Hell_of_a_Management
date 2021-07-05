@@ -2,6 +2,7 @@
 
 public class CustomerReferences : MonoBehaviour
 {
+    public CustomerData customerData;
     [HideInInspector] public CustomerVignette customerVignette;
     [HideInInspector] public Highlightable highlightable;
     private void Awake()

@@ -28,16 +28,6 @@ public class Timer : MonoBehaviour
         if (IsActive) UpdateTime();
     }
 
-    //void TimerGoingDown()
-    //{
-    //    if (runTimer)
-     //   {
-    //        currentTime = Mathf.Clamp(currentTime - Time.deltaTime, 0, currentTime);
-    //        if (currentTime == 0)
-    //            OnEndTimer?.Invoke(this, currentTime);
-    //    }
-    //}
-
     void UpdateTime()
     {
         currentTime = currentTime - Time.deltaTime > 0 ? currentTime - Time.deltaTime : 0;

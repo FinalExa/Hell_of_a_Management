@@ -16,7 +16,11 @@ public class Highlightable : MonoBehaviour
     }
     private void Start()
     {
-        if (outline != null) outline.OutlineColor = outlineData.highlightColor;
+        if (outline != null)
+        {
+            outline.OutlineColor = outlineData.highlightColor;
+            outline.OutlineWidth = outlineData.outlineWidth;
+        }
     }
     void Update()
     {

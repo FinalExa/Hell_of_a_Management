@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 7845207312148664838}
   - component: {fileID: 3371889578214040557}
   - component: {fileID: 8490081029144132567}
-  - component: {fileID: 879281037676685858}
+  - component: {fileID: 5028165272920022856}
   m_Layer: 2
   m_Name: PC_Garth
   m_TagString: Player
@@ -369,8 +369,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!65 &879281037676685858
-BoxCollider:
+--- !u!136 &5028165272920022856
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -379,8 +379,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 1.6, z: 0.35}
+  m_Radius: 0.25
+  m_Height: 1.6
+  m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1001 &6595274228909836926
 PrefabInstance:
