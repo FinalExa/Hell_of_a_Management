@@ -21,3 +21,5 @@ MonoBehaviour:
     scoreGivenByThisOrderSize: 200
   - probabilityOfThisOrderSize: 5
     scoreGivenByThisOrderSize: 300
+  maxActiveOrdersAtATime: 2
+  activeOrders: 1
