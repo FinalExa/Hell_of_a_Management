@@ -2,14 +2,16 @@
 using UnityEngine;
 public class CustomerSpawner : Spawner
 {
+    [SerializeField] private CustomerData customerData;
     [SerializeField] private float timeBetweenSpawns;
     private float spawnerTimer;
     private bool spawnerIsFilled;
-    [SerializeField] private List<SeatInfo> freeSeats;
-    [SerializeField] private List<MonoBehaviour> inactiveCustomers;
+    [HideInInspector] public List<SeatInfo> freeSeats;
+    [HideInInspector] public List<MonoBehaviour> inactiveCustomers;
     private Table[] tablesList;
     public override void Start()
     {
+        customerData.activeOrders = 0;
         spawnerTimer = timeBetweenSpawns;
         CalculateObjectsToInstantiate();
         base.Start();

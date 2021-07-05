@@ -13,7 +13,7 @@ public class CustomerWaitingForInteraction : CustomerState
 
     public override void StateUpdate()
     {
-        if (_customerStateMachine.customerController.interactionReceived) GoToWaitingForOrder();
+        if (_customerStateMachine.customerController.interactionReceived && _customerStateMachine.customerController.customerReferences.customerData.activeOrders < _customerStateMachine.customerController.customerReferences.customerData.maxActiveOrdersAtATime) GoToWaitingForOrder();
     }
 
     private void GenerateOrder()
@@ -57,6 +57,8 @@ public class CustomerWaitingForInteraction : CustomerState
 
     private void GoToWaitingForOrder()
     {
+        _customerStateMachine.customerController.customerReferences.customerData.activeOrders++;
+        Debug.Log(_customerStateMachine.customerController.customerReferences.customerData.activeOrders);
         _customerStateMachine.SetState(new CustomerWaitingForOrder(_customerStateMachine));
     }
 }
