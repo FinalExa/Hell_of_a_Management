@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4810914766928566479}
   - component: {fileID: 5448448129621136402}
   - component: {fileID: 5145179293072261354}
-  - component: {fileID: 8682722287322134973}
+  - component: {fileID: 5017148922921960497}
   - component: {fileID: 8682722287322134972}
   - component: {fileID: 2166118056616765054}
   m_Layer: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     color: {r: 0, g: 1, b: 0, a: 0}
   - soulColor: 4
     color: {r: 1, g: 0, b: 1, a: 0}
---- !u!135 &8682722287322134973
-SphereCollider:
+--- !u!136 &5017148922921960497
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -91,9 +91,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.75
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Radius: 1.2
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!65 &8682722287322134972
 BoxCollider:
   m_ObjectHideFlags: 0
