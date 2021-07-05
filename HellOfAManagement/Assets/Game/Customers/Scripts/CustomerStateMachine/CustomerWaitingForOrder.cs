@@ -20,7 +20,7 @@ public class CustomerWaitingForOrder : CustomerState
 
     private void EndOrder()
     {
-        addScore(_customerStateMachine.customerController.customerReferences.customerScoreData.scoresGiven[_customerStateMachine.customerController.chosenIngredients.Count - 1]);
+        addScore(_customerStateMachine.customerController.customerReferences.customerData.orderSizesProbabilitiesAndScores[_customerStateMachine.customerController.chosenIngredients.Count - 1].scoreGivenByThisOrderSize);
         _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette();
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
         _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableId);

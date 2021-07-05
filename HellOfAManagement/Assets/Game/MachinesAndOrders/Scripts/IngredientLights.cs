@@ -35,6 +35,6 @@ public class IngredientLights : MonoBehaviour, IHaveIngredientLights
 [System.Serializable]
 public class IngredientColors
 {
-    public SoulType.SoulColor soulColor;
+    public OrdersData.OrderIngredients soulColor;
     public Color color;
 }
