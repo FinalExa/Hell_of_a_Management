@@ -7,37 +7,48 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
 {
     public bool IsInsidePlayerRange { get; set; }
     public static Action<Table, int, CustomerController> customerLeft;
+    [System.Serializable]
+    public struct CustomerGraphics
+    {
+        public GameObject customerModel;
+        public Outline customerOutline;
+    }
+
+    [SerializeField] private OrdersData ordersData;
     [SerializeField] private CustomerGraphics[] customerGraphics;
     [SerializeField] private float maxInteractionTimer;
+    public NavMeshAgent thisNavMeshAgent;
     private float interactionTimer;
+    private Vector3 startingPos;
+    [HideInInspector] public GameObject seatToTake;
     [HideInInspector] public GameObject exitDoor;
-    public GameObject seatToTake;
     [HideInInspector] public GameObject targetedLocation;
     [HideInInspector] public Table thisTable;
     [HideInInspector] public int thisTableId;
     [HideInInspector] public bool interactionReceived;
     [HideInInspector] public bool waitingForOrder;
     [HideInInspector] public bool leave;
-    public NavMeshAgent thisNavMeshAgent;
-    public Order.OrderType[] possibleTypes;
-    public SoulType.SoulColor[] possibleIngredients;
-    [HideInInspector] public Order.OrderType chosenType;
-    [HideInInspector] public List<SoulType.SoulColor> chosenIngredients;
-    private Vector3 startingPos;
-
+    [HideInInspector] public OrdersData.OrderTypes[] possibleTypes;
+    [HideInInspector] public OrdersData.OrderIngredients[] possibleIngredients;
+    [HideInInspector] public OrdersData.OrderTypes chosenType;
+    [HideInInspector] public List<OrdersData.OrderIngredients> chosenIngredients;
     [HideInInspector] public CustomerReferences customerReferences;
-
     public GameObject Self { get; set; }
     private GameObject selectedModel;
-
-
 
     private void Awake()
     {
         customerReferences = this.gameObject.GetComponent<CustomerReferences>();
         Self = this.gameObject;
         exitDoor = GameObject.FindGameObjectWithTag("Exit");
+    }
+
+    private void Start()
+    {
         startingPos = this.gameObject.transform.position;
+        thisNavMeshAgent.speed = customerReferences.customerData.customerMovementSpeed;
+        thisNavMeshAgent.acceleration = customerReferences.customerData.customerAcceleration;
+        InitializeOrderInfos();
     }
     private void OnEnable()
     {
@@ -53,6 +64,12 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     {
         if (interactionReceived) InteractionTimer();
     }
+
+    private void InitializeOrderInfos()
+    {
+        possibleTypes = ordersData.orderTypes;
+        possibleIngredients = ordersData.orderIngredients;
+    }
     public void RandomizeModel()
     {
         int randIndex = UnityEngine.Random.Range(0, customerGraphics.Length);
@@ -60,6 +77,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
         selectedModel.SetActive(true);
         customerReferences.highlightable.outline = customerGraphics[randIndex].customerOutline;
         customerReferences.highlightable.outline.OutlineColor = customerReferences.highlightable.outlineData.highlightColor;
+        customerReferences.highlightable.outline.OutlineWidth = customerReferences.highlightable.outlineData.outlineWidth;
     }
     public void Interaction()
     {
@@ -84,10 +102,4 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
             this.gameObject.SetActive(false);
         }
     }
-}
-[System.Serializable]
-public class CustomerGraphics
-{
-    public GameObject customerModel;
-    public Outline customerOutline;
 }
