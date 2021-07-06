@@ -11,7 +11,7 @@ public class CustomerWaitingForOrder : CustomerState
 
     public override void Start()
     {
-        SendOrderInfosToUI(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
+        //SendOrderInfosToUI(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
         _customerStateMachine.customerController.thisNavMeshAgent.enabled = false;
         _customerStateMachine.customerController.waitingForOrder = true;
         _customerStateMachine.customerController.customerReferences.customerVignette.SetupVignette(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
@@ -24,7 +24,7 @@ public class CustomerWaitingForOrder : CustomerState
 
     private void EndOrder()
     {
-        RemoveOrderInfosFromUI(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
+        //RemoveOrderInfosFromUI(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
         addScore(_customerStateMachine.customerController.customerReferences.customerData.orderSizesProbabilitiesAndScores[_customerStateMachine.customerController.chosenIngredients.Count - 1].scoreGivenByThisOrderSize);
         _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette();
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
