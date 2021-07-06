@@ -45,10 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects: []
   activeObjects: []
-  objectReference: {fileID: 4751507346424960338, guid: 856f26171b0676c468d0de7c251ac9b9,
-    type: 3}
+  objectReference: {fileID: 4751507346424960338, guid: 856f26171b0676c468d0de7c251ac9b9, type: 3}
   parentObjectTag: CustomerSpawner
-  spawnerData: {fileID: 11400000, guid: cad1e4c158375f647b57ceac1336fbf5, type: 2}
-  timeBetweenSpawns: 2
+  spawnerData: {fileID: 0}
+  customerData: {fileID: 11400000, guid: 57de14e80b8a67443821c297a91f8e15, type: 2}
+  customerSpawnerData: {fileID: 11400000, guid: c4310be828d6d6445a21f8a9e4e33c80, type: 2}
   freeSeats: []
   inactiveCustomers: []

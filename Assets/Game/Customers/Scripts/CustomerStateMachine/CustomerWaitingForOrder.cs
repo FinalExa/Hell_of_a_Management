@@ -25,6 +25,7 @@ public class CustomerWaitingForOrder : CustomerState
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
         _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableId);
         _customerStateMachine.customerController.leave = true;
+        _customerStateMachine.customerController.customerReferences.customerData.activeOrders--;
         GoToGoToLocation();
     }
 
