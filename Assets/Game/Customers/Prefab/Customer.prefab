@@ -137,13 +137,14 @@ MonoBehaviour:
   fixRotationY: 45
   fixPositionX: 1
   fixPositionZ: -1
-  canvas: {fileID: 6345568519247880728}
-  background: {fileID: 3553313054773205198}
-  typeOfOrder: {fileID: 5800430859877911676}
-  orderSizes:
-  - {fileID: 8703547359333078360}
-  - {fileID: 4646237813493873807}
-  - {fileID: 3885599497705510228}
+  vignettes:
+  - container: {fileID: 6345568519247880728}
+    background: {fileID: 3553313054773205198}
+    typeOfOrder: {fileID: 5800430859877911676}
+    orderSizes:
+    - {fileID: 8703547359333078360}
+    - {fileID: 4646237813493873807}
+    - {fileID: 3885599497705510228}
 --- !u!114 &4751089946219986335
 MonoBehaviour:
   m_ObjectHideFlags: 0

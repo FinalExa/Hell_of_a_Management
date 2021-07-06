@@ -20,7 +20,19 @@ public class CustomerVignetteToDoList : CustomerVignette
     {
 
         activeOrdersInfo.Add(ComposeOrderInfo(type, ingredients));
-        SetupVignette(type, ingredients);
+        int indexToActivate = activeOrdersInfo.Count - 1;
+        if (vignettes[indexToActivate].isActive)
+        {
+            for (int i = 0; i < activeOrdersInfo.Count; i++)
+            {
+                if (!vignettes[i].isActive)
+                {
+                    indexToActivate = i;
+                    break;
+                }
+            }
+        }
+        SetupVignette(type, ingredients, indexToActivate, false);
     }
 
     private void RemoveOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
@@ -30,6 +42,7 @@ public class CustomerVignetteToDoList : CustomerVignette
         {
             if (activeOrdersInfo[i].type == orderInfo.type && activeOrdersInfo[i].ingredients == orderInfo.ingredients)
             {
+                DeactivateVignette(i);
                 activeOrdersInfo.RemoveAt(i);
                 break;
             }
