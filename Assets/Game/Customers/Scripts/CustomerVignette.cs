@@ -2,16 +2,16 @@
 using UnityEngine;
 public class CustomerVignette : MonoBehaviour
 {
-    [SerializeField] private float fixRotationX;
-    [SerializeField] private float fixRotationY;
-    [SerializeField] private float fixPositionX;
-    [SerializeField] private float fixPositionZ;
-    [SerializeField] private GameObject canvas;
-    [SerializeField] private GameObject background;
-    [SerializeField] private GameObject typeOfOrder;
-    [SerializeField] private GameObject[] orderSizes;
+    [SerializeField] protected float fixRotationX;
+    [SerializeField] protected float fixRotationY;
+    [SerializeField] protected float fixPositionX;
+    [SerializeField] protected float fixPositionZ;
+    [SerializeField] protected GameObject canvas;
+    [SerializeField] protected GameObject background;
+    [SerializeField] protected GameObject typeOfOrder;
+    [SerializeField] protected GameObject[] orderSizes;
 
-    public void SetupVignette(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
+    public virtual void SetupVignette(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
         canvas.transform.rotation = Quaternion.Euler(fixRotationX, fixRotationY, 0f);
         canvas.transform.position = new Vector3(this.gameObject.transform.position.x + fixPositionX, canvas.transform.position.y, this.gameObject.transform.position.z + fixPositionZ);
@@ -27,7 +27,7 @@ public class CustomerVignette : MonoBehaviour
         background.SetActive(true);
     }
 
-    public void DeactivateVignette()
+    public virtual void DeactivateVignette()
     {
         background.SetActive(false);
         foreach (Transform child in typeOfOrder.transform) child.gameObject.SetActive(false);

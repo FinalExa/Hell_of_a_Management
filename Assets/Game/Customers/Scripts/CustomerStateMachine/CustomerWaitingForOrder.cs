@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 public class CustomerWaitingForOrder : CustomerState
 {
     public static Action<float> addScore;
+    public static Action<OrdersData.OrderTypes, List<OrdersData.OrderIngredients>> SendOrderInfosToUI;
+    public static Action<OrdersData.OrderTypes, List<OrdersData.OrderIngredients>> RemoveOrderInfosFromUI;
     public CustomerWaitingForOrder(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
     }
 
     public override void Start()
     {
+        SendOrderInfosToUI(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
         _customerStateMachine.customerController.thisNavMeshAgent.enabled = false;
         _customerStateMachine.customerController.waitingForOrder = true;
         _customerStateMachine.customerController.customerReferences.customerVignette.SetupVignette(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
@@ -20,6 +24,7 @@ public class CustomerWaitingForOrder : CustomerState
 
     private void EndOrder()
     {
+        RemoveOrderInfosFromUI(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients);
         addScore(_customerStateMachine.customerController.customerReferences.customerData.orderSizesProbabilitiesAndScores[_customerStateMachine.customerController.chosenIngredients.Count - 1].scoreGivenByThisOrderSize);
         _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette();
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
