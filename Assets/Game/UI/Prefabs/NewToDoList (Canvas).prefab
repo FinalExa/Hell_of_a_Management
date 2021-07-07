@@ -3800,6 +3800,7 @@ MonoBehaviour:
     - {fileID: 2095288473044346097}
     - {fileID: 2095288473455257595}
     - {fileID: 2095288472040615405}
+    isActive: 0
   - container: {fileID: 7333527185101576647}
     background: {fileID: 7333527185101576647}
     typeOfOrder: {fileID: 6296672868300637042}
@@ -3807,7 +3808,14 @@ MonoBehaviour:
     - {fileID: 4507759394158926938}
     - {fileID: 6885363626735199097}
     - {fileID: 6208437294139853903}
-  activeOrdersInfo: []
+    isActive: 0
+  activeOrdersInfo:
+  - type: 0
+    ingredients: 
+    isFilled: 0
+  - type: 0
+    ingredients: 
+    isFilled: 0
 --- !u!223 &2644771325609167344
 Canvas:
   m_ObjectHideFlags: 0

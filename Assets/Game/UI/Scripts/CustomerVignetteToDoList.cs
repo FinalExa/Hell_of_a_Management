@@ -7,8 +7,9 @@ public class CustomerVignetteToDoList : CustomerVignette
     {
         public OrdersData.OrderTypes type;
         public List<OrdersData.OrderIngredients> ingredients;
+        public bool isFilled;
     }
-    [SerializeField] private List<OrdersInfo> activeOrdersInfo;
+    [SerializeField] private OrdersInfo[] activeOrdersInfo;
 
     private void Awake()
     {
@@ -18,15 +19,15 @@ public class CustomerVignetteToDoList : CustomerVignette
 
     private void AddOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
-        activeOrdersInfo.Add(ComposeOrderInfo(type, ingredients));
         int indexToActivate = SearchForFirstActiveVignette();
+        activeOrdersInfo[indexToActivate] = ComposeOrderInfo(type, ingredients);
         SetupVignette(type, ingredients, indexToActivate, false);
     }
 
     private int SearchForFirstActiveVignette()
     {
         int indexToActivate;
-        for (indexToActivate = 0; indexToActivate < activeOrdersInfo.Count; indexToActivate++)
+        for (indexToActivate = 0; indexToActivate < activeOrdersInfo.Length; indexToActivate++)
         {
             if (!vignettes[indexToActivate].isActive) break;
         }
@@ -36,13 +37,13 @@ public class CustomerVignetteToDoList : CustomerVignette
     private void RemoveOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
         OrdersInfo orderInfo = ComposeOrderInfo(type, ingredients);
-        for (int i = 0; i < activeOrdersInfo.Count; i++)
+        for (int i = 0; i < activeOrdersInfo.Length; i++)
         {
             if (activeOrdersInfo[i].type == orderInfo.type && activeOrdersInfo[i].ingredients == orderInfo.ingredients)
             {
                 print(i);
                 DeactivateVignette(i);
-                activeOrdersInfo.RemoveAt(i);
+                activeOrdersInfo[i].isFilled = false;
                 break;
             }
         }
@@ -53,6 +54,7 @@ public class CustomerVignetteToDoList : CustomerVignette
         OrdersInfo orderInfo;
         orderInfo.type = type;
         orderInfo.ingredients = ingredients;
+        orderInfo.isFilled = true;
         return orderInfo;
     }
 }
