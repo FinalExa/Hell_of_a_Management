@@ -17,6 +17,6 @@ MonoBehaviour:
   grabRange: 3.5
   throwDistance: 6
   throwFlightTime: 0.3
-  dashDistance: 6
-  dashDuration: 0.275
+  dashDistance: 6.5
+  dashDuration: 0.19
   dashCooldown: 0.5
