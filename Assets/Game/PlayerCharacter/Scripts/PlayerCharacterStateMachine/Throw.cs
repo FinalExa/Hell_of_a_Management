@@ -10,13 +10,14 @@ public class Throw : PlayerState
         clickedPos = _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().point;
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = false;
         _playerCharacter.playerController.playerReferences.playerRb.velocity = Vector3.zero;
-        _playerCharacter.playerController.playerReferences.playerAnimations.waitForAnimation = true;
+        //_playerCharacter.playerController.playerReferences.playerAnimations.waitForAnimation = true;
         _playerCharacter.playerController.playerReferences.rotation.RotatePlayerToMousePosition();
     }
     public override void StateUpdate()
     {
         PlayerAnimations playerAnimations = _playerCharacter.playerController.playerReferences.playerAnimations;
-        if (!playerAnimations.waitForAnimation) CheckHand();
+        //if (!playerAnimations.waitForAnimation)
+        CheckHand();
     }
     #region Throw
     private void CheckHand()

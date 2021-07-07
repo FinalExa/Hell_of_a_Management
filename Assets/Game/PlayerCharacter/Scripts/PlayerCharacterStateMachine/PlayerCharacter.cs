@@ -8,7 +8,7 @@ public class PlayerCharacter : StateMachine
     public override void SetState(State state)
     {
         base.SetState(state);
-        playerStateChanged();
+        //playerStateChanged();
     }
     private void Awake()
     {
