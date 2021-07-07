@@ -41,7 +41,6 @@ public class CustomerVignetteToDoList : CustomerVignette
         {
             if (activeOrdersInfo[i].type == orderInfo.type && activeOrdersInfo[i].ingredients == orderInfo.ingredients)
             {
-                print(i);
                 DeactivateVignette(i);
                 activeOrdersInfo[i].isFilled = false;
                 break;
