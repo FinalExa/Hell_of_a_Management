@@ -39,7 +39,7 @@ public class SoulSpawner : Spawner
         Vector3 positionToSpawn;
         float xFixedSize = thisTrigger.size.x / 2 - 1;
         float zFixedSize = thisTrigger.size.z / 2 - 1;
-        positionToSpawn = new Vector3(Random.Range(-xFixedSize, xFixedSize), 0f, Random.Range(-zFixedSize, zFixedSize));
+        positionToSpawn = new Vector3(Random.Range(-xFixedSize, xFixedSize) + thisTrigger.center.x, 0f, Random.Range(-zFixedSize, zFixedSize) + thisTrigger.center.z);
         sc.gameObject.transform.localPosition = positionToSpawn;
     }
     private void SetupSoul(int indexInObjectsList, SoulController sc)

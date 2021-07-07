@@ -13,4 +13,8 @@ public class CustomerData : ScriptableObject
         public float scoreGivenByThisOrderSize;
     }
     public OrderSizesProbabilitiesAndScore[] orderSizesProbabilitiesAndScores;
+
+    public int maxActiveOrdersAtATime;
+    [HideInInspector] public int activeOrders;
+    public float timeBetweenSpawns;
 }
