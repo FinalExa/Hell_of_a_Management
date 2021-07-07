@@ -57,6 +57,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     }
     private void OnDisable()
     {
+        TurnOffCustomerModels();
         leave = false;
         this.gameObject.transform.position = startingPos;
     }
@@ -78,6 +79,10 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
         customerReferences.highlightable.outline = customerGraphics[randIndex].customerOutline;
         customerReferences.highlightable.outline.OutlineColor = customerReferences.highlightable.outlineData.highlightColor;
         customerReferences.highlightable.outline.OutlineWidth = customerReferences.highlightable.outlineData.outlineWidth;
+    }
+    private void TurnOffCustomerModels()
+    {
+        selectedModel.SetActive(false);
     }
     public void Interaction()
     {

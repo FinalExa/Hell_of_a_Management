@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878b21a864fff5b4d966632135c07ffe, type: 3}
   m_Name: SoulThrowableData
   m_EditorClassIdentifier: 
-  objectWeight: 1
-  highlightColor: {r: 1, g: 0, b: 0, a: 1}
-  baseColor: {r: 0.39622638, g: 0, b: 0.39622638, a: 1}
+  objectWeight: 1.5

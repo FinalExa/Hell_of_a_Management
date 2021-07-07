@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 public class CustomerWaitingForInteraction : CustomerState
 {
+
     public CustomerWaitingForInteraction(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
     }
@@ -13,7 +14,12 @@ public class CustomerWaitingForInteraction : CustomerState
 
     public override void StateUpdate()
     {
-        if (_customerStateMachine.customerController.interactionReceived) GoToWaitingForOrder();
+        if (_customerStateMachine.customerController.interactionReceived && _customerStateMachine.customerController.customerReferences.customerData.activeOrders < _customerStateMachine.customerController.customerReferences.customerData.maxActiveOrdersAtATime)
+        {
+
+            _customerStateMachine.customerController.customerReferences.customerData.activeOrders++;
+            GoToWaitingForOrder();
+        }
     }
 
     private void GenerateOrder()
