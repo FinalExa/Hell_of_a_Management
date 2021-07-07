@@ -18,21 +18,19 @@ public class CustomerVignetteToDoList : CustomerVignette
 
     private void AddOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
-
         activeOrdersInfo.Add(ComposeOrderInfo(type, ingredients));
-        int indexToActivate = activeOrdersInfo.Count - 1;
-        if (vignettes[indexToActivate].isActive)
-        {
-            for (int i = 0; i < activeOrdersInfo.Count; i++)
-            {
-                if (!vignettes[i].isActive)
-                {
-                    indexToActivate = i;
-                    break;
-                }
-            }
-        }
+        int indexToActivate = SearchForFirstActiveVignette();
         SetupVignette(type, ingredients, indexToActivate, false);
+    }
+
+    private int SearchForFirstActiveVignette()
+    {
+        int indexToActivate;
+        for (indexToActivate = 0; indexToActivate < activeOrdersInfo.Count; indexToActivate++)
+        {
+            if (!vignettes[indexToActivate].isActive) break;
+        }
+        return indexToActivate;
     }
 
     private void RemoveOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
@@ -42,6 +40,7 @@ public class CustomerVignetteToDoList : CustomerVignette
         {
             if (activeOrdersInfo[i].type == orderInfo.type && activeOrdersInfo[i].ingredients == orderInfo.ingredients)
             {
+                print(i);
                 DeactivateVignette(i);
                 activeOrdersInfo.RemoveAt(i);
                 break;

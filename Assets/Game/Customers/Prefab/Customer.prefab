@@ -145,6 +145,7 @@ MonoBehaviour:
     - {fileID: 8703547359333078360}
     - {fileID: 4646237813493873807}
     - {fileID: 3885599497705510228}
+    isActive: 0
 --- !u!114 &4751089946219986335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67bd99021fefe324d811c2572bb119bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67bd99021fefe324d811c2572bb119bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -526,15 +527,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 65ed49edc3fad0f41b731695945e882f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00000022888183
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 65ed49edc3fad0f41b731695945e882f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.005
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 65ed49edc3fad0f41b731695945e882f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.000000009536743
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 65ed49edc3fad0f41b731695945e882f, type: 3}
       propertyPath: m_LocalRotation.w
