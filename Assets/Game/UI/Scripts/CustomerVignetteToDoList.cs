@@ -11,13 +11,7 @@ public class CustomerVignetteToDoList : CustomerVignette
     }
     [SerializeField] private OrdersInfo[] activeOrdersInfo;
 
-    private void Awake()
-    {
-        CustomerWaitingForOrder.SendOrderInfosToUI += AddOrder;
-        CustomerWaitingForOrder.RemoveOrderInfosFromUI += RemoveOrder;
-    }
-
-    private void AddOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
+    public void AddOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
         int indexToActivate = SearchForFirstActiveVignette();
         activeOrdersInfo[indexToActivate] = ComposeOrderInfo(type, ingredients);
@@ -34,7 +28,7 @@ public class CustomerVignetteToDoList : CustomerVignette
         return indexToActivate;
     }
 
-    private void RemoveOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
+    public void RemoveOrder(OrdersData.OrderTypes type, List<OrdersData.OrderIngredients> ingredients)
     {
         OrdersInfo orderInfo = ComposeOrderInfo(type, ingredients);
         for (int i = 0; i < activeOrdersInfo.Length; i++)

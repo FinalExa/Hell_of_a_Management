@@ -20,6 +20,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     public NavMeshAgent thisNavMeshAgent;
     private float interactionTimer;
     private Vector3 startingPos;
+    private CustomerVignetteToDoList uiToDoList;
     [HideInInspector] public GameObject seatToTake;
     [HideInInspector] public GameObject exitDoor;
     [HideInInspector] public GameObject targetedLocation;
@@ -97,6 +98,15 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
             interactionReceived = false;
             interactionTimer = maxInteractionTimer;
         }
+    }
+    public void SendInfoToToDoList()
+    {
+        if (uiToDoList == null) uiToDoList = FindObjectOfType<CustomerVignetteToDoList>();
+        uiToDoList.AddOrder(chosenType, chosenIngredients);
+    }
+    public void RemoveInfoFromToDoList()
+    {
+        uiToDoList.RemoveOrder(chosenType, chosenIngredients);
     }
 
     private void OnTriggerEnter(Collider other)
