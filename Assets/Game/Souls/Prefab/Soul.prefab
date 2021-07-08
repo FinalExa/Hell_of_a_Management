@@ -350,17 +350,17 @@ MonoBehaviour:
     soulModelOutline: {fileID: 6933751415642102327}
   - soulColor: 1
     soulMainModelObject: {fileID: 4857783041625888507}
-    soulMeshContainer: {fileID: 2461139034740131653}
+    soulMeshContainer: {fileID: 6691826116737365087}
     soulAnimator: {fileID: 3514779735446408827}
     soulModelOutline: {fileID: 1659756530328415460}
   - soulColor: 2
     soulMainModelObject: {fileID: 4857783040402764062}
-    soulMeshContainer: {fileID: 6691826116737365087}
+    soulMeshContainer: {fileID: 626735195267432303}
     soulAnimator: {fileID: 5622609767438150272}
     soulModelOutline: {fileID: 7951604837007433126}
   - soulColor: 3
     soulMainModelObject: {fileID: 4857783040794530853}
-    soulMeshContainer: {fileID: 626735195267432303}
+    soulMeshContainer: {fileID: 2461139034740131653}
     soulAnimator: {fileID: 4263470750526146311}
     soulModelOutline: {fileID: 1936418008155434328}
   - soulColor: 4
