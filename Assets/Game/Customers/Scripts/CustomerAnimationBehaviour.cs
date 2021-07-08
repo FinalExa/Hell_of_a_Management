@@ -1,12 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlayerAnimationsBehaviour : StateMachineBehaviour
+public class CustomerAnimationBehaviour : StateMachineBehaviour
 {
-    public static Action onAnimationEnd;
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("Release", true);
         base.OnStateExit(animator, stateInfo, layerIndex);
-        onAnimationEnd();
     }
 }

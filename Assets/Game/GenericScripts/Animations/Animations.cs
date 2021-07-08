@@ -2,8 +2,8 @@
 
 public class Animations : MonoBehaviour
 {
-    [HideInInspector] public bool waitForAnimation;
     public Animator animator;
+    [HideInInspector] public bool waitForAnimation;
     [SerializeField] protected StateMachine stateMachineToRead;
     protected string actualState;
 

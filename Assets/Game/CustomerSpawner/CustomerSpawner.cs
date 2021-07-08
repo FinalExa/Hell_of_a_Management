@@ -85,7 +85,7 @@ public class CustomerSpawner : Spawner
         cc.seatToTake = freeSeats[seatIndex].seatTarget;
         cc.thisTable = freeSeats[seatIndex].thisTable;
         freeSeats[seatIndex].customer = cc;
-        cc.thisTableId = freeSeats[seatIndex].thisId;
+        cc.thisTableSeatId = freeSeats[seatIndex].thisId;
         cc.targetedLocation = cc.seatToTake;
         cc.gameObject.SetActive(true);
         freeSeats.RemoveAt(seatIndex);
