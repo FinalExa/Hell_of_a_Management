@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 
-public abstract class Animations : MonoBehaviour
+public class Animations : MonoBehaviour
 {
     [HideInInspector] public bool waitForAnimation;
-    [SerializeField] protected Animator animator;
+    [SerializeField] public Animator animator;
     [SerializeField] protected StateMachine stateMachineToRead;
-    [SerializeField] private string[] statesToExclude;
     protected string actualState;
 
     public virtual void AnimatorStateUpdate(string statePassed)
     {
-        if (!string.IsNullOrEmpty(actualState)) animator.SetBool(actualState, false);
-        SetupStateBool(statePassed);
+        if (animator != null)
+        {
+            if (!string.IsNullOrEmpty(actualState)) animator.SetBool(actualState, false);
+            SetupStateBool(statePassed);
+        }
     }
     public virtual void SetupStateBool(string statePassed)
     {

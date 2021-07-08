@@ -44,10 +44,11 @@ public class SoulSpawner : Spawner
     }
     private void SetupSoul(int indexInObjectsList, SoulController sc)
     {
-        sc.gameObject.SetActive(true);
         int soulIndex;
         if (indexInObjectsList < sc.soulTypes.Length * soulsPerType) soulIndex = indexInObjectsList / soulsPerType;
         else soulIndex = Random.Range(0, sc.soulTypes.Length);
+        sc.gameObject.SetActive(true);
+        sc.soulReferences.soulAnimations.animator = sc.soulTypes[soulIndex].soulAnimator;
         sc.thisSoulTypeIndex = soulIndex;
         sc.soulReferences.highlightable.thisGraphicsObject = sc.soulTypes[soulIndex].soulMeshContainer;
         sc.soulReferences.highlightable.outline = sc.soulTypes[soulIndex].soulModelOutline;
