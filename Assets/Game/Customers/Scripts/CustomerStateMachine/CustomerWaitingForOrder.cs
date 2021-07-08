@@ -8,6 +8,7 @@ public class CustomerWaitingForOrder : CustomerState
 
     public override void Start()
     {
+        _customerStateMachine.customerController.customerReferences.animations.AnimatorStateUpdate(this.ToString());
         _customerStateMachine.customerController.thisNavMeshAgent.enabled = false;
         _customerStateMachine.customerController.waitingForOrder = true;
         _customerStateMachine.customerController.customerReferences.customerVignette.SetupVignette(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients, 0, true);
@@ -25,7 +26,7 @@ public class CustomerWaitingForOrder : CustomerState
         _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette(0);
         _customerStateMachine.customerController.RemoveInfoFromToDoList();
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
-        _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableId);
+        _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableSeatId);
         _customerStateMachine.customerController.leave = true;
         _customerStateMachine.customerController.customerReferences.customerData.activeOrders--;
         GoToGoToLocation();

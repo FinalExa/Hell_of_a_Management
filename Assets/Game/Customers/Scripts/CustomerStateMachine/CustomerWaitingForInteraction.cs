@@ -8,6 +8,7 @@ public class CustomerWaitingForInteraction : CustomerState
 
     public override void Start()
     {
+        _customerStateMachine.customerController.customerReferences.animations.AnimatorStateUpdate(this.ToString());
         _customerStateMachine.customerController.thisNavMeshAgent.enabled = false;
         GenerateOrder();
     }
@@ -33,7 +34,7 @@ public class CustomerWaitingForInteraction : CustomerState
         {
             customerController.chosenIngredients.Add(customerController.possibleIngredients[Random.Range(0, customerController.possibleIngredients.Length)]);
         }
-        customerController.thisTable.AssignOrderToTable(customerController.thisTableId, customerController);
+        customerController.thisTable.AssignOrderToTable(customerController.thisTableSeatId, customerController);
     }
 
     private float CalculateTotalProbability()

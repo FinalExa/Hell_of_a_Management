@@ -11,6 +11,7 @@ public class CustomerGoToLocation : CustomerState
 
     public override void Start()
     {
+        _customerStateMachine.customerController.customerReferences.animations.AnimatorStateUpdate(this.ToString());
         timerIsOver = false;
         movingIssued = false;
         timerStart = false;
@@ -21,7 +22,7 @@ public class CustomerGoToLocation : CustomerState
     {
         if (!movingIssued) MoveToTarget();
         if (timerStart) NavMeshTimer();
-        if (_customerStateMachine.customerController.thisNavMeshAgent.destination == _customerStateMachine.gameObject.transform.position && movingIssued && timerIsOver) GoToWaitingForInteraction();
+        if (_customerStateMachine.customerController.thisNavMeshAgent.destination == _customerStateMachine.gameObject.transform.position && movingIssued && timerIsOver) DestinationReached();
     }
 
     private void MoveToTarget()
@@ -39,6 +40,12 @@ public class CustomerGoToLocation : CustomerState
             timerStart = false;
             timerIsOver = true;
         }
+    }
+
+    private void DestinationReached()
+    {
+        _customerStateMachine.gameObject.transform.LookAt(_customerStateMachine.customerController.thisTable.gameObject.transform.position);
+        GoToWaitingForInteraction();
     }
 
     private void GoToWaitingForInteraction()
