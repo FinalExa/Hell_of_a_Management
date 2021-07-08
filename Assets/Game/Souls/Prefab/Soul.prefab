@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5740724075522996928
 Transform:
   m_ObjectHideFlags: 0
@@ -431,7 +431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a20973d5ec113418b4c383feda6d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateRef: 
   soulController: {fileID: 0}
 --- !u!114 &8411376419026247185
 MonoBehaviour:
@@ -955,7 +954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6fb979619f5eeaf4dbf02970171b58bc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5608378385574008688, guid: 6fb979619f5eeaf4dbf02970171b58bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

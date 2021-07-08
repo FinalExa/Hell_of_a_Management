@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Animations : MonoBehaviour
+public abstract class Animations : MonoBehaviour
 {
     [HideInInspector] public bool waitForAnimation;
     [SerializeField] protected Animator animator;
@@ -8,44 +8,18 @@ public class Animations : MonoBehaviour
     [SerializeField] private string[] statesToExclude;
     protected string actualState;
 
-    public virtual void OnEnable()
+    public virtual void AnimatorStateUpdate(string statePassed)
     {
-        if (!string.IsNullOrEmpty(actualState)) SetupStateBool();
+        if (!string.IsNullOrEmpty(actualState)) animator.SetBool(actualState, false);
+        SetupStateBool(statePassed);
     }
-
-    public virtual void UpdateAnimatorValues()
+    public virtual void SetupStateBool(string statePassed)
     {
-        AnimatorStateUpdate();
-    }
-
-    public virtual void AnimatorStateUpdate()
-    {
-        if (actualState != stateMachineToRead.stateRef && NoStatesToIgnore())
-        {
-            if (!string.IsNullOrEmpty(actualState)) animator.SetBool(actualState, false);
-            SetupStateBool();
-        }
-    }
-    public virtual void SetupStateBool()
-    {
-        actualState = stateMachineToRead.stateRef;
+        actualState = statePassed;
         animator.SetBool(actualState, true);
     }
     public virtual void AnimationIsOver()
     {
         waitForAnimation = false;
-    }
-    private bool NoStatesToIgnore()
-    {
-        bool passed = true;
-        for (int i = 0; i < statesToExclude.Length; i++)
-        {
-            if (stateMachineToRead.stateRef == statesToExclude[i])
-            {
-                passed = false;
-                break;
-            }
-        }
-        return passed;
     }
 }

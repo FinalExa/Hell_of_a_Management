@@ -6,9 +6,8 @@
     {
         soulStateMachine = (SoulStateMachine)stateMachineToRead;
     }
-    public override void OnEnable()
+    public void OnEnable()
     {
         animator = soulStateMachine.soulController.soulTypes[soulStateMachine.soulController.thisSoulTypeIndex].soulAnimator;
-        base.OnEnable();
     }
 }

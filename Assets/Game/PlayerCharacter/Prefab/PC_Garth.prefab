@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 94225614841390228}
   - component: {fileID: 6826761888702464984}
   - component: {fileID: 7845207312148664838}
+  - component: {fileID: 7061543828600889953}
   - component: {fileID: 8490081029144132567}
   - component: {fileID: 5028165272920022856}
   m_Layer: 2
@@ -334,6 +335,22 @@ MonoBehaviour:
   actualSpeed: 0
   objectClicked: {fileID: 0}
   selectedHand: 0
+--- !u!114 &7061543828600889953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877571697949988489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a7d53a33dd7f24d9e8c545d2b75b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitForAnimation: 0
+  animator: {fileID: 3957953130347433435}
+  stateMachineToRead: {fileID: 1673490640784394817}
+  statesToExclude: []
 --- !u!54 &8490081029144132567
 Rigidbody:
   m_ObjectHideFlags: 0

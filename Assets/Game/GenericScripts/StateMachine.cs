@@ -2,7 +2,6 @@
 public abstract class StateMachine : MonoBehaviour
 {
     protected State _state;
-    [HideInInspector] public string stateRef;
 
     public virtual void SetState(State state)
     {
