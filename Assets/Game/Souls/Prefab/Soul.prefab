@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1096875990175124523}
   - component: {fileID: 7682380320128411222}
   - component: {fileID: 7255005166623741164}
-  - component: {fileID: 8411376419026247185}
+  - component: {fileID: 2905151620920480676}
   - component: {fileID: 8768027527686475258}
   - component: {fileID: 7429171268645209088}
   - component: {fileID: 7246138982620699378}
@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5740724075522996928
 Transform:
   m_ObjectHideFlags: 0
@@ -350,17 +350,17 @@ MonoBehaviour:
     soulModelOutline: {fileID: 6933751415642102327}
   - soulColor: 1
     soulMainModelObject: {fileID: 4857783041625888507}
-    soulMeshContainer: {fileID: 2461139034740131653}
+    soulMeshContainer: {fileID: 6691826116737365087}
     soulAnimator: {fileID: 3514779735446408827}
     soulModelOutline: {fileID: 1659756530328415460}
   - soulColor: 2
     soulMainModelObject: {fileID: 4857783040402764062}
-    soulMeshContainer: {fileID: 6691826116737365087}
+    soulMeshContainer: {fileID: 626735195267432303}
     soulAnimator: {fileID: 5622609767438150272}
     soulModelOutline: {fileID: 7951604837007433126}
   - soulColor: 3
     soulMainModelObject: {fileID: 4857783040794530853}
-    soulMeshContainer: {fileID: 626735195267432303}
+    soulMeshContainer: {fileID: 2461139034740131653}
     soulAnimator: {fileID: 4263470750526146311}
     soulModelOutline: {fileID: 1936418008155434328}
   - soulColor: 4
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soulThrowableObject: {fileID: 0}
   highlightable: {fileID: 0}
-  soulAnimations: {fileID: 8411376419026247185}
+  soulAnimations: {fileID: 0}
   soulData: {fileID: 11400000, guid: 5e189b5352d206644b4fcbae8aff4615, type: 2}
 --- !u!114 &1096875990175124523
 MonoBehaviour:
@@ -431,9 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89a20973d5ec113418b4c383feda6d54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateRef: 
   soulController: {fileID: 0}
---- !u!114 &8411376419026247185
+--- !u!114 &2905151620920480676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -442,11 +441,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5740724075522996929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8115026eb9b50444cb85e5ce5dd267be, type: 3}
+  m_Script: {fileID: 11500000, guid: 7dd2d13e5ac352945ab2c8cd5aa866e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   waitForAnimation: 0
-  animator: {fileID: 9023260238331158097}
+  animator: {fileID: 0}
   stateMachineToRead: {fileID: 7255005166623741164}
   statesToExclude: []
 --- !u!135 &8768027527686475258
@@ -955,7 +954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6fb979619f5eeaf4dbf02970171b58bc, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5608378385574008688, guid: 6fb979619f5eeaf4dbf02970171b58bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

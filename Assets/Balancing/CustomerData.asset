@@ -23,4 +23,4 @@ MonoBehaviour:
     scoreGivenByThisOrderSize: 300
   maxActiveOrdersAtATime: 2
   activeOrders: 1
-  timeBetweenSpawns: 2
+  timeBetweenSpawns: 4
