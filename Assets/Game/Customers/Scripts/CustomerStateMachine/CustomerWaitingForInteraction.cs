@@ -28,7 +28,7 @@ public class CustomerWaitingForInteraction : CustomerState
         CustomerController customerController = _customerStateMachine.customerController;
         float totalProbability = CalculateTotalProbability();
         float roll = Random.Range(0, totalProbability + 1);
-        int orderSize = CheckForRollResult(totalProbability, roll);
+        int orderSize = CheckForRollResult(roll);
         customerController.chosenType = customerController.possibleTypes[Random.Range(0, customerController.possibleTypes.Length)];
         for (int i = 0; i < orderSize; i++)
         {
@@ -48,7 +48,7 @@ public class CustomerWaitingForInteraction : CustomerState
         return totalProbability;
     }
 
-    private int CheckForRollResult(float totalProbability, float roll)
+    private int CheckForRollResult(float roll)
     {
         CustomerData customerData = _customerStateMachine.customerController.customerReferences.customerData;
         int rollResult = 0;
