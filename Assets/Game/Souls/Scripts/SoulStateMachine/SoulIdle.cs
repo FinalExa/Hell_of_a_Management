@@ -9,6 +9,7 @@ public class SoulIdle : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsIdle(_soulStateMachine.soulController);
         StopMovements();
     }
