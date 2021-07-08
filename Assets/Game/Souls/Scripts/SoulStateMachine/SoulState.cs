@@ -4,7 +4,5 @@
     public SoulState(SoulStateMachine soulStateMachine)
     {
         _soulStateMachine = soulStateMachine;
-        soulStateMachine.stateRef = this.ToString();
-        //soulStateMachine.StateNamePrint();
     }
 }

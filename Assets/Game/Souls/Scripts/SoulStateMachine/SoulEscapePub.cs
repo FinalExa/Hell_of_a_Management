@@ -7,6 +7,7 @@ public class SoulEscapePub : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         SetupEscapePub();
     }
     private void SetupEscapePub()

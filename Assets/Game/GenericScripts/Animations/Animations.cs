@@ -3,49 +3,25 @@
 public class Animations : MonoBehaviour
 {
     [HideInInspector] public bool waitForAnimation;
-    [SerializeField] protected Animator animator;
+    public Animator animator;
     [SerializeField] protected StateMachine stateMachineToRead;
-    [SerializeField] private string[] statesToExclude;
     protected string actualState;
 
-    public virtual void OnEnable()
+    public virtual void AnimatorStateUpdate(string statePassed)
     {
-        if (!string.IsNullOrEmpty(actualState)) SetupStateBool();
-    }
-
-    public virtual void UpdateAnimatorValues()
-    {
-        AnimatorStateUpdate();
-    }
-
-    public virtual void AnimatorStateUpdate()
-    {
-        if (actualState != stateMachineToRead.stateRef && NoStatesToIgnore())
+        if (animator != null)
         {
             if (!string.IsNullOrEmpty(actualState)) animator.SetBool(actualState, false);
-            SetupStateBool();
+            SetupStateBool(statePassed);
         }
     }
-    public virtual void SetupStateBool()
+    public virtual void SetupStateBool(string statePassed)
     {
-        actualState = stateMachineToRead.stateRef;
+        actualState = statePassed;
         animator.SetBool(actualState, true);
     }
     public virtual void AnimationIsOver()
     {
         waitForAnimation = false;
-    }
-    private bool NoStatesToIgnore()
-    {
-        bool passed = true;
-        for (int i = 0; i < statesToExclude.Length; i++)
-        {
-            if (stateMachineToRead.stateRef == statesToExclude[i])
-            {
-                passed = false;
-                break;
-            }
-        }
-        return passed;
     }
 }

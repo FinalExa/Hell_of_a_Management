@@ -4,6 +4,5 @@
     public CustomerState(CustomerStateMachine customerStateMachine)
     {
         _customerStateMachine = customerStateMachine;
-        customerStateMachine.stateRef = this.ToString();
     }
 }
