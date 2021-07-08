@@ -10,7 +10,6 @@ public class CustomerModelLoad : MonoBehaviour
         public GameObject customerModel;
         public Outline customerOutline;
         public Animator customerAnimator;
-        public bool isMale;
     }
 
     private void Awake()

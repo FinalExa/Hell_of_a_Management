@@ -2,6 +2,7 @@
 public class CustomerWaitingForOrder : CustomerState
 {
     public static Action<float> addScore;
+    private bool orderReceived;
     public CustomerWaitingForOrder(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
     }
@@ -17,19 +18,21 @@ public class CustomerWaitingForOrder : CustomerState
 
     public override void StateUpdate()
     {
-        if (!_customerStateMachine.customerController.waitingForOrder) EndOrder();
+        if (!_customerStateMachine.customerController.waitingForOrder && !orderReceived) EndOrder();
+        if (orderReceived && _customerStateMachine.customerController.customerReferences.animations.animator.GetBool("Release")) GoToGoToLocation();
     }
 
     private void EndOrder()
     {
         addScore(_customerStateMachine.customerController.customerReferences.customerData.orderSizesProbabilitiesAndScores[_customerStateMachine.customerController.chosenIngredients.Count - 1].scoreGivenByThisOrderSize);
-        _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette(0);
-        _customerStateMachine.customerController.RemoveInfoFromToDoList();
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
         _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableSeatId);
+        _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette(0);
+        _customerStateMachine.customerController.RemoveInfoFromToDoList();
+        _customerStateMachine.customerController.customerReferences.animations.animator.SetBool("OrderIsReceived", true);
         _customerStateMachine.customerController.leave = true;
         _customerStateMachine.customerController.customerReferences.customerData.activeOrders--;
-        GoToGoToLocation();
+        orderReceived = true;
     }
 
     private void GoToGoToLocation()

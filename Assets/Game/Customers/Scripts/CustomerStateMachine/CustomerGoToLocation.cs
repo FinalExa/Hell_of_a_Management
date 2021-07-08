@@ -11,6 +11,8 @@ public class CustomerGoToLocation : CustomerState
 
     public override void Start()
     {
+        _customerStateMachine.customerController.customerReferences.animations.animator.SetBool("OrderIsReceived", false);
+        _customerStateMachine.customerController.customerReferences.animations.animator.SetBool("Release", false);
         _customerStateMachine.customerController.customerReferences.animations.AnimatorStateUpdate(this.ToString());
         timerIsOver = false;
         movingIssued = false;

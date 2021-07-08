@@ -123,11 +123,9 @@ MonoBehaviour:
   - customerModel: {fileID: 1986430114044108516}
     customerOutline: {fileID: 1448477364520883675}
     customerAnimator: {fileID: 1481369048983390877}
-    isMale: 1
   - customerModel: {fileID: 2311981440701223623}
     customerOutline: {fileID: 1150539086831136906}
     customerAnimator: {fileID: 4056236225785215666}
-    isMale: 0
 --- !u!114 &5838437348996743918
 MonoBehaviour:
   m_ObjectHideFlags: 0
