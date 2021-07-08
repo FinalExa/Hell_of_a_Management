@@ -69,7 +69,6 @@ using UnityEngine;
             yield return new WaitForSeconds(1);
             loadingScreen.SetActive(false);
             isLoading = false;
-            Timer.ActivateTimer();
             ui_Animator.SetTrigger("SceneChanged");
         }
     }

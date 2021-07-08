@@ -4,6 +4,10 @@ public class SoulFlying : SoulState
     public SoulFlying(SoulStateMachine soulStateMachine) : base(soulStateMachine)
     {
     }
+    public override void Start()
+    {
+        _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
+    }
     public override void StateUpdate()
     {
         if (!_soulStateMachine.soulController.soulReferences.soulThrowableObject.isNotGrounded) StopFlight();

@@ -11,6 +11,7 @@ namespace HOM
         {
             animator.SetBool("Paused", false);
             GUIHandler.ActivatesMenu("Clock");
+            Timer.ActivateTimer();
             GUIHandler.ActivatesMenu("ToDoList");
         }
     }

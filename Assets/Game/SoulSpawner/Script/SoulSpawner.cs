@@ -39,7 +39,7 @@ public class SoulSpawner : Spawner
         Vector3 positionToSpawn;
         float xFixedSize = thisTrigger.size.x / 2 - 1;
         float zFixedSize = thisTrigger.size.z / 2 - 1;
-        positionToSpawn = new Vector3(Random.Range(-xFixedSize, xFixedSize), 0f, Random.Range(-zFixedSize, zFixedSize));
+        positionToSpawn = new Vector3(Random.Range(-xFixedSize, xFixedSize) + thisTrigger.center.x, 0f, Random.Range(-zFixedSize, zFixedSize) + thisTrigger.center.z);
         sc.gameObject.transform.localPosition = positionToSpawn;
     }
     private void SetupSoul(int indexInObjectsList, SoulController sc)
@@ -47,6 +47,8 @@ public class SoulSpawner : Spawner
         int soulIndex;
         if (indexInObjectsList < sc.soulTypes.Length * soulsPerType) soulIndex = indexInObjectsList / soulsPerType;
         else soulIndex = Random.Range(0, sc.soulTypes.Length);
+        sc.gameObject.SetActive(true);
+        sc.soulReferences.soulAnimations.animator = sc.soulTypes[soulIndex].soulAnimator;
         sc.thisSoulTypeIndex = soulIndex;
         sc.soulReferences.highlightable.thisGraphicsObject = sc.soulTypes[soulIndex].soulMeshContainer;
         sc.soulReferences.highlightable.outline = sc.soulTypes[soulIndex].soulModelOutline;

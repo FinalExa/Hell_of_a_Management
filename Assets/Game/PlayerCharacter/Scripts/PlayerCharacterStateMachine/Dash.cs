@@ -11,6 +11,7 @@ public class Dash : PlayerState
 
     public override void Start()
     {
+        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         Cooldown cooldown = _playerCharacter.playerController.playerReferences.cooldown;
         if (!cooldown.cooldowns.ContainsKey(Cooldown.CooldownType.Dash)) DashSetup();
         else Transitions();

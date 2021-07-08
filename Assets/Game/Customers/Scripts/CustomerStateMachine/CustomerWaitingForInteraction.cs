@@ -1,19 +1,26 @@
 ﻿using UnityEngine;
 public class CustomerWaitingForInteraction : CustomerState
 {
+
     public CustomerWaitingForInteraction(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
     }
 
     public override void Start()
     {
+        _customerStateMachine.customerController.customerReferences.animations.AnimatorStateUpdate(this.ToString());
         _customerStateMachine.customerController.thisNavMeshAgent.enabled = false;
         GenerateOrder();
     }
 
     public override void StateUpdate()
     {
-        if (_customerStateMachine.customerController.interactionReceived) GoToWaitingForOrder();
+        if (_customerStateMachine.customerController.interactionReceived && _customerStateMachine.customerController.customerReferences.customerData.activeOrders < _customerStateMachine.customerController.customerReferences.customerData.maxActiveOrdersAtATime)
+        {
+
+            _customerStateMachine.customerController.customerReferences.customerData.activeOrders++;
+            GoToWaitingForOrder();
+        }
     }
 
     private void GenerateOrder()
@@ -21,13 +28,13 @@ public class CustomerWaitingForInteraction : CustomerState
         CustomerController customerController = _customerStateMachine.customerController;
         float totalProbability = CalculateTotalProbability();
         float roll = Random.Range(0, totalProbability + 1);
-        int orderSize = CheckForRollResult(totalProbability, roll);
+        int orderSize = CheckForRollResult(roll);
         customerController.chosenType = customerController.possibleTypes[Random.Range(0, customerController.possibleTypes.Length)];
         for (int i = 0; i < orderSize; i++)
         {
             customerController.chosenIngredients.Add(customerController.possibleIngredients[Random.Range(0, customerController.possibleIngredients.Length)]);
         }
-        customerController.thisTable.AssignOrderToTable(customerController.thisTableId, customerController);
+        customerController.thisTable.AssignOrderToTable(customerController.thisTableSeatId, customerController);
     }
 
     private float CalculateTotalProbability()
@@ -41,7 +48,7 @@ public class CustomerWaitingForInteraction : CustomerState
         return totalProbability;
     }
 
-    private int CheckForRollResult(float totalProbability, float roll)
+    private int CheckForRollResult(float roll)
     {
         CustomerData customerData = _customerStateMachine.customerController.customerReferences.customerData;
         int rollResult = 0;

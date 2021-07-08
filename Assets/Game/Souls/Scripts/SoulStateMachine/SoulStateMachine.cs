@@ -11,11 +11,5 @@ public class SoulStateMachine : StateMachine
     public override void SetState(State state)
     {
         base.SetState(state);
-        soulController.soulReferences.soulAnimations.UpdateAnimatorValues();
-    }
-
-    public void StateNamePrint()
-    {
-        print(stateRef);
     }
 }
