@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 94225614841390228}
   - component: {fileID: 6826761888702464984}
   - component: {fileID: 7845207312148664838}
-  - component: {fileID: 3371889578214040557}
+  - component: {fileID: 7061543828600889953}
   - component: {fileID: 8490081029144132567}
   - component: {fileID: 5028165272920022856}
   m_Layer: 2
@@ -335,7 +335,7 @@ MonoBehaviour:
   actualSpeed: 0
   objectClicked: {fileID: 0}
   selectedHand: 0
---- !u!114 &3371889578214040557
+--- !u!114 &7061543828600889953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -350,9 +350,7 @@ MonoBehaviour:
   waitForAnimation: 0
   animator: {fileID: 3957953130347433435}
   stateMachineToRead: {fileID: 1673490640784394817}
-  statesToExclude:
-  - Hands
-  - Interact
+  statesToExclude: []
 --- !u!54 &8490081029144132567
 Rigidbody:
   m_ObjectHideFlags: 0

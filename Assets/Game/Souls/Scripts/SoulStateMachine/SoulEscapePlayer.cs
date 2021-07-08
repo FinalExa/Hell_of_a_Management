@@ -9,6 +9,7 @@ public class SoulEscapePlayer : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsEscapingPlayer(_soulStateMachine.soulController);
         SetupEscape(false);
     }

@@ -1,25 +1,23 @@
 ﻿public class PlayerAnimations : Animations
 {
-    PlayerCharacter playerCharacter;
+    PlayerController playerController;
     private void Awake()
     {
-        PlayerCharacter.playerStateChanged += UpdateAnimatorValues;
         PlayerAnimationsBehaviour.onAnimationEnd += AnimationIsOver;
-        playerCharacter = this.gameObject.GetComponent<PlayerCharacter>();
+        playerController = this.gameObject.GetComponent<PlayerController>();
     }
-    public override void AnimatorStateUpdate()
+    public void PlayerAnimatorStateUpdate(string statePassed)
     {
         HandsChecks();
-        base.AnimatorStateUpdate();
+        AnimatorStateUpdate(statePassed);
     }
     private void HandsChecks()
     {
-        PlayerController playerController = playerCharacter.playerController;
-        ActiveHand(playerController);
-        HandsStatus(playerController);
+        ActiveHand();
+        HandsStatus();
     }
 
-    private void ActiveHand(PlayerController playerController)
+    private void ActiveHand()
     {
         if (playerController.selectedHand == PlayerController.SelectedHand.Left && !animator.GetBool("LeftHandSelected"))
         {
@@ -32,7 +30,7 @@
             animator.SetBool("RightHandSelected", true);
         }
     }
-    private void HandsStatus(PlayerController playerController)
+    private void HandsStatus()
     {
         if (!playerController.LeftHandOccupied && !playerController.RightHandOccupied && !animator.GetBool("HandsFree"))
         {
