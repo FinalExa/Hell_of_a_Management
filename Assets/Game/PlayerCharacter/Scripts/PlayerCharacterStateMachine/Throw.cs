@@ -7,7 +7,7 @@ public class Throw : PlayerState
     }
     public override void Start()
     {
-        _playerCharacter.playerController.playerReferences.playerAnimations.AnimatorStateUpdate(this.ToString());
+        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         clickedPos = _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().point;
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = false;
         _playerCharacter.playerController.playerReferences.playerRb.velocity = Vector3.zero;

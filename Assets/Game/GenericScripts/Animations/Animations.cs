@@ -3,7 +3,7 @@
 public class Animations : MonoBehaviour
 {
     [HideInInspector] public bool waitForAnimation;
-    [SerializeField] public Animator animator;
+    public Animator animator;
     [SerializeField] protected StateMachine stateMachineToRead;
     protected string actualState;
 

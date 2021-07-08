@@ -6,7 +6,7 @@ public class Moving : PlayerState
     }
     public override void Start()
     {
-        _playerCharacter.playerController.playerReferences.playerAnimations.AnimatorStateUpdate(this.ToString());
+        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = true;
         UpdateSpeedValue();
     }
