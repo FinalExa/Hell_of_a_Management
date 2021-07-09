@@ -22,11 +22,6 @@ public class SoulSpawner : Spawner
     {
         objectsToInstantiate = (int)(((thisTrigger.size.x - 1) * (thisTrigger.size.z - 1)) / 3);
     }
-
-    private void SpawnSouls()
-    {
-        ActivateObjects();
-    }
     public override void ObjectActivatedSetup(int indexInObjectsList)
     {
         SoulController sc = (SoulController)objects[indexInObjectsList];
@@ -67,7 +62,7 @@ public class SoulSpawner : Spawner
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) SpawnSouls();
+        if (other.CompareTag("Player")) ActivateObjects();
     }
     private void OnTriggerExit(Collider other)
     {
