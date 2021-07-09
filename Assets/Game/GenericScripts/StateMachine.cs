@@ -16,8 +16,8 @@ public abstract class StateMachine : MonoBehaviour
     {
         _state.StateUpdate();
     }
-    private void FixedUpdate()
+    /*private void FixedUpdate()
     {
         _state.StatePhysicsUpdate();
-    }
+    }*/
 }

@@ -44,7 +44,7 @@ public abstract class Spawner : MonoBehaviour
             {
                 ObjectActivatedSetup(i);
                 objects[i].gameObject.SetActive(true);
-                activeObjects.Add(objects[i]);
+                if (!activeObjects.Contains(objects[i])) activeObjects.Add(objects[i]);
                 countSpawnedObjects++;
             }
             if (countSpawnedObjects == objectsToSpawn) break;
