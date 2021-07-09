@@ -60,7 +60,6 @@ public class SoulController : MonoBehaviour
         if ((thisPos.x <= storageRoomPos.x + storageRoom.size.x) && (thisPos.x >= storageRoomPos.x - storageRoom.size.x)) xTrue = true;
         if ((thisPos.z <= storageRoomPos.z + storageRoom.size.z) && (thisPos.z >= storageRoomPos.z - storageRoom.size.z)) zTrue = true;
         if (xTrue && zTrue) isInside = true;
-        print(isInside);
         return isInside;
     }
     private void OnTriggerExit(Collider other)
