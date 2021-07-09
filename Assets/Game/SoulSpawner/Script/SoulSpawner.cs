@@ -17,7 +17,6 @@ public class SoulSpawner : Spawner
     {
         CalculateObjectsToInstantiate();
         base.Start();
-        DeactivateObjects();
     }
     private void CalculateObjectsToInstantiate()
     {
