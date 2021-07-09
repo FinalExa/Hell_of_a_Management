@@ -18,9 +18,9 @@ MonoBehaviour:
   - probabilityOfThisOrderSize: 80
     scoreGivenByThisOrderSize: 100
   - probabilityOfThisOrderSize: 35
-    scoreGivenByThisOrderSize: 200
+    scoreGivenByThisOrderSize: 250
   - probabilityOfThisOrderSize: 5
-    scoreGivenByThisOrderSize: 300
-  maxActiveOrdersAtATime: 2
+    scoreGivenByThisOrderSize: 400
+  maxActiveOrdersAtATime: 3
   activeOrders: 0
   timeBetweenSpawns: 5
