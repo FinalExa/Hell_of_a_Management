@@ -165,7 +165,7 @@ using System;
             if (surface.Type == SurfaceType.ICE) OnIcySurfaceCreated?.Invoke(self, surface);
             else if (surface.Type == SurfaceType.MUD) OnMudSurfaceCreated?.Invoke(self, surface);
         }
-        public static void GeneratesSurfaceFromThrownPlate(SurfaceType type, Transform plate)
+        public void GeneratesSurfaceFromThrownPlate(SurfaceType type, Transform plate)
         {
             SurfaceController surface = null;
             switch(type)
