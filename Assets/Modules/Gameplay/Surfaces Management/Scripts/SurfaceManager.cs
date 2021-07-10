@@ -107,7 +107,7 @@ using System;
             spots = FindObjectsOfType<SurfaceTarget>();
         }
         
-        public static void ActivatesSurfaceFromSurfaceTarget(SurfaceType type)
+        public void ActivatesSurfaceFromSurfaceTarget(SurfaceType type)
         {
             /** 
              * PLACMENT LOGIC

@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   size: {x: 0.5, y: 0, z: 0.5}
+  playerData: {fileID: 11400000, guid: 311653c0f595efe4b9bf12720d42eab5, type: 2}
 --- !u!135 &3971370852153708219
 SphereCollider:
   m_ObjectHideFlags: 0

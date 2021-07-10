@@ -42,14 +42,10 @@ public class CustomerWaitingForOrder : CustomerState
 
     private void RollForTerrain()
     {
-        int roll = UnityEngine.Random.Range(1, 101);
-        if (roll < _customerStateMachine.customerController.customerReferences.customerData.customerGenerateTerrainProbability)
-        {
-            if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish)
-                SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.MUD, _customerStateMachine.gameObject.transform);
-            else if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Drink)
-                SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.ICE, _customerStateMachine.gameObject.transform);
-        }
+        if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish)
+            SurfaceManager.self.ActivatesSurfaceFromSurfaceTarget(SurfaceManager.SurfaceType.MUD);
+        else if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Drink)
+            SurfaceManager.self.ActivatesSurfaceFromSurfaceTarget(SurfaceManager.SurfaceType.ICE);
     }
     private void GoToGoToLocation()
     {

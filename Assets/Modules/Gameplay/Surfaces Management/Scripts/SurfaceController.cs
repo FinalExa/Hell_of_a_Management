@@ -10,6 +10,8 @@ using DG.Tweening;
         [SerializeField] Vector3 size = new Vector3(0.2f, 0, 0.2f);
         public Vector3 Size => size;
 
+        public PlayerData playerData;
+
         /// <summary>
         /// The referred surface target where this surface is placed
         /// </summary>
@@ -18,56 +20,20 @@ using DG.Tweening;
         #region Events
         public delegate void SurfaceEventHandler(SurfaceController sender, GameObject obj, SurfaceManager.SurfaceType type);
 
-        /// <summary>
-        /// Event called when an object moves into a surface
-        /// </summary>
-        public static event SurfaceEventHandler OnSurface;
-        /// <summary>
-        /// Event called when an object moves into a slippery surface
-        /// </summary>
-        public static event SurfaceEventHandler OnSlipperySurface;
-        /// <summary>
-        /// Evetn called whena an object moves into a slowery surface
-        /// </summary>
-        public static event SurfaceEventHandler OnSlowerySurface;
-
-        /// <summary>
-        /// Event called when the player hits a surface
-        /// </summary>
-        public static event SurfaceEventHandler OnPlayerHitSurface;
-        /// <summary>
-        /// Event called when a player hits a slippery surface;
-        /// </summary>
-        public static event SurfaceEventHandler OnPlayerHitSlipperySurface;
-        /// <summary>
-        /// Event called when a player hits a slowery surface
-        /// </summary>
-        public static event SurfaceEventHandler OnPlayerHitSlowerySurface;
         #endregion
 
         #region Unity Callbacks
-        protected virtual void OnTriggerEnter(Collider other)
-        {
-            OnSurface?.Invoke(this, other.gameObject, Type);
-            if(type == SurfaceManager.SurfaceType.ICE)
-            {
-                OnSlipperySurface?.Invoke(this, other.gameObject, Type);
-            }
-            else if(type == SurfaceManager.SurfaceType.MUD)
-            {
-                OnSlowerySurface?.Invoke(this, other.gameObject, Type);
-            }
-
-            
+        void OnTriggerEnter(Collider other)
+        {            
             if (other.tag == "Player")
             {
                 switch (type)
                 {
                     case SurfaceManager.SurfaceType.MUD:
-                    //Attiva muovimento Mud
+                    playerData.currentMovementSpeed = playerData.slowMovementSpeed;
                         break;
                     case SurfaceManager.SurfaceType.ICE:
-                    //Attiva muovimento Ice
+                    playerData.currentMovementSpeed = playerData.fastMovementSpeed;
                         break;
                 }
             }
@@ -75,9 +41,8 @@ using DG.Tweening;
         protected virtual void OnTriggerExit(Collider coll)
         {
             if (coll.tag == "Player")
-            {
-                //Reimposta muovimento Default
-            }
+                playerData.currentMovementSpeed = playerData.defaultMovementSpeed;
+
         }
         #endregion
 

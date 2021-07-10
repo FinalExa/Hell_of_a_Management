@@ -14,6 +14,7 @@ public class PlayerReferences : MonoBehaviour
 
     private void Awake()
     {
+        playerData.currentMovementSpeed = playerData.defaultMovementSpeed;
         rotation = FindObjectOfType<Rotation>();
         playerInputs = this.gameObject.GetComponent<PlayerInputs>();
         objectsOnMouse = FindObjectOfType<ObjectsOnMouse>();

@@ -21,7 +21,7 @@ public class Moving : PlayerState
     {
         PlayerData playerData = _playerCharacter.playerController.playerReferences.playerData;
         PlayerController playerController = _playerCharacter.playerController;
-        playerController.actualSpeed = playerData.movementSpeed - (_playerCharacter.playerController.leftHandWeight + _playerCharacter.playerController.rightHandWeight);
+        playerController.actualSpeed = playerData.currentMovementSpeed - (_playerCharacter.playerController.leftHandWeight + _playerCharacter.playerController.rightHandWeight);
         if (playerController.actualSpeed < playerData.minSpeedValue) playerController.actualSpeed = playerData.minSpeedValue;
     }
     private void Movement()
