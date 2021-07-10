@@ -24,3 +24,4 @@ MonoBehaviour:
   maxActiveOrdersAtATime: 2
   activeOrders: 1
   timeBetweenSpawns: 4
+  customerGenerateTerrainProbability: 70
