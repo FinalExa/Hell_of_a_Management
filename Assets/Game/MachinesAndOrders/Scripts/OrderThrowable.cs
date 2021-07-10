@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 public class OrderThrowable : ThrowableObject
 {
+    public static Action<OrdersData.OrderTypes, Vector3> orderFallenDown;
+    private Order order;
     private bool isLaunched;
     private bool isGrounded;
 
+    public override void Awake()
+    {
+        base.Awake();
+        order = this.gameObject.GetComponent<Order>();
+    }
     public override void Start()
     {
         base.Start();
@@ -22,7 +30,7 @@ public class OrderThrowable : ThrowableObject
     private void LandOnGround()
     {
         isLaunched = false;
-        print("Generate Terrain Wrong Throw");
+        orderFallenDown(order.thisOrderType, this.gameObject.transform.position);
     }
 
     public override void OnCollisionEnter(Collision collision)
