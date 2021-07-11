@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2383c930d6efd54ea9e4300b61213d7, type: 3}
   m_Name: SoulSpawnerData
   m_EditorClassIdentifier: 
-  objectsToSpawn: 10
+  objectsToSpawn: 30
