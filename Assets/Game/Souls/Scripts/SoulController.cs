@@ -32,6 +32,10 @@ public class SoulController : MonoBehaviour
         thisNavMeshAgent.speed = soulReferences.soulData.soulMovementSpeed;
         thisNavMeshAgent.acceleration = soulReferences.soulData.soulAcceleration;
     }
+    private void OnDisable()
+    {
+        isInsideExitDoorCollider = false;
+    }
     public void DeactivateAllSoulModels()
     {
         for (int i = 0; i < soulTypes.Length; i++)
