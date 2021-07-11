@@ -334,7 +334,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d7316bfcb3a74b41809ce3d259fc4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInsideStorageRoom: 0
   collidedWithOther: 0
   isInsideExitDoorCollider: 0
   thisNavMeshAgent: {fileID: 7246138982620699378}
@@ -342,6 +341,7 @@ MonoBehaviour:
   playerIsInRange: {fileID: 0}
   soulReferences: {fileID: 0}
   exit: {fileID: 0}
+  storageRoom: {fileID: 0}
   soulTypes:
   - soulColor: 0
     soulMainModelObject: {fileID: 4857783040482557073}
@@ -444,10 +444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd2d13e5ac352945ab2c8cd5aa866e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitForAnimation: 0
   animator: {fileID: 0}
+  waitForAnimation: 0
   stateMachineToRead: {fileID: 7255005166623741164}
-  statesToExclude: []
 --- !u!135 &8768027527686475258
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -495,7 +494,7 @@ NavMeshAgent:
   m_Height: 0.7
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 1
+  m_ObstacleAvoidanceType: 3
 --- !u!54 &527291455377808624
 Rigidbody:
   m_ObjectHideFlags: 0
