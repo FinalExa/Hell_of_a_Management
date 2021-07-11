@@ -52,7 +52,7 @@ public class SoulEscapePlayer : SoulState
     }
     private void GoToGrabbed()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.isAttachedToHand)
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand)
         {
             _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
         }
