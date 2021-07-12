@@ -8,6 +8,7 @@ public class SoulGrabbed : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsGrabbed(_soulStateMachine.soulController);
         if (_soulStateMachine.soulController.thisNavMeshAgent.isOnNavMesh) _soulStateMachine.soulController.thisNavMeshAgent.isStopped = true;

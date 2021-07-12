@@ -384,6 +384,7 @@ MonoBehaviour:
   soulThrowableObject: {fileID: 0}
   highlightable: {fileID: 0}
   soulAnimations: {fileID: 0}
+  playerInRange: {fileID: 0}
   soulData: {fileID: 11400000, guid: 5e189b5352d206644b4fcbae8aff4615, type: 2}
 --- !u!114 &1096875990175124523
 MonoBehaviour:
@@ -590,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4629796291944bc4ca41ba52993a5cab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisTrigger: {fileID: 2474038679515232444}
 --- !u!65 &2474038679515232444
 BoxCollider:
   m_ObjectHideFlags: 0
