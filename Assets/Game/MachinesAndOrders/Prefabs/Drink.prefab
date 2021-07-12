@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8860357294858953887}
   - component: {fileID: 5300032733128147604}
   - component: {fileID: 2666093287981000013}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Drink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwableObjectData: {fileID: 11400000, guid: 48014ad405e2a6144a72ee177a920a5b, type: 2}
   thisGraphicsObject: {fileID: 5276451242744232870}
-  isAttachedToHand: 0
   isFlying: 0
   selfRB: {fileID: 0}
   parentObjectTag: GenericObjectsContainer
@@ -153,7 +152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2197848775440388281}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,6 +244,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}

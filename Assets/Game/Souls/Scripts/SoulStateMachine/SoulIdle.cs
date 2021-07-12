@@ -9,6 +9,7 @@ public class SoulIdle : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = true;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsIdle(_soulStateMachine.soulController);
         StopMovements();
@@ -39,7 +40,7 @@ public class SoulIdle : SoulState
     }
     private void GoToGrabbed()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.isAttachedToHand) _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand) _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
     }
     private void GoToEscapeThePlayer()
     {

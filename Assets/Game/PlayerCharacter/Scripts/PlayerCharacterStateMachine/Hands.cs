@@ -8,7 +8,7 @@ public class Hands : PlayerState
 
     public override void Start()
     {
-        _playerCharacter.playerController.objectClicked = _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().collider;
+        _playerCharacter.playerController.objectClicked = _playerCharacter.playerController.playerReferences.objectsOnMouse.PassPointedObject().GetComponent<Collider>();
         CheckHandAction(_playerCharacter.playerController.selectedHand);
     }
 
