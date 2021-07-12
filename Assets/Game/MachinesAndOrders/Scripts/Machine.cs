@@ -23,6 +23,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
     {
         if (source.soulReferences.soulThrowableObject.isFlying && recipe.Count < recipeMaxLimit)
         {
+            AudioManager.instance.Play("Soul_Poof");
             recipe.Add(ingredientType);
             source.gameObject.SetActive(false);
             source.transform.localPosition = Vector3.zero;

@@ -46,43 +46,43 @@ MonoBehaviour:
   sounds:
   - name: DefaultSound
     clip: {fileID: 8300000, guid: 2e461921d46029c43b988798752740ea, type: 3}
-    volume: 0.15
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Machine_Soul_1_2
     clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Drink_LastSoul
     clip: {fileID: 8300000, guid: 9763dbace3bbf8a438a9e590d314451f, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Dish_LastSoul
     clip: {fileID: 8300000, guid: 4afd7d4e87c57dc43a220832441e4478, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mop_Drop
     clip: {fileID: 8300000, guid: 0301c1bb620ebbb49b90c5ed9aaece46, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mop_Throw_Sciaf
     clip: {fileID: 8300000, guid: 214d7c05f1c85b04dbfacd0434f609b3, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Soul_SurprisedScream
     clip: {fileID: 8300000, guid: 5306db2c83a65c543932b981628888e0, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -90,29 +90,29 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c05cd2b6158a78940bc7402c437f2037, type: 3}
     volume: 0
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - name: Soul_Poof
     clip: {fileID: 8300000, guid: cff1bad5e14f5ef468056dbcc0bd6f03, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Soul_JoyfulScream
     clip: {fileID: 8300000, guid: 8dce77000e01ba4488c241aa84761522, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Terrain_StickyWalkOn
     clip: {fileID: 8300000, guid: 2d7b3e0730ecc064796ca72ab5c21828, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Terrain_SlipperyWalkOn
     clip: {fileID: 8300000, guid: 9125838e3518cc84981bc9386255ecbd, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
