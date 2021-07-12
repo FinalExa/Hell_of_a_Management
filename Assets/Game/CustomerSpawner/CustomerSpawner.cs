@@ -55,12 +55,14 @@ public class CustomerSpawner : Spawner
         if (firstSpawn)
         {
             SpawnCustomer();
+            AudioManager.instance.Play("DefaultSound");
             firstSpawn = false;
         }
         if (spawnerTimer > 0) spawnerTimer -= Time.deltaTime;
         else
         {
             SpawnCustomer();
+            AudioManager.instance.Play("DefaultSound");
         }
     }
     private void SpawnCustomer()

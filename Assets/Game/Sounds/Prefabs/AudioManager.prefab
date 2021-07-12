@@ -88,9 +88,9 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Soul_DesperateScream
     clip: {fileID: 8300000, guid: c05cd2b6158a78940bc7402c437f2037, type: 3}
-    volume: 0
+    volume: 0.1
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
   - name: Soul_Poof
     clip: {fileID: 8300000, guid: cff1bad5e14f5ef468056dbcc0bd6f03, type: 3}
