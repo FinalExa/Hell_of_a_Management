@@ -8,7 +8,7 @@ public class Interact : PlayerState
 
     public override void Start()
     {
-        _playerCharacter.playerController.objectClicked = _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().collider;
+        _playerCharacter.playerController.objectClicked = _playerCharacter.playerController.playerReferences.objectsOnMouse.PassPointedObject().GetComponent<Collider>();
         CheckIfInteractableIsSelected();
     }
     private void CheckIfInteractableIsSelected()
