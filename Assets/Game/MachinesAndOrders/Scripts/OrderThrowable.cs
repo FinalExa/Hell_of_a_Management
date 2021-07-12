@@ -34,6 +34,7 @@ public class OrderThrowable : ThrowableObject
             SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.MUD, this.gameObject.transform);
         else if (order.thisOrderType == OrdersData.OrderTypes.Drink)
             SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.ICE, this.gameObject.transform);
+        Destroy(this.gameObject);
     }
 
     public override void OnCollisionEnter(Collision collision)

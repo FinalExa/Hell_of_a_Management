@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerMudSurfaceSpawnPercentage: 30
   customerIcySurfaceSpawnPercentage: 30
-  mudSurfaceSpawnFromDishPercentage: 30
-  icySurfaceSpawnFromDrinkPercentage: 30
+  mudSurfaceSpawnFromDishPercentage: 100
+  icySurfaceSpawnFromDrinkPercentage: 100

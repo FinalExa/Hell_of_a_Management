@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static Action changeMovementData;
     [HideInInspector] public PlayerReferences playerReferences;
     public List<Collider> throwablesInPlayerRange;
     public List<Collider> interactablesInPlayerRange;
@@ -24,5 +26,14 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         playerReferences = this.gameObject.GetComponent<PlayerReferences>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Terrain")) changeMovementData();
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Terrain")) changeMovementData();
     }
 }
