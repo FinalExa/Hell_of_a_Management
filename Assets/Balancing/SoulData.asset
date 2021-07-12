@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daafea5a44fca694f840d9576f3c9d85, type: 3}
   m_Name: SoulData
   m_EditorClassIdentifier: 
-  soulMovementSpeed: 10
-  soulAcceleration: 5
-  soulDetectionRange: 6
+  soulMovementSpeed: 8
+  soulAcceleration: 2.5
+  soulDetectionRange: 11
