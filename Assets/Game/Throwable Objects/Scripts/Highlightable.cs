@@ -2,7 +2,7 @@
 
 public class Highlightable : MonoBehaviour
 {
-    private MouseData mouseData;
+    private ObjectsOnMouse mouseData;
     private ThrowableObject throwableObject;
     private ICanBeInteracted interactable;
     public Outline outline;
@@ -10,7 +10,7 @@ public class Highlightable : MonoBehaviour
     public GameObject thisGraphicsObject;
     private void Awake()
     {
-        mouseData = FindObjectOfType<MouseData>();
+        mouseData = FindObjectOfType<ObjectsOnMouse>();
         if (this.gameObject.GetComponent<ThrowableObject>() != null) throwableObject = this.gameObject.GetComponent<ThrowableObject>();
         if (this.gameObject.GetComponent<ICanBeInteracted>() != null) interactable = this.gameObject.GetComponent<ICanBeInteracted>();
     }
@@ -22,23 +22,15 @@ public class Highlightable : MonoBehaviour
             outline.OutlineWidth = outlineData.outlineWidth;
         }
     }
-    void Update()
+
+    private void Update()
     {
         if (outline != null) HighlightSelf();
     }
 
     public void HighlightSelf()
     {
-        Collider collider = mouseData.GetMousePosition().collider;
-        if (throwableObject != null)
-        {
-            if (collider != null && GameObject.ReferenceEquals(collider.gameObject, this.gameObject) && throwableObject.IsInsidePlayerRange) outline.enabled = true;
-            else outline.enabled = false;
-        }
-        else
-        {
-            if (collider != null && GameObject.ReferenceEquals(collider.gameObject, this.gameObject) && interactable.IsInsidePlayerRange) outline.enabled = true;
-            else outline.enabled = false;
-        }
+        if (mouseData.pointedGameObject == this.gameObject) outline.enabled = true;
+        else outline.enabled = false;
     }
 }

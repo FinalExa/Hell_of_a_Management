@@ -6,6 +6,7 @@ public class SoulFlying : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
     }
     public override void StateUpdate()
@@ -27,11 +28,11 @@ public class SoulFlying : SoulState
     }
     private void GoToIdle()
     {
-        if (_soulStateMachine.soulController.isInsideStorageRoom || !_soulStateMachine.soulController.thisNavMeshAgent.isOnNavMesh) _soulStateMachine.SetState(new SoulIdle(_soulStateMachine));
+        if (_soulStateMachine.soulController.SoulIsInsideStorage() || !_soulStateMachine.soulController.thisNavMeshAgent.isOnNavMesh) _soulStateMachine.SetState(new SoulIdle(_soulStateMachine));
     }
     private void GoToEscapePub()
     {
-        if (!_soulStateMachine.soulController.isInsideStorageRoom) _soulStateMachine.SetState(new SoulEscapePub(_soulStateMachine));
+        if (!_soulStateMachine.soulController.SoulIsInsideStorage()) _soulStateMachine.SetState(new SoulEscapePub(_soulStateMachine));
     }
     #endregion
 }

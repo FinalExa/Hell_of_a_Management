@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Spawner : MonoBehaviour
@@ -43,8 +43,10 @@ public abstract class Spawner : MonoBehaviour
             if (!objects[i].gameObject.activeSelf)
             {
                 ObjectActivatedSetup(i);
-                objects[i].gameObject.SetActive(true);
-                activeObjects.Add(objects[i]);
+                if (!activeObjects.Contains(objects[i]))
+                {
+                    activeObjects.Add(objects[i]);
+                }
                 countSpawnedObjects++;
             }
             if (countSpawnedObjects == objectsToSpawn) break;
