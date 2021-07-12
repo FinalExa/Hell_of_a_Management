@@ -6,6 +6,7 @@ public class SoulFlying : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
     }
     public override void StateUpdate()
