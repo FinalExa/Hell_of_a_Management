@@ -43,4 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286a3df41601458449add30d14d02e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointedGameObject: {fileID: 0}
   mousePositionInSpace: {x: 0, y: 0, z: 0}
+  overlapSphereRadius: 0.5

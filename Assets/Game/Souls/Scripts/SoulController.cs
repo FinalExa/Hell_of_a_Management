@@ -35,6 +35,10 @@ public class SoulController : MonoBehaviour
     private void OnDisable()
     {
         isInsideExitDoorCollider = false;
+        collidedWithOther = false;
+        soulReferences.soulThrowableObject.isFlying = false;
+        soulReferences.soulThrowableObject.IsInsidePlayerRange = false;
+        soulReferences.soulThrowableObject.isNotGrounded = false;
     }
     public void DeactivateAllSoulModels()
     {

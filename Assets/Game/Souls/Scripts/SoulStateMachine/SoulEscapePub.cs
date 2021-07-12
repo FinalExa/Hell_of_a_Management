@@ -7,6 +7,7 @@ public class SoulEscapePub : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         SetupEscapePub();
     }
@@ -33,7 +34,7 @@ public class SoulEscapePub : SoulState
     }
     private void GoToGrabbed()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.isAttachedToHand) _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand) _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
     }
     #endregion
 }
