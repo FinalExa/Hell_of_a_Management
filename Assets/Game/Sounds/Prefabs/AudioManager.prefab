@@ -141,37 +141,19 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Customer_Enter
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
-    volume: 0.1
+    clip: {fileID: 8300000, guid: 902330b077bb729468c3fb59baf5c5c5, type: 3}
+    volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Customer_Consume_drink
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
+    clip: {fileID: 8300000, guid: 28cecc9703108aa44a4db9bfcd04acf3, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Customer_Consume_dish
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Customer_Enter
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Customer_Consume_drink
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
-    volume: 0.1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Customer_Consume_dish
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
+    clip: {fileID: 8300000, guid: c958e238266842748b2f85c81468afaa, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
