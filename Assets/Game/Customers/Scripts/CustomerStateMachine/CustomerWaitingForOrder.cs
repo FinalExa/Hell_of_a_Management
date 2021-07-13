@@ -38,8 +38,8 @@ public class CustomerWaitingForOrder : CustomerState
 
     private void PlaySoundDependingOnOrder()
     {
-        if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish) AudioManager.instance.Play("DefaultSound");
-        else AudioManager.instance.Play("DefaultSound");
+        if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish) AudioManager.instance.Play("Customer_Consume_dish");
+        else AudioManager.instance.Play("Customer_Consume_drink");
     }
 
     private void GoToGoToLocation()
