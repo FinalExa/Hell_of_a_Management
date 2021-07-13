@@ -90,10 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clock: {fileID: 1421140798828543259}
-  green: {r: 0, g: 1, b: 0, a: 1}
-  yellow: {r: 1, g: 1, b: 0, a: 1}
-  red: {r: 1, g: 0, b: 0, a: 1}
-  animationPercent: 25
+  green: {r: 0, g: 0.574, b: 0, a: 1}
+  yellow: {r: 0.894, g: 0.7971285, b: 0, a: 1}
+  red: {r: 0.84400004, g: 0, b: 0, a: 1}
+  animationPercent: 10
 --- !u!95 &741813368391100042
 Animator:
   serializedVersion: 3
