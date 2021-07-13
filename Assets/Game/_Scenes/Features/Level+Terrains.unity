@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 555c76bf64e506c40be66ee4ee799683, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c7c3ad47aa103204a803dde1711d881a, type: 2}
 --- !u!1001 &30617163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 755477328}
   - component: {fileID: 755477327}
   - component: {fileID: 755477326}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wall (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2050,7 +2050,7 @@ GameObject:
   - component: {fileID: 1090485853}
   - component: {fileID: 1090485852}
   - component: {fileID: 1090485851}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wall (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2968,7 +2968,7 @@ GameObject:
   - component: {fileID: 1284359159}
   - component: {fileID: 1284359158}
   - component: {fileID: 1284359157}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wall (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3060,7 +3060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1307768734}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3709,7 +3709,7 @@ GameObject:
   - component: {fileID: 1764010988}
   - component: {fileID: 1764010987}
   - component: {fileID: 1764010986}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wall (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
