@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 285202106212958197}
   - component: {fileID: 4732294554863856102}
   - component: {fileID: 8682722287322134972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DishMachine
   m_TagString: Machine
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3595027780339055074}
   - component: {fileID: 1448234807502011814}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Order Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4210874113479578387}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,6 +268,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8158073373026978372, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8158073373026978372, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
@@ -280,6 +284,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a750e8c95374fc1408cb217a6ae6c593, type: 2}
     - target: {fileID: -6451142449507150053, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6451142449507150053, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -291,6 +299,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a750e8c95374fc1408cb217a6ae6c593, type: 2}
+    - target: {fileID: -4462741712654703697, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -4462741712654703697, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
@@ -308,16 +320,32 @@ PrefabInstance:
       value: SM_Env_Furnace
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468665686063936124, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3468665686063936124, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3708624384278697742, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3708624384278697742, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254834536908116757, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4254834536908116757, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -327,6 +355,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a750e8c95374fc1408cb217a6ae6c593, type: 2}
+    - target: {fileID: 5794595847912300506, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5794595847912300506, guid: 4800b7c3fb49f044d819ac762472e1ef, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8

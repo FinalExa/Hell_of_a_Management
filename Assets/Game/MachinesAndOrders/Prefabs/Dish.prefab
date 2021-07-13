@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8860357294858953887}
   - component: {fileID: 4493137582267161765}
   - component: {fileID: 4004316034915004406}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwableObjectData: {fileID: 11400000, guid: 8eed06185090d2a4b8f2e591a466fa9f, type: 2}
   thisGraphicsObject: {fileID: 8960731281391228171}
-  isAttachedToHand: 0
   isFlying: 0
   selfRB: {fileID: 0}
   parentObjectTag: GenericObjectsContainer
@@ -135,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2197848775440388281}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,6 +350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_DirtyPlate1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa0fabe097ba8474b9d3c5e0166c60c4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa0fabe097ba8474b9d3c5e0166c60c4, type: 3}
 --- !u!4 &4898786216478894120 stripped
@@ -428,6 +431,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8fc927c064835b54d80397b6e3552969, type: 3}
       propertyPath: m_Name
       value: SM_Env_Plate
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8fc927c064835b54d80397b6e3552969, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fc927c064835b54d80397b6e3552969, type: 3}

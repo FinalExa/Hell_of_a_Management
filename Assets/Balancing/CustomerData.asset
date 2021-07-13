@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333b789d0dfae5c4e98b2e0d8cef6e00, type: 3}
   m_Name: CustomerData
   m_EditorClassIdentifier: 
-  customerMovementSpeed: 5
-  customerAcceleration: 5
+  customerMovementSpeed: 2.5
+  customerAcceleration: 4
   orderSizesProbabilitiesAndScores:
   - probabilityOfThisOrderSize: 80
     scoreGivenByThisOrderSize: 100
   - probabilityOfThisOrderSize: 35
-    scoreGivenByThisOrderSize: 200
+    scoreGivenByThisOrderSize: 250
   - probabilityOfThisOrderSize: 5
-    scoreGivenByThisOrderSize: 300
-  maxActiveOrdersAtATime: 2
-  activeOrders: 1
-  timeBetweenSpawns: 4
-  customerGenerateTerrainProbability: 70
+    scoreGivenByThisOrderSize: 400
+  maxActiveOrdersAtATime: 3
+  activeOrders: 0
+  timeBetweenSpawns: 5
