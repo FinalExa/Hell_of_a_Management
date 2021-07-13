@@ -117,7 +117,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Mc_Dash
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
+    clip: {fileID: 8300000, guid: be878cca27ff0a04daee83e5d6235f65, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
@@ -129,13 +129,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Mc_Grab
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
+    clip: {fileID: 8300000, guid: f6a6e3918c74cbc49a5ef021d7ce14d4, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mc_Throw
-    clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
+    clip: {fileID: 8300000, guid: df76a0b62a6181e4085ba0bfd8de52d2, type: 3}
     volume: 0.1
     pitch: 1
     loop: 0
