@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8673397429239722628}
-  m_Layer: 0
+  - component: {fileID: 2073293474582146245}
+  m_Layer: 2
   m_Name: Drinks_Shelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +152,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2073293474582146245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9050378383228372638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &69916211628755678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,6 +223,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f5c8a14dd9298f242940d525e6f2c350, type: 3}
       propertyPath: m_Name
       value: SM_Env_Apple (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f5c8a14dd9298f242940d525e6f2c350, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c8a14dd9298f242940d525e6f2c350, type: 3}
@@ -276,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &426764655116153975 stripped
@@ -341,6 +363,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -408,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &335005172284868569 stripped
@@ -473,6 +503,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -540,6 +574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &199962606674819542 stripped
@@ -605,6 +643,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -672,6 +714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &173648981842696302 stripped
@@ -737,6 +783,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -804,6 +854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &48025361493176455 stripped
@@ -869,6 +923,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (37)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -936,6 +994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &1041450064630768325 stripped
@@ -1001,6 +1063,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wine (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
@@ -1068,6 +1134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &921000973269341341 stripped
@@ -1133,6 +1203,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -1200,6 +1274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &819239969506522403 stripped
@@ -1265,6 +1343,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -1332,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &722954181502419381 stripped
@@ -1397,6 +1483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -1464,6 +1554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &712260422344745224 stripped
@@ -1529,6 +1623,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -1596,6 +1694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &1588390328380539123 stripped
@@ -1661,6 +1763,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -1728,6 +1834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &1493407737650756694 stripped
@@ -1793,6 +1903,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -1860,6 +1974,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &1356946841294129163 stripped
@@ -1925,6 +2043,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
       propertyPath: m_Name
       value: SM_Env_Scotch (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
@@ -1992,6 +2114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &1257468111527157202 stripped
@@ -2057,6 +2183,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -2124,6 +2254,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (48)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &1176115700446039603 stripped
@@ -2189,6 +2323,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
       propertyPath: m_Name
       value: SM_Env_Scotch (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
@@ -2256,6 +2394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &1795620325464905440 stripped
@@ -2321,6 +2463,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -2388,6 +2534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTube (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
 --- !u!4 &2559402762709827675 stripped
@@ -2453,6 +2603,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -2520,6 +2674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &2426372113225019273 stripped
@@ -2585,6 +2743,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wine (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
@@ -2652,6 +2814,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &3440137304691396136 stripped
@@ -2717,6 +2883,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7f597e6599a1806498aa1b9ac97cdf71, type: 3}
       propertyPath: m_Name
       value: SM_Env_Lamp_Wall (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7f597e6599a1806498aa1b9ac97cdf71, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f597e6599a1806498aa1b9ac97cdf71, type: 3}
@@ -2784,6 +2954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &3334888790747672574 stripped
@@ -2849,6 +3023,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -2916,6 +3094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (47)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &3118989938859804374 stripped
@@ -2981,6 +3163,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -3048,6 +3234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &3030283081799232802 stripped
@@ -3113,6 +3303,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -3180,6 +3374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &2982544102988145694 stripped
@@ -3245,6 +3443,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -3312,6 +3514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &2915918453258552629 stripped
@@ -3377,6 +3583,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -3444,6 +3654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &3994455353715637715 stripped
@@ -3509,6 +3723,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -3576,6 +3794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &3652399739030403134 stripped
@@ -3641,6 +3863,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -3708,6 +3934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTube (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
 --- !u!4 &4511982119978819619 stripped
@@ -3773,6 +4003,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -3840,6 +4074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &4534754076188716118 stripped
@@ -3905,6 +4143,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 19d6cb04ae37392409a14c391a64157b, type: 3}
       propertyPath: m_Name
       value: SM_Env_DisplayShelf (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 19d6cb04ae37392409a14c391a64157b, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19d6cb04ae37392409a14c391a64157b, type: 3}
@@ -3972,6 +4214,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (52)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &4324086793373849192 stripped
@@ -4037,6 +4283,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wine (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
@@ -4104,6 +4354,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &4210233593682448117 stripped
@@ -4169,6 +4423,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -4236,6 +4494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &5075438917428817229 stripped
@@ -4301,6 +4563,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -4368,6 +4634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &4903489001511321992 stripped
@@ -4433,6 +4703,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -4500,6 +4774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &4791166762338874130 stripped
@@ -4565,6 +4843,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wine (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
@@ -4632,6 +4914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &4672017906373124854 stripped
@@ -4697,6 +4983,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -4764,6 +5054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &5689894593123702480 stripped
@@ -4829,6 +5123,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -4896,6 +5194,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &5550706270035219374 stripped
@@ -4961,6 +5263,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
       propertyPath: m_Name
       value: SM_Env_Scotch (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
@@ -5028,6 +5334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &5495357431972651880 stripped
@@ -5093,6 +5403,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -5160,6 +5474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &5315472329093270434 stripped
@@ -5225,6 +5543,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -5292,6 +5614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &5217197861608758896 stripped
@@ -5357,6 +5683,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -5424,6 +5754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &6182329871573211044 stripped
@@ -5489,6 +5823,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -5556,6 +5894,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &5989958397132501362 stripped
@@ -5621,6 +5963,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -5688,6 +6034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Wine (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
 --- !u!4 &5950269488997314709 stripped
@@ -5753,6 +6103,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -5820,6 +6174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &5868196559032555695 stripped
@@ -5885,6 +6243,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
       propertyPath: m_Name
       value: SM_Env_Scotch (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
@@ -5952,6 +6314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (58)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &6829243670584254775 stripped
@@ -6017,6 +6383,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -6084,6 +6454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Whiskey (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
 --- !u!4 &6781238209141122908 stripped
@@ -6149,6 +6523,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -6216,6 +6594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &6575884375095776645 stripped
@@ -6281,6 +6663,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -6348,6 +6734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &7427060189306857834 stripped
@@ -6413,6 +6803,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wine (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
@@ -6480,6 +6874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &7454161910711007901 stripped
@@ -6545,6 +6943,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -6612,6 +7014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &7327642754250446583 stripped
@@ -6677,6 +7083,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -6744,6 +7154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &7974903825014774779 stripped
@@ -6809,6 +7223,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -6876,6 +7294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &7940126682488973916 stripped
@@ -6941,6 +7363,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -7008,6 +7434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &7783842790314539931 stripped
@@ -7073,6 +7503,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
       propertyPath: m_Name
       value: SM_Env_Cup (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
@@ -7140,6 +7574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &8577534138040171742 stripped
@@ -7205,6 +7643,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
       propertyPath: m_Name
       value: SM_Env_Whiskey (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74758d15f64459241b754a8b3ccb1ab9, type: 3}
@@ -7272,6 +7714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTube (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
 --- !u!4 &8431233495640031290 stripped
@@ -7337,6 +7783,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTube (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbf3f455b7693564d98301a018418027, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbf3f455b7693564d98301a018418027, type: 3}
@@ -7404,6 +7854,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Scotch (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
 --- !u!4 &8426218152076988875 stripped
@@ -7469,6 +7923,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -7536,6 +7994,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &8248622143468646067 stripped
@@ -7601,6 +8063,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
       propertyPath: m_Name
       value: SM_Env_Scotch (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
@@ -7668,6 +8134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Cup (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de170052ffc62b4419861e0db6436b39, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de170052ffc62b4419861e0db6436b39, type: 3}
 --- !u!4 &8134886462335053275 stripped
@@ -7733,6 +8203,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
       propertyPath: m_Name
       value: SM_Env_Liquor (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
@@ -7800,6 +8274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &9151705916318752916 stripped
@@ -7865,6 +8343,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
@@ -7932,6 +8414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_MetalTubeTrim (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5f03e5e2232df44bac378b904c8e5f9, type: 3}
 --- !u!4 &9039221745009115901 stripped
@@ -7997,6 +8483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
       propertyPath: m_Name
       value: SM_Env_Scotch (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca4dc54c32935e543b7a433265277e22, type: 3}
@@ -8064,6 +8554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Env_Liquor (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 424c616c6f188ce428a31372982286eb, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424c616c6f188ce428a31372982286eb, type: 3}
 --- !u!4 &8965762449633032097 stripped
@@ -8129,6 +8623,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
       propertyPath: m_Name
       value: SM_Env_Wine (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67e425989e96fd740b9f8b897103998c, type: 3}
