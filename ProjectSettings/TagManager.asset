@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Table
+  - SoulContainer
+  - StorageRoom
+  - Soul
+  - Machine
+  - ThrowableObject
+  - Customer
+  - CustomerSpawner
+  - Ground
+  - GenericObjectsContainer
+  - Exit
   layers:
   - Default
   - TransparentFX
@@ -11,7 +22,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - ThroughWall
   - 
   - 
   - 
