@@ -106,7 +106,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: InGame_Music
     clip: {fileID: 8300000, guid: aea766692c1f7d24593af192d7e0027e, type: 3}
-    volume: 0.1
+    volume: 0.01
     pitch: 1
     loop: 1
     source: {fileID: 0}
