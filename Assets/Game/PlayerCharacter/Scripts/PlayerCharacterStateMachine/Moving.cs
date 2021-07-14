@@ -6,6 +6,7 @@ public class Moving : PlayerState
     }
     public override void Start()
     {
+        AudioManager.instance.Play("Mc_Movement");
         _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = true;
         UpdateSpeedValue();
@@ -58,13 +59,21 @@ public class Moving : PlayerState
     #region ToIdleState
     private void GoToIdleState(PlayerInputs playerInputs)
     {
-        if (playerInputs.MovementInput == Vector3.zero) _playerCharacter.SetState(new Idle(_playerCharacter));
+        if (playerInputs.MovementInput == Vector3.zero)
+        {
+            StopMovementSound();
+            _playerCharacter.SetState(new Idle(_playerCharacter));
+        }
     }
     #endregion
     #region ToDashState
     private void GoToDashState(PlayerInputs playerInputs)
     {
-        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied) _playerCharacter.SetState(new Dash(_playerCharacter));
+        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied)
+        {
+            StopMovementSound();
+            _playerCharacter.SetState(new Dash(_playerCharacter));
+        }
     }
     #endregion
     #region ToHandsState
@@ -72,6 +81,7 @@ public class Moving : PlayerState
     {
         if (playerInputs.LeftHandInput || playerInputs.RightHandInput)
         {
+            StopMovementSound();
             if (playerInputs.LeftHandInput) _playerCharacter.playerController.selectedHand = PlayerController.SelectedHand.Left;
             else _playerCharacter.playerController.selectedHand = PlayerController.SelectedHand.Right;
             _playerCharacter.SetState(new Hands(_playerCharacter));
@@ -81,8 +91,17 @@ public class Moving : PlayerState
     #region ToInteractState
     private void GoToInteractState(PlayerInputs playerInputs)
     {
-        if (playerInputs.InteractionInput) _playerCharacter.SetState(new Interact(_playerCharacter));
+        if (playerInputs.InteractionInput)
+        {
+            StopMovementSound();
+            _playerCharacter.SetState(new Interact(_playerCharacter));
+        }
     }
+
     #endregion
+    private void StopMovementSound()
+    {
+        AudioManager.instance.Stop("Mc_Movement");
+    }
     #endregion
 }
