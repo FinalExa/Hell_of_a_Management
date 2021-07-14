@@ -13,7 +13,11 @@ public class Dash : PlayerState
     {
         _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         Cooldown cooldown = _playerCharacter.playerController.playerReferences.cooldown;
-        if (!cooldown.cooldowns.ContainsKey(Cooldown.CooldownType.Dash)) DashSetup();
+        if (!cooldown.cooldowns.ContainsKey(Cooldown.CooldownType.Dash))
+        {
+            AudioManager.instance.Play("Mc_Dash");
+            DashSetup();
+        }
         else Transitions();
     }
     public override void StateUpdate()

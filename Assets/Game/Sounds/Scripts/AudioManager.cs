@@ -1,5 +1,4 @@
-using UnityEngine.Audio;
-using System;
+﻿using System;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -17,9 +16,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
         DontDestroyOnLoad(gameObject);
-
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -29,17 +26,29 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-
     }
 
-    public void Play (string name)
+    public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = SearchSound(name);
+        if (s.loop)
+            s.source.Play();
+        else
+            s.source.PlayOneShot(s.clip);
+    }
+    public void Stop(string name)
+    {
+        SearchSound(name).source.Stop();
+    }
+
+    public Sound SearchSound(string name)
+    {
+        Sound s = Array.Find(sounds, item => item.name == name);
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found!");
-            return;
+            return null;
         }
-        s.source.Play();
+        return s;
     }
 }
