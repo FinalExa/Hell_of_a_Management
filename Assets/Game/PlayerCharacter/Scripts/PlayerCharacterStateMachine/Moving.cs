@@ -101,7 +101,7 @@ public class Moving : PlayerState
     #endregion
     private void StopMovementSound()
     {
-        //AudioManager.instance.Stop("Mc_Throw");
+        AudioManager.instance.Stop("Mc_Movement");
     }
     #endregion
 }
