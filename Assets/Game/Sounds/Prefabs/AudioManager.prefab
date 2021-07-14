@@ -106,13 +106,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: InGame_Music
     clip: {fileID: 8300000, guid: aea766692c1f7d24593af192d7e0027e, type: 3}
-    volume: 0.01
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Menu_Music
     clip: {fileID: 8300000, guid: 81719608508619d4f8fe99d4c17836b6, type: 3}
-    volume: 0.01
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Customer_Enter
     clip: {fileID: 8300000, guid: 902330b077bb729468c3fb59baf5c5c5, type: 3}
-    volume: 0.01
+    volume: 0.005
     pitch: 1
     loop: 0
     source: {fileID: 0}
