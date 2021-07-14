@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8194548509548146645}
   m_Layer: 2
   m_Name: Wall_Corner_Single_Trim
-  m_TagString: Untagged
+  m_TagString: Occlusion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

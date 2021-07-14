@@ -21,7 +21,7 @@ public class ObjectsOnMouse : MonoBehaviour
     public void MouseRaycast()
     {
         ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        Physics.Raycast(ray, out hit, Mathf.Infinity, ~6);
+        Physics.Raycast(ray, out hit);
         mousePositionInSpace = hit.point;
         Collider[] objectsInMouseRange = Physics.OverlapSphere(mousePositionInSpace, overlapSphereRadius);
         objectsInMouseRange = objectsInMouseRange.OrderBy((d) => (d.transform.position - mousePositionInSpace).sqrMagnitude).ToArray();

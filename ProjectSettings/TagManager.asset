@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - GenericObjectsContainer
   - Exit
+  - Occlusion
   layers:
   - Default
   - TransparentFX
