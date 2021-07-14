@@ -31,11 +31,11 @@ public class UI_Clock : MonoBehaviour
 
     void UITimerChangeColor()
     {
-        if(Timer.self.currentTime >= (Timer.self.totaltime * 67) / 100)
+        if(Timer.self.currentTime >= (Timer.self.totaltime * 50) / 100)
             circle.color = green;
-        else if(Timer.self.currentTime >= (Timer.self.totaltime * 34) / 100 && Timer.self.currentTime <= (Timer.self.totaltime * 67) / 100)
+        else if(Timer.self.currentTime >= (Timer.self.totaltime * 25) / 100 && Timer.self.currentTime <= (Timer.self.totaltime * 67) / 100)
             circle.color = yellow;
-        else if (Timer.self.currentTime <= (Timer.self.totaltime * 33) / 100)
+        else if (Timer.self.currentTime <= (Timer.self.totaltime * 24) / 100)
             circle.color = red;
     }
 

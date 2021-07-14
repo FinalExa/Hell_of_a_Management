@@ -8,6 +8,7 @@ public class SoulGrabbed : SoulState
     }
     public override void Start()
     {
+        AudioManager.instance.Play("Soul_DesperateScream");
         _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsGrabbed(_soulStateMachine.soulController);

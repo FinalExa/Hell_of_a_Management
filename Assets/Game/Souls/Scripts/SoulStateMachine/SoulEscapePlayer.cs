@@ -9,6 +9,7 @@ public class SoulEscapePlayer : SoulState
     }
     public override void Start()
     {
+        AudioManager.instance.Play("Soul_SurprisedScream");
         _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = true;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsEscapingPlayer(_soulStateMachine.soulController);
