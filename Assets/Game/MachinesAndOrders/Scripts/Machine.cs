@@ -23,6 +23,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
     {
         if (source.soulReferences.soulThrowableObject.isFlying && recipe.Count < recipeMaxLimit)
         {
+            PlayMachineSound();
             recipe.Add(ingredientType);
             source.gameObject.SetActive(false);
             source.transform.localPosition = Vector3.zero;
@@ -31,8 +32,23 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
         }
     }
 
+    private void PlayMachineSound()
+    {
+        if (recipe.Count != recipeMaxLimit - 1) AudioManager.instance.Play("Machine_Soul_1_2");
+        else
+        {
+            PlayDependingOnType();
+        }
+    }
+
+    private void PlayDependingOnType()
+    {
+        if (thisOrder.name == "Dish") AudioManager.instance.Play("Dish_LastSoul");
+        else AudioManager.instance.Play("Drink_LastSoul");
+    }
     public void ProduceOrder()
     {
+        PlayDependingOnType();
         GameObject obj = Instantiate(thisOrder, orderOutputPosition.transform);
         obj.GetComponent<Order>().SetupOrderIngredients(recipe);
         recipe.Clear();
