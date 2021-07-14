@@ -7,6 +7,7 @@ public class SoulEscapePub : SoulState
     }
     public override void Start()
     {
+        _soulStateMachine.soulController.thisRigidbody.detectCollisions = false;
         _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         SetupEscapePub();
@@ -25,7 +26,11 @@ public class SoulEscapePub : SoulState
 
     private void CheckForEscapeSuccess()
     {
-        if (_soulStateMachine.soulController.isInsideExitDoorCollider) _soulStateMachine.gameObject.SetActive(false);
+        if (_soulStateMachine.soulController.isInsideExitDoorCollider)
+        {
+            _soulStateMachine.soulController.thisRigidbody.detectCollisions = true;
+            _soulStateMachine.gameObject.SetActive(false);
+        }
     }
     #region Transitions
     private void Transitions()
@@ -34,7 +39,11 @@ public class SoulEscapePub : SoulState
     }
     private void GoToGrabbed()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand) _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand)
+        {
+            _soulStateMachine.soulController.thisRigidbody.detectCollisions = true;
+            _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
+        }
     }
     #endregion
 }
