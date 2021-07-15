@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 public class PlayerOcclusionCheck : MonoBehaviour
 {
     private GameObject shader;
-    public static Action<bool> enteredOcclusion;
     [SerializeField] private List<BoxCollider> occlusionTagsDetected;
     private void Awake()
     {
