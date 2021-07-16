@@ -9,6 +9,7 @@ public class ObjectsOnMouse : MonoBehaviour
     [HideInInspector] public Vector3 mousePositionInSpace;
     private Camera mainCamera;
     [SerializeField] private float overlapSphereRadius;
+    [SerializeField] Collider[] objectsInMouseRange;
 
     public void Awake()
     {
@@ -18,13 +19,17 @@ public class ObjectsOnMouse : MonoBehaviour
     {
         MouseRaycast();
     }
-    public void MouseRaycast()
+    private void MouseRaycast()
     {
         ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out hit);
         mousePositionInSpace = hit.point;
-        Collider[] objectsInMouseRange = Physics.OverlapSphere(mousePositionInSpace, overlapSphereRadius);
+        objectsInMouseRange = Physics.OverlapSphere(mousePositionInSpace, overlapSphereRadius);
         objectsInMouseRange = objectsInMouseRange.OrderBy((d) => (d.transform.position - mousePositionInSpace).sqrMagnitude).ToArray();
+        DetectFirstObject();
+    }
+    private void DetectFirstObject()
+    {
         for (int i = 0; i < objectsInMouseRange.Length; i++)
         {
             IThrowable throwable = objectsInMouseRange[i].gameObject.GetComponent<IThrowable>();
@@ -36,10 +41,7 @@ public class ObjectsOnMouse : MonoBehaviour
                 check = true;
                 break;
             }
-            if (!check)
-            {
-                pointedGameObject = this.gameObject;
-            }
+            if (!check) pointedGameObject = this.gameObject;
         }
     }
     public RaycastHit GetMousePosition()

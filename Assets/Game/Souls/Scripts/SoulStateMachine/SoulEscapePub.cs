@@ -7,7 +7,6 @@ public class SoulEscapePub : SoulState
     }
     public override void Start()
     {
-        _soulStateMachine.soulController.thisRigidbody.detectCollisions = false;
         _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
         _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         SetupEscapePub();

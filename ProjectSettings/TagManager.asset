@@ -17,6 +17,7 @@ TagManager:
   - Exit
   - Occlusion
   - OcclusionShader
+  - Void
   layers:
   - Default
   - TransparentFX
