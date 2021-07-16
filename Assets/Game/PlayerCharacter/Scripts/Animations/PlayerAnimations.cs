@@ -1,22 +1,53 @@
-﻿public class PlayerAnimations : Animations
+﻿using UnityEngine;
+public class PlayerAnimations : Animations
 {
     PlayerController playerController;
+    PlayerCharacter playerCharacter;
+    [SerializeField] private float pauseAnimatorMaxTimer;
+    private float pauseAnimatorTimer;
+    private bool pauseAnimator;
+
     private void Awake()
     {
-        PlayerAnimationsBehaviour.onAnimationEnd += AnimationIsOver;
         playerController = this.gameObject.GetComponent<PlayerController>();
+        playerCharacter = this.gameObject.GetComponent<PlayerCharacter>();
+    }
+    private void Start()
+    {
+        pauseAnimator = false;
+        pauseAnimatorTimer = pauseAnimatorMaxTimer;
+    }
+    private void Update()
+    {
+        if (pauseAnimator) PauseAnimatorTimer();
+    }
+    private void PauseAnimatorTimer()
+    {
+        if (pauseAnimatorTimer > 0) pauseAnimatorTimer -= Time.deltaTime;
+        else
+        {
+            pauseAnimatorTimer = pauseAnimatorMaxTimer;
+            pauseAnimator = false;
+            PlayerAnimatorStateUpdate(playerCharacter.thisStateName);
+        }
+    }
+    public void PauseAnimator()
+    {
+        pauseAnimator = true;
     }
     public void PlayerAnimatorStateUpdate(string statePassed)
     {
-        HandsChecks();
-        AnimatorStateUpdate(statePassed);
+        if (!pauseAnimator)
+        {
+            HandsChecks();
+            AnimatorStateUpdate(statePassed);
+        }
     }
     private void HandsChecks()
     {
         ActiveHand();
         HandsStatus();
     }
-
     private void ActiveHand()
     {
         if (playerController.selectedHand == PlayerController.SelectedHand.Left && !animator.GetBool("LeftHandSelected"))

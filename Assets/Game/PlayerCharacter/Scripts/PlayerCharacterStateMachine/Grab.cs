@@ -10,16 +10,14 @@ public class Grab : PlayerState
         _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = false;
         _playerCharacter.playerController.playerReferences.playerRb.velocity = Vector3.zero;
-        _playerCharacter.playerController.playerReferences.playerAnimations.waitForAnimation = true;
         AudioManager.instance.Play("Mc_Grab");
         _playerCharacter.playerController.playerReferences.rotation.RotatePlayerToMousePosition();
+        _playerCharacter.playerController.playerReferences.playerAnimations.PauseAnimator();
     }
 
     public override void StateUpdate()
     {
-        PlayerAnimations playerAnimations = _playerCharacter.playerController.playerReferences.playerAnimations;
-        if (!playerAnimations.waitForAnimation)
-            CheckHand();
+        CheckHand();
     }
 
     #region Grab
