@@ -38,7 +38,7 @@ using UnityEngine;
                 case "Main Menu":
                 levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 0));
                     break;
-                case "Level":
+                case "LevelCleaned":
                 levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 1));
                     break;
             }    

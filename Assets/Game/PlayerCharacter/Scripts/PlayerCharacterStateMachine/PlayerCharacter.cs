@@ -2,10 +2,11 @@
 public class PlayerCharacter : StateMachine
 {
     [HideInInspector] public PlayerController playerController;
-
+    [HideInInspector] public string thisStateName;
     public override void SetState(State state)
     {
         base.SetState(state);
+        thisStateName = state.ToString();
     }
     private void Awake()
     {
