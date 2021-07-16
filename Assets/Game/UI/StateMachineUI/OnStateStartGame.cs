@@ -11,7 +11,7 @@ namespace HOM
         {
             AudioManager.instance.StopAllSounds();
             GUIHandler.DeactivatesMenu("Main Menu");
-            LevelManager.LoadLevel("Level");
+            LevelManager.LoadLevel("LevelCleaned");
         }
     }
 }
