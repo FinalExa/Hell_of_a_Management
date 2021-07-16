@@ -4,16 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Table
+  - SoulContainer
+  - StorageRoom
+  - Soul
+  - ThrowableObject
+  - Machine
+  - Customer
+  - CustomerSpawner
   - Ground
   - GenericObjectsContainer
+  - Occlusion
   - Exit
-  - Machine
-  - Table
-  - StorageRoom
-  - SoulContainer
-  - Soul
-  - CustomerSpawner
-  - Customer
+  - OcclusionShader
+  - Void
   - Terrain
   layers:
   - Default
@@ -22,7 +26,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - ThroughWall
   - 
   - 
   - 

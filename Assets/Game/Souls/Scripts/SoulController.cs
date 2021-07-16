@@ -10,6 +10,7 @@ public class SoulController : MonoBehaviour
     [HideInInspector] public SoulReferences soulReferences;
     [HideInInspector] public GameObject exit;
     [HideInInspector] public BoxCollider storageRoom;
+    private BoxCollider thisCollider;
     [System.Serializable]
     public struct SoulType
     {
@@ -23,6 +24,7 @@ public class SoulController : MonoBehaviour
     [HideInInspector] public int thisSoulTypeIndex;
     private void Awake()
     {
+        thisCollider = this.gameObject.GetComponent<BoxCollider>();
         soulReferences = this.gameObject.GetComponent<SoulReferences>();
         exit = GameObject.FindGameObjectWithTag("Exit");
         storageRoom = GameObject.FindGameObjectWithTag("StorageRoom").GetComponent<BoxCollider>();
@@ -47,7 +49,6 @@ public class SoulController : MonoBehaviour
             soulTypes[i].soulMainModelObject.SetActive(false);
         }
     }
-
     private void AttemptToEnterMachine(Collider other)
     {
         ICanUseIngredients canUseIngredients = other.GetComponent<ICanUseIngredients>();
@@ -65,18 +66,15 @@ public class SoulController : MonoBehaviour
         bool zTrue = false;
         Vector3 thisPos = this.gameObject.transform.position;
         Vector3 storageRoomPos = storageRoom.gameObject.transform.position;
-        if ((thisPos.x <= storageRoomPos.x + storageRoom.size.x) && (thisPos.x >= storageRoomPos.x - storageRoom.size.x)) xTrue = true;
-        if ((thisPos.z <= storageRoomPos.z + storageRoom.size.z) && (thisPos.z >= storageRoomPos.z - storageRoom.size.z)) zTrue = true;
+        if ((thisPos.x <= storageRoomPos.x + storageRoom.size.x / 2) && (thisPos.x >= storageRoomPos.x - storageRoom.size.x / 2)) xTrue = true;
+        if ((thisPos.z <= storageRoomPos.z + storageRoom.size.z / 2) && (thisPos.z >= storageRoomPos.z - storageRoom.size.z / 2)) zTrue = true;
         if (xTrue && zTrue) isInside = true;
         return isInside;
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Exit") && !other.CompareTag("Player")) isInsideExitDoorCollider = false;
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Soul")) collidedWithOther = true;
+        if (collision.gameObject.CompareTag("Void")) Physics.IgnoreCollision(thisCollider, collision.collider);
     }
     private void OnCollisionExit(Collision collision)
     {

@@ -10,6 +10,7 @@ namespace HOM
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             GUIHandler.ActivatesMenu("Main Menu");
+            AudioManager.instance.Play("Menu_Music");
         }
     }
 }

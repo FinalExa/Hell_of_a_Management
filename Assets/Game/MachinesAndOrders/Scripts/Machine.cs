@@ -35,10 +35,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
     private void PlayMachineSound()
     {
         if (recipe.Count != recipeMaxLimit - 1) AudioManager.instance.Play("Machine_Soul_1_2");
-        else
-        {
-            PlayDependingOnType();
-        }
+        else PlayDependingOnType();
     }
 
     private void PlayDependingOnType()

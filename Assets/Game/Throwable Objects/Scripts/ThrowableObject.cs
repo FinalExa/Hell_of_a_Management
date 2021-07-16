@@ -38,7 +38,6 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     {
         StopForce();
         IsAttachedToHand = true;
-        gameObject.layer = 2;
         ActivateConstraints();
         this.gameObject.transform.position = playerHand.transform.position;
         this.gameObject.transform.SetParent(playerHand.transform);
@@ -50,7 +49,6 @@ public class ThrowableObject : MonoBehaviour, IThrowable
         throwDistance = throwDistanceObtained;
         flightTime = flightTimeObtained;
         DeactivateConstraintsExceptGravity();
-        gameObject.layer = 0;
         this.gameObject.transform.SetParent(baseContainer.transform);
         IsAttachedToHand = false;
         physicsCollider.enabled = true;
@@ -91,7 +89,6 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     }
     public virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && IsAttachedToHand) Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), physicsCollider);
         if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Ground"))
         {
             StopForce();
