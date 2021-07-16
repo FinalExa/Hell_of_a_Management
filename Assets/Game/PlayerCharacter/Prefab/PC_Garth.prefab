@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
+  thisStateName: 
 --- !u!114 &94225614841390228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +351,7 @@ MonoBehaviour:
   animator: {fileID: 3957953130347433435}
   waitForAnimation: 0
   stateMachineToRead: {fileID: 1673490640784394817}
+  pauseAnimatorMaxTimer: 0.3
 --- !u!114 &5935098799575821376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4685641de467bc3498f2d4f5bfac1a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 0}
   occlusionTagsDetected: []
 --- !u!54 &8490081029144132567
 Rigidbody:
