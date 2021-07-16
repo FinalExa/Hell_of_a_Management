@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5a256a92c3047564b8a77bb2aec37211, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59c14efa9f56e5d4dae0392baf2edbfd, type: 2}
     - target: {fileID: 919132149155446097, guid: 5a256a92c3047564b8a77bb2aec37211, type: 3}
       propertyPath: m_Name
       value: SM_Env_Seperator_Column
@@ -160,6 +164,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cda26ef84bf294f4cbd091d64f6594f0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad99471f6b05b8f4eaf92d2afe7d1bbd, type: 2}
     - target: {fileID: 919132149155446097, guid: cda26ef84bf294f4cbd091d64f6594f0, type: 3}
       propertyPath: m_Name
       value: SM_Env_Seperator_SepMain
@@ -222,6 +230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a647adfc747236549b8a27bf7da2bcc5, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59c14efa9f56e5d4dae0392baf2edbfd, type: 2}
     - target: {fileID: 919132149155446097, guid: a647adfc747236549b8a27bf7da2bcc5, type: 3}
       propertyPath: m_Name
       value: SM_Env_Seperator_Extender

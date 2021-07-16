@@ -16,6 +16,7 @@ TagManager:
   - GenericObjectsContainer
   - Exit
   - Occlusion
+  - OcclusionShader
   layers:
   - Default
   - TransparentFX
