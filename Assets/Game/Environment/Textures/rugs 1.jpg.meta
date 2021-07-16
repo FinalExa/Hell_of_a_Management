@@ -199,10 +199,10 @@ TextureImporter:
       name: Dark Long Rug 2
       rect:
         serializedVersion: 2
-        x: 1539
-        y: 1814
-        width: 2646
-        height: 751
+        x: 2457
+        y: 2399
+        width: 759
+        height: 118
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: Dark Medium Rug 1
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 935
-        width: 1889
-        height: 767
+        x: 2291
+        y: 1504
+        width: 677
+        height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

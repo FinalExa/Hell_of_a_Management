@@ -190,10 +190,10 @@ TextureImporter:
       name: Light Long Rug 2
       rect:
         serializedVersion: 2
-        x: 1538
-        y: 1814
-        width: 2647
-        height: 753
+        x: 2446
+        y: 1858
+        width: 824
+        height: 163
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: Light Medium Rug 1
       rect:
         serializedVersion: 2
-        x: 1659
-        y: 932
-        width: 1894
-        height: 775
+        x: 2361
+        y: 986
+        width: 501
+        height: 184
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,10 +232,10 @@ TextureImporter:
       name: Light Medium Rug 2
       rect:
         serializedVersion: 2
-        x: 1669
-        y: 55
-        width: 1872
-        height: 767
+        x: 2440
+        y: 422
+        width: 388
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: Light Square Rug 2
       rect:
         serializedVersion: 2
-        x: 140
-        y: 225
-        width: 1241
-        height: 1248
+        x: 628
+        y: 689
+        width: 251
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

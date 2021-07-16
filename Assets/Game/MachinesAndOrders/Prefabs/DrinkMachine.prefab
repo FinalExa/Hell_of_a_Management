@@ -69,7 +69,7 @@ MonoBehaviour:
   - {fileID: 1638588031834943868}
   - {fileID: 7679429902357987290}
   - {fileID: 3834360962996011838}
-  baseColor: {r: 1, g: 1, b: 1, a: 0}
+  baseColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
   colors:
   - soulColor: 0
     color: {r: 1, g: 0, b: 0, a: 0}
