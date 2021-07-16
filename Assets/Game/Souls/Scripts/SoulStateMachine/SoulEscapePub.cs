@@ -25,7 +25,11 @@ public class SoulEscapePub : SoulState
 
     private void CheckForEscapeSuccess()
     {
-        if (_soulStateMachine.soulController.isInsideExitDoorCollider) _soulStateMachine.gameObject.SetActive(false);
+        if (_soulStateMachine.soulController.isInsideExitDoorCollider)
+        {
+            _soulStateMachine.soulController.thisRigidbody.detectCollisions = true;
+            _soulStateMachine.gameObject.SetActive(false);
+        }
     }
     #region Transitions
     private void Transitions()
@@ -34,7 +38,11 @@ public class SoulEscapePub : SoulState
     }
     private void GoToGrabbed()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand) _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand)
+        {
+            _soulStateMachine.soulController.thisRigidbody.detectCollisions = true;
+            _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
+        }
     }
     #endregion
 }
