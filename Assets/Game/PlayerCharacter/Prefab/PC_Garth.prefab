@@ -351,7 +351,7 @@ MonoBehaviour:
   animator: {fileID: 3957953130347433435}
   waitForAnimation: 0
   stateMachineToRead: {fileID: 1673490640784394817}
-  pauseAnimatorMaxTimer: 0.3
+  pauseAnimatorMaxTimer: 0.4
 --- !u!114 &5935098799575821376
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class Throw : PlayerState
         _playerCharacter.playerController.playerReferences.playerRb.velocity = Vector3.zero;
         AudioManager.instance.Play("Mc_Throw");
         _playerCharacter.playerController.playerReferences.rotation.RotatePlayerToMousePosition();
-        _playerCharacter.playerController.playerReferences.playerAnimations.PauseAnimator();
+        _playerCharacter.playerController.playerReferences.playerAnimations.PauseAnimatorStart();
     }
     public override void StateUpdate()
     {

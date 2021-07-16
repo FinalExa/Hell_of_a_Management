@@ -5,7 +5,7 @@ public class PlayerAnimations : Animations
     PlayerCharacter playerCharacter;
     [SerializeField] private float pauseAnimatorMaxTimer;
     private float pauseAnimatorTimer;
-    private bool pauseAnimator;
+    public bool PauseAnimator { get; private set; }
 
     private void Awake()
     {
@@ -14,12 +14,12 @@ public class PlayerAnimations : Animations
     }
     private void Start()
     {
-        pauseAnimator = false;
+        PauseAnimator = false;
         pauseAnimatorTimer = pauseAnimatorMaxTimer;
     }
     private void Update()
     {
-        if (pauseAnimator) PauseAnimatorTimer();
+        if (PauseAnimator) PauseAnimatorTimer();
     }
     private void PauseAnimatorTimer()
     {
@@ -27,17 +27,19 @@ public class PlayerAnimations : Animations
         else
         {
             pauseAnimatorTimer = pauseAnimatorMaxTimer;
-            pauseAnimator = false;
+            PauseAnimator = false;
+            playerController.playerReferences.rotation.rotationEnabled = true;
             PlayerAnimatorStateUpdate(playerCharacter.thisStateName);
         }
     }
-    public void PauseAnimator()
+    public void PauseAnimatorStart()
     {
-        pauseAnimator = true;
+        PauseAnimator = true;
+        playerController.playerReferences.rotation.rotationEnabled = false;
     }
     public void PlayerAnimatorStateUpdate(string statePassed)
     {
-        if (!pauseAnimator)
+        if (!PauseAnimator)
         {
             HandsChecks();
             AnimatorStateUpdate(statePassed);

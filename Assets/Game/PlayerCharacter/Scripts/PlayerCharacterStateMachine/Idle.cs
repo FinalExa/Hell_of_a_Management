@@ -6,8 +6,9 @@
 
     public override void Start()
     {
-        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
-        _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = true;
+        PlayerReferences playerReferences = _playerCharacter.playerController.playerReferences;
+        playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
+        if (!playerReferences.playerAnimations.PauseAnimator) playerReferences.rotation.rotationEnabled = true;
     }
 
     public override void StateUpdate()

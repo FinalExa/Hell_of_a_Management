@@ -7,8 +7,9 @@ public class Moving : PlayerState
     public override void Start()
     {
         AudioManager.instance.Play("Mc_Movement");
-        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
-        _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = true;
+        PlayerReferences playerReferences = _playerCharacter.playerController.playerReferences;
+        playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
+        if (!playerReferences.playerAnimations.PauseAnimator) playerReferences.rotation.rotationEnabled = true;
         UpdateSpeedValue();
     }
     public override void StateUpdate()
