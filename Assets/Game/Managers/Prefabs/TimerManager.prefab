@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9518ca519ac611e41876c3d626d8a926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totaltime: 180
+  thisLevelData: {fileID: 11400000, guid: 688e257cdbdb34142afdae0eacc3734b, type: 2}
+  totaltime: 5
   currentTime: 0

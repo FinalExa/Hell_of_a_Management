@@ -1,15 +1,16 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    [SerializeField] private LevelData thisLevelData;
     public static Timer self;
-    public float totaltime = 60;
+    [HideInInspector] public float totaltime;
     public float currentTime;
     public bool runTimer => currentTime > 0;
     public bool IsActive { private set; get; } = false;
 
-    public static event Action<Timer, float>OnEndTimer;
+    public static event Action<Timer, float> OnEndTimer;
     public static event Action<Timer, float> OnTimeUpdate;
 
     private void Start()
@@ -21,6 +22,7 @@ public class Timer : MonoBehaviour
     void Init()
     {
         self = this;
+        totaltime = thisLevelData.GetLevel(0).levelTimer;
     }
 
     void Update()
@@ -32,7 +34,7 @@ public class Timer : MonoBehaviour
     {
         currentTime = currentTime - Time.deltaTime > 0 ? currentTime - Time.deltaTime : 0;
         OnTimeUpdate?.Invoke(this, currentTime / totaltime);
-        if(currentTime == 0)
+        if (currentTime == 0)
         {
             DeactivateTimer();
             OnEndTimer?.Invoke(this, currentTime / totaltime);
