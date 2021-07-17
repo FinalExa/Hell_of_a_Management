@@ -7,7 +7,12 @@ public class GameManager : MonoBehaviour
     static GameManager self;
 
     [SerializeField] LevelData levelsData;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
+    }
     void Start()
     {
         Init();
