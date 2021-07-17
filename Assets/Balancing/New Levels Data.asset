@@ -19,3 +19,4 @@ MonoBehaviour:
     firstStarScore: 500
     secondStarScore: 750
     thirdStarScore: 1000
+    levelTimer: 10

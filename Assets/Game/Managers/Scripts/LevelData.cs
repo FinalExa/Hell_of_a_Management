@@ -14,6 +14,8 @@ public sealed class LevelData : ScriptableObject
         public uint firstStarScore;
         public uint secondStarScore;
         public uint thirdStarScore;
+
+        public float levelTimer;
     }
 
     [SerializeField] Level[] levels;
