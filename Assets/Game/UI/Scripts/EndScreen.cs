@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 public class EndScreen : MonoBehaviour
 {
     Animator animator;
@@ -17,6 +15,7 @@ public class EndScreen : MonoBehaviour
 
     public void GoToMainMenu()
     {
+        AudioManager.instance.StopAllSounds();
         animator.SetTrigger("EndGame");
         LevelManager.LoadLevel("Main Menu");
     }
