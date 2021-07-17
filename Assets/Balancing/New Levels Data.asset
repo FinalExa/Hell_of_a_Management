@@ -16,7 +16,7 @@ MonoBehaviour:
   - levelName: First Level
     levelGoalDescription: Reach First Star
     LevelLogoPath: 
-    firstStarScore: 50
-    secondStarScore: 750
-    thirdStarScore: 1000
-    levelTimer: 30
+    firstStarScore: 550
+    secondStarScore: 900
+    thirdStarScore: 1200
+    levelTimer: 150

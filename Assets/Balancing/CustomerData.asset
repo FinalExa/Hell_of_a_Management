@@ -16,11 +16,11 @@ MonoBehaviour:
   customerAcceleration: 4
   orderSizesProbabilitiesAndScores:
   - probabilityOfThisOrderSize: 80
-    scoreGivenByThisOrderSize: 100
-  - probabilityOfThisOrderSize: 35
-    scoreGivenByThisOrderSize: 250
-  - probabilityOfThisOrderSize: 5
-    scoreGivenByThisOrderSize: 400
+    scoreGivenByThisOrderSize: 80
+  - probabilityOfThisOrderSize: 40
+    scoreGivenByThisOrderSize: 140
+  - probabilityOfThisOrderSize: 12
+    scoreGivenByThisOrderSize: 200
   maxActiveOrdersAtATime: 3
-  activeOrders: 0
+  activeOrders: 1
   timeBetweenSpawns: 5
