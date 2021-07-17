@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace HOM
 {
@@ -10,7 +8,6 @@ namespace HOM
         {
             GUIHandler.ActivatesMenu("LoseScreen");
             Time.timeScale = 0;
-            Debug.Log("Lost");
         }
     }
 }
