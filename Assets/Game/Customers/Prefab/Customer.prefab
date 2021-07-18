@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 3557013024554415402}
   - component: {fileID: 4751089946219986335}
   - component: {fileID: 3394192095285962491}
-  - component: {fileID: 6951263314689598073}
+  - component: {fileID: 6805680164571434478}
   - component: {fileID: 7233830989049600199}
   - component: {fileID: 2950122897823638306}
   m_Layer: 2
@@ -211,8 +211,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   waitForAnimation: 0
   stateMachineToRead: {fileID: 5838437348996743918}
---- !u!135 &6951263314689598073
-SphereCollider:
+--- !u!65 &6805680164571434478
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -222,8 +222,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6, y: 6, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!195 &7233830989049600199
 NavMeshAgent:
   m_ObjectHideFlags: 0

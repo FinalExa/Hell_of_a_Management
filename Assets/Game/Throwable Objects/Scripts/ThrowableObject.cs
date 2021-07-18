@@ -20,7 +20,10 @@ public class ThrowableObject : MonoBehaviour, IThrowable
 
     void Awake()
     {
-        physicsCollider = this.gameObject.GetComponent<BoxCollider>();
+        foreach (BoxCollider collider in this.gameObject.GetComponents<BoxCollider>())
+        {
+            if (!collider.isTrigger) physicsCollider = collider;
+        }
         baseContainer = GameObject.FindGameObjectWithTag(parentObjectTag);
         Self = this.gameObject;
         selfRB = Self.GetComponent<Rigidbody>();
