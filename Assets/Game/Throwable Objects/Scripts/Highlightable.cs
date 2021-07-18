@@ -3,16 +3,12 @@
 public class Highlightable : MonoBehaviour
 {
     private ObjectsOnMouse mouseData;
-    private ThrowableObject throwableObject;
-    private ICanBeInteracted interactable;
     public Outline outline;
     public OutlineData outlineData;
     public GameObject thisGraphicsObject;
     private void Awake()
     {
         mouseData = FindObjectOfType<ObjectsOnMouse>();
-        if (this.gameObject.GetComponent<ThrowableObject>() != null) throwableObject = this.gameObject.GetComponent<ThrowableObject>();
-        if (this.gameObject.GetComponent<ICanBeInteracted>() != null) interactable = this.gameObject.GetComponent<ICanBeInteracted>();
     }
     private void Start()
     {
@@ -30,7 +26,16 @@ public class Highlightable : MonoBehaviour
 
     public void HighlightSelf()
     {
-        if (mouseData.pointedGameObject == this.gameObject) outline.enabled = true;
-        else outline.enabled = false;
+        if (mouseData.pointedGameObject == this.gameObject) ActivateGraphic();
+        else DeactivateGraphic();
+    }
+    public virtual void ActivateGraphic()
+    {
+        outline.enabled = true;
+    }
+
+    public virtual void DeactivateGraphic()
+    {
+        outline.enabled = false;
     }
 }
