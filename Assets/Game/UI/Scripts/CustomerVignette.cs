@@ -25,7 +25,7 @@ public class CustomerVignette : MonoBehaviour
             vignettes[index].container.transform.rotation = Quaternion.Euler(fixRotationX, fixRotationY, 0f);
             vignettes[index].container.transform.position = new Vector3(this.gameObject.transform.position.x + fixPositionX, vignettes[index].container.transform.position.y, this.gameObject.transform.position.z + fixPositionZ);
         }
-        vignettes[index].typeOfOrder.transform.Find(type.ToString()).gameObject.SetActive(true);
+        if (vignettes[index].typeOfOrder != null) vignettes[index].typeOfOrder.transform.Find(type.ToString()).gameObject.SetActive(true);
         int size = ingredients.Count - 1;
         int i = 0;
         foreach (Transform child in vignettes[index].orderSizes[size].transform)
@@ -41,7 +41,7 @@ public class CustomerVignette : MonoBehaviour
     {
         vignettes[index].isActive = false;
         vignettes[index].background.SetActive(false);
-        foreach (Transform child in vignettes[index].typeOfOrder.transform) child.gameObject.SetActive(false);
+        if (vignettes[index].typeOfOrder != null) foreach (Transform child in vignettes[index].typeOfOrder.transform) child.gameObject.SetActive(false);
         for (int i = 0; i < vignettes[index].orderSizes.Length; i++)
         {
             vignettes[index].orderSizes[i].SetActive(false);
