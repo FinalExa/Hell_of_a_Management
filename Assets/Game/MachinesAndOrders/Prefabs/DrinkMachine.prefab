@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2166118056616765054}
   m_Layer: 2
   m_Name: DrinkMachine
-  m_TagString: Machine
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,6 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 3323380749891075524}
   - {fileID: 3595027780339055074}
   - {fileID: 4210874113479578387}
   m_Father: {fileID: 0}
@@ -122,6 +123,50 @@ MonoBehaviour:
   outline: {fileID: 5946112838452530968}
   outlineData: {fileID: 11400000, guid: 0a7462d12ece4224bae0ef9a03356b88, type: 2}
   thisGraphicsObject: {fileID: 2587364878906848969}
+--- !u!1 &1516819929660014648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3323380749891075524}
+  - component: {fileID: 7584691187545026275}
+  m_Layer: 2
+  m_Name: SoulInsertRange
+  m_TagString: Machine
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3323380749891075524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516819929660014648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4810914766928566479}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7584691187545026275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516819929660014648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.75, y: 4, z: 1.75}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &5946112838452530968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4810914766928566479}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1448234807502011814
 BoxCollider:
@@ -213,7 +258,7 @@ Transform:
   m_Children:
   - {fileID: 2928459105811049587}
   m_Father: {fileID: 4810914766928566479}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3398321576429308824
 PrefabInstance:
