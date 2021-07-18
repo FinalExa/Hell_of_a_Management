@@ -41,6 +41,7 @@ public class SoulController : MonoBehaviour
         soulReferences.soulThrowableObject.isFlying = false;
         soulReferences.soulThrowableObject.IsInsidePlayerRange = false;
         soulReferences.soulThrowableObject.isNotGrounded = false;
+        soulReferences.soulThrowableObject.IsAttachedToHand = false;
     }
     public void DeactivateAllSoulModels()
     {

@@ -8,7 +8,7 @@ public abstract class StateMachine : MonoBehaviour
         _state = state;
         state.Start();
     }
-    private void Start()
+    public virtual void Start()
     {
         _state.Start();
     }
