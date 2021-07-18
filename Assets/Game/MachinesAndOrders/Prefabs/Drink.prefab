@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7443002229499881040}
   - component: {fileID: 971017331653552835}
   - component: {fileID: 8860357294858953887}
-  - component: {fileID: 5300032733128147604}
+  - component: {fileID: 1235971438022187850}
   - component: {fileID: 2666093287981000013}
   m_Layer: 2
   m_Name: Drink
@@ -99,8 +99,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!135 &5300032733128147604
-SphereCollider:
+--- !u!65 &1235971438022187850
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,7 +110,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 4, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &2666093287981000013
 BoxCollider:

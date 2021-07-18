@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 7682380320128411222}
   - component: {fileID: 7255005166623741164}
   - component: {fileID: 2905151620920480676}
-  - component: {fileID: 8768027527686475258}
+  - component: {fileID: 8260865385279235824}
   - component: {fileID: 7429171268645209088}
   - component: {fileID: 7246138982620699378}
   - component: {fileID: 527291455377808624}
@@ -447,8 +447,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   waitForAnimation: 0
   stateMachineToRead: {fileID: 7255005166623741164}
---- !u!135 &8768027527686475258
-SphereCollider:
+--- !u!65 &8260865385279235824
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -458,7 +458,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Size: {x: 1.5, y: 4, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &7429171268645209088
 BoxCollider:
