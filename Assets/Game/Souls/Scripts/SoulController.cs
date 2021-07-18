@@ -52,7 +52,7 @@ public class SoulController : MonoBehaviour
     }
     private void AttemptToEnterMachine(Collider other)
     {
-        ICanUseIngredients canUseIngredients = other.GetComponent<ICanUseIngredients>();
+        ICanUseIngredients canUseIngredients = other.gameObject.transform.parent.gameObject.GetComponent<ICanUseIngredients>();
         canUseIngredients.RecipeFill(soulTypes[thisSoulTypeIndex].soulColor, this);
     }
     private void OnTriggerEnter(Collider other)
