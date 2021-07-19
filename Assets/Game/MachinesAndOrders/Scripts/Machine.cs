@@ -8,15 +8,18 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
     [SerializeField] int recipeMaxLimit;
     [SerializeField] private GameObject thisOrder;
     [SerializeField] GameObject orderOutputPosition;
+    private HighlightableMachine highlightableMachine;
     private IHaveIngredientLights thisLightObject;
 
     private void Awake()
     {
+        highlightableMachine = this.gameObject.GetComponent<HighlightableMachine>();
         thisLightObject = this.gameObject.GetComponent<IHaveIngredientLights>();
     }
     private void Start()
     {
         Self = this.gameObject;
+        highlightableMachine.miniDialogueWithText.SetupPosition();
     }
 
     public void RecipeFill(OrdersData.OrderIngredients ingredientType, SoulController source)
@@ -50,6 +53,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
         obj.GetComponent<Order>().SetupOrderIngredients(recipe);
         recipe.Clear();
         thisLightObject.ResetAllLights();
+        highlightableMachine.miniDialogueWithText.DeactivateDialogue();
     }
 
     public void Interaction()

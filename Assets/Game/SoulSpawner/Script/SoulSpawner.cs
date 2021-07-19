@@ -50,6 +50,7 @@ public class SoulSpawner : Spawner
         sc.soulReferences.highlightable.outline = sc.soulTypes[soulIndex].soulModelOutline;
         sc.soulReferences.highlightable.outline.OutlineColor = sc.soulReferences.highlightable.outlineData.highlightColor;
         sc.soulReferences.highlightable.outline.OutlineWidth = sc.soulReferences.highlightable.outlineData.outlineWidth;
+        sc.soulReferences.highlightable.DeactivateGraphic();
         sc.soulReferences.soulThrowableObject.thisGraphicsObject = sc.soulTypes[soulIndex].soulMeshContainer;
         sc.DeactivateAllSoulModels();
         sc.soulTypes[soulIndex].soulMainModelObject.SetActive(true);

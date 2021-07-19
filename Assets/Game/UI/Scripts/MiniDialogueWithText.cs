@@ -7,7 +7,7 @@ public class MiniDialogueWithText : MonoBehaviour
     [SerializeField] private GameObject graphicObj;
     [SerializeField] private float fixRotationX;
     [SerializeField] private float fixRotationY;
-    private bool alreadyActivated;
+    [HideInInspector] public bool activated;
 
     public void SetupPosition()
     {
@@ -18,11 +18,13 @@ public class MiniDialogueWithText : MonoBehaviour
     {
         graphicObj.SetActive(true);
         textObj.text = text;
+        activated = true;
     }
 
     public void DeactivateDialogue()
     {
         textObj.text = string.Empty;
         graphicObj.SetActive(false);
+        activated = false;
     }
 }

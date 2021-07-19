@@ -26,20 +26,36 @@ public class Highlightable : MonoBehaviour
         if (outline != null) HighlightSelf();
     }
 
-    public void HighlightSelf()
+    public virtual void HighlightSelf()
     {
-        if (mouseData.pointedGameObject == this.gameObject && !isActive) ActivateGraphic();
-        else if (mouseData.pointedGameObject != this.gameObject && isActive) DeactivateGraphic();
+        if (mouseData.pointedGameObject == this.gameObject)
+        {
+            if (!isActive) ActivateGraphic();
+            OtherActivateBehaviour();
+        }
+        else if (mouseData.pointedGameObject != this.gameObject)
+        {
+            if (isActive) DeactivateGraphic();
+            OtherDeactivateBehaviour();
+        }
     }
     public virtual void ActivateGraphic()
     {
         outline.enabled = true;
         isActive = true;
     }
-
+    public virtual void OtherActivateBehaviour()
+    {
+        return;
+    }
     public virtual void DeactivateGraphic()
     {
         outline.enabled = false;
         isActive = false;
     }
+    public virtual void OtherDeactivateBehaviour()
+    {
+        return;
+    }
+
 }
