@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d61a8108afe649b326463cce540d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationSpeed: 20
   rotationEnabled: 0
 --- !u!1 &8877571697949988489
 GameObject:
@@ -351,7 +352,7 @@ MonoBehaviour:
   animator: {fileID: 3957953130347433435}
   waitForAnimation: 0
   stateMachineToRead: {fileID: 1673490640784394817}
-  pauseAnimatorMaxTimer: 0.4
+  pauseAnimatorMaxTimer: 0.3
 --- !u!114 &5935098799575821376
 MonoBehaviour:
   m_ObjectHideFlags: 0
