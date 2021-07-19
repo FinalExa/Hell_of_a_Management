@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 525047500357446127}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3333334, y: 1.3333334, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2487717336216216184}
   m_RootOrder: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: af3d6b15795b7fb4c98efff11ac1b322, type: 3}
     m_FontSize: 300
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2487717336400088095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,5 +272,3 @@ MonoBehaviour:
   graphicObj: {fileID: 2487717336216216185}
   fixRotationX: 45
   fixRotationY: 45
-  fixPositionX: 0
-  fixPositionZ: 0
