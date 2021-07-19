@@ -13,14 +13,17 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     public GameObject thisGraphicsObject;
     [HideInInspector] public bool IsAttachedToHand { get; set; }
     [HideInInspector] public bool isFlying;
-    private BoxCollider physicsCollider;
+    protected BoxCollider physicsCollider;
     private GameObject baseContainer;
     [HideInInspector] public Rigidbody selfRB;
     [SerializeField] private string parentObjectTag;
 
     public virtual void Awake()
     {
-        physicsCollider = this.gameObject.GetComponent<BoxCollider>();
+        foreach (BoxCollider collider in this.gameObject.GetComponents<BoxCollider>())
+        {
+            if (!collider.isTrigger) physicsCollider = collider;
+        }
         baseContainer = GameObject.FindGameObjectWithTag(parentObjectTag);
         Self = this.gameObject;
         selfRB = Self.GetComponent<Rigidbody>();

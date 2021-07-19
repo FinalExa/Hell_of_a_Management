@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -35,7 +34,7 @@ public class AudioManager : MonoBehaviour
         Sound s = SearchSound(name);
         if (s.loop)
             s.source.Play();
-        else
+        else if (!s.source.isPlaying)
             s.source.PlayOneShot(s.clip);
     }
     public void Stop(string name)

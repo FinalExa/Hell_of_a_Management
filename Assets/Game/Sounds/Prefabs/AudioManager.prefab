@@ -46,114 +46,133 @@ MonoBehaviour:
   sounds:
   - name: Machine_Soul_1_2
     clip: {fileID: 8300000, guid: 64cc76d66816390408d64cf96b5e66cc, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Drink_LastSoul
     clip: {fileID: 8300000, guid: 9763dbace3bbf8a438a9e590d314451f, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Dish_LastSoul
     clip: {fileID: 8300000, guid: 4afd7d4e87c57dc43a220832441e4478, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mop_Drop
     clip: {fileID: 8300000, guid: 0301c1bb620ebbb49b90c5ed9aaece46, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mop_Throw_Sciaf
     clip: {fileID: 8300000, guid: a46ac5ec9df2281488ffe55565faefe7, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Soul_SurprisedScream
     clip: {fileID: 8300000, guid: 5306db2c83a65c543932b981628888e0, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Soul_DesperateScream
     clip: {fileID: 8300000, guid: c05cd2b6158a78940bc7402c437f2037, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Soul_JoyfulScream
     clip: {fileID: 8300000, guid: 8dce77000e01ba4488c241aa84761522, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Terrain_StickyWalkOn
     clip: {fileID: 8300000, guid: 2d7b3e0730ecc064796ca72ab5c21828, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Terrain_SlipperyWalkOn
     clip: {fileID: 8300000, guid: ffb3fe4072fd8904180ff84baeb7f0d5, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: InGame_Music
     clip: {fileID: 8300000, guid: aea766692c1f7d24593af192d7e0027e, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Menu_Music
     clip: {fileID: 8300000, guid: 81719608508619d4f8fe99d4c17836b6, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Mc_Dash
     clip: {fileID: 8300000, guid: be878cca27ff0a04daee83e5d6235f65, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mc_Movement
     clip: {fileID: 8300000, guid: d6b010e0d2a344c4bbc04b5ca02021db, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: Mc_Grab
     clip: {fileID: 8300000, guid: f6a6e3918c74cbc49a5ef021d7ce14d4, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Mc_Throw
     clip: {fileID: 8300000, guid: df76a0b62a6181e4085ba0bfd8de52d2, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Customer_Enter
-    clip: {fileID: 8300000, guid: 902330b077bb729468c3fb59baf5c5c5, type: 3}
+    clip: {fileID: 8300000, guid: 8766e7393c4ab6d449424311ecedca6a, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.005
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Customer_Consume_drink
     clip: {fileID: 8300000, guid: 28cecc9703108aa44a4db9bfcd04acf3, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Customer_Consume_dish
     clip: {fileID: 8300000, guid: c958e238266842748b2f85c81468afaa, type: 3}
+    audioMixerGroup: {fileID: 0}
     volume: 0.01
     pitch: 1
     loop: 0
