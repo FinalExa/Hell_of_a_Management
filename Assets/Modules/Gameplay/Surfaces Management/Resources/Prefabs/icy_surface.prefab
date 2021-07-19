@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5545257541692358988}
   - component: {fileID: 8298623967431835802}
   - component: {fileID: 3971370852153708219}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: icy_surface
   m_TagString: Terrain
   m_Icon: {fileID: 0}
