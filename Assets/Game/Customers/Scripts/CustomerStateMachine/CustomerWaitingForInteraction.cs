@@ -17,7 +17,7 @@ public class CustomerWaitingForInteraction : CustomerState
     {
         if (_customerStateMachine.customerController.interactionReceived && _customerStateMachine.customerController.customerReferences.customerData.activeOrders < _customerStateMachine.customerController.customerReferences.customerData.maxActiveOrdersAtATime)
         {
-
+            _customerStateMachine.customerController.customerReferences.miniDialogueWithText.DeactivateDialogue();
             _customerStateMachine.customerController.customerReferences.customerData.activeOrders++;
             GoToWaitingForOrder();
         }
@@ -35,6 +35,7 @@ public class CustomerWaitingForInteraction : CustomerState
             customerController.chosenIngredients.Add(customerController.possibleIngredients[Random.Range(0, customerController.possibleIngredients.Length)]);
         }
         customerController.thisTable.AssignOrderToTable(customerController.thisTableSeatId, customerController);
+        customerController.customerReferences.miniDialogueWithText.SetupPosition();
     }
 
     private float CalculateTotalProbability()
