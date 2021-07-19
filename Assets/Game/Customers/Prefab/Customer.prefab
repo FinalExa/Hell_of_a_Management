@@ -4738,6 +4738,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniDialogueWithText
       objectReference: {fileID: 0}
+    - target: {fileID: 2487717336400088092, guid: 0d6a0f737c065d148a0348186297ed75, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2487717336400088094, guid: 0d6a0f737c065d148a0348186297ed75, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6a0f737c065d148a0348186297ed75, type: 3}
 --- !u!224 &5445109143854010610 stripped
