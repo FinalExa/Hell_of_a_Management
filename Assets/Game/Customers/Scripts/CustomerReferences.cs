@@ -6,6 +6,7 @@ public class CustomerReferences : MonoBehaviour
     [HideInInspector] public CustomerVignette customerVignette;
     [HideInInspector] public Highlightable highlightable;
     [HideInInspector] public Animations animations;
+    public MiniDialogueWithText miniDialogueWithText;
     private void Awake()
     {
         customerVignette = this.gameObject.GetComponent<CustomerVignette>();

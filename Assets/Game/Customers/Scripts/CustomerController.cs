@@ -26,6 +26,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     [HideInInspector] public OrdersData.OrderTypes chosenType;
     [HideInInspector] public List<OrdersData.OrderIngredients> chosenIngredients;
     [HideInInspector] public CustomerReferences customerReferences;
+    [HideInInspector] public string curState;
     public GameObject Self { get; set; }
 
     private void Awake()

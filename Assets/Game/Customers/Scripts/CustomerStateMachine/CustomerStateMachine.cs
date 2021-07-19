@@ -14,4 +14,9 @@ public class CustomerStateMachine : StateMachine
         customerController.targetedLocation = customerController.seatToTake;
         SetState(new CustomerGoToLocation(this));
     }
+    public override void SetState(State state)
+    {
+        base.SetState(state);
+        customerController.curState = state.ToString();
+    }
 }
