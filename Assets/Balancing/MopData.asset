@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac9fe635b364ed944b6e0ea1a74609e6, type: 3}
   m_Name: MopData
   m_EditorClassIdentifier: 
-  scoreGivenByRemovingTerrains: 30
+  scoreGivenByRemovingTerrains: 20
