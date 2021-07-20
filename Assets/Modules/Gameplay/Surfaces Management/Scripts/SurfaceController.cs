@@ -15,7 +15,6 @@ using DG.Tweening;
         /// <summary>
         /// The referred surface target where this surface is placed
         /// </summary>
-        internal SurfaceTarget starget;
 
         #region Events
         public delegate void SurfaceEventHandler(SurfaceController sender, GameObject obj, SurfaceManager.SurfaceType type);
@@ -45,9 +44,6 @@ using DG.Tweening;
 
         }
         #endregion
-
-        public void RegisterSurfaceTarget(ref SurfaceTarget st) => starget = st;
-        public void UnregisterSurfaceTarget() => starget = null;
 
         /// <summary>
         /// Executes the enable animation
