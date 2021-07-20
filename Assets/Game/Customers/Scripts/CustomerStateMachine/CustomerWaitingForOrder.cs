@@ -44,9 +44,9 @@ public class CustomerWaitingForOrder : CustomerState
     private void RollForTerrain()
     {
         if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish)
-            SurfaceManager.self.ActivatesSurfaceFromSurfaceTarget(SurfaceManager.SurfaceType.MUD);
+            SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.MUD, _customerStateMachine.gameObject.transform);
         else if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Drink)
-            SurfaceManager.self.ActivatesSurfaceFromSurfaceTarget(SurfaceManager.SurfaceType.ICE);
+            SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.ICE, _customerStateMachine.gameObject.transform);
     }
     private void PlaySoundDependingOnOrder()
     {
