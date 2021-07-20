@@ -4,7 +4,6 @@ public class Mop : MonoBehaviour
 {
     [SerializeField] private MopData mopData;
     private float scoreGiven;
-    private SurfaceController lastTerrainTouched;
     private void Start()
     {
         scoreGiven = mopData.scoreGivenByRemovingTerrains;
@@ -14,12 +13,11 @@ public class Mop : MonoBehaviour
         if (other.CompareTag("Terrain"))
         {
             SurfaceController sc = other.gameObject.GetComponent<SurfaceController>();
-            if (sc != null && sc != lastTerrainTouched)
+            if (sc != null && sc.isBeingRemoved == false)
             {
-                lastTerrainTouched = sc;
+                sc.isBeingRemoved = true;
                 SurfaceManager.DeactivateSurface(ref sc);
                 Score.self.AddScore(scoreGiven);
-                lastTerrainTouched = null;
             }
         }
     }

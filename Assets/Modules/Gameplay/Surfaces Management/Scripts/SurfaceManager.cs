@@ -105,6 +105,7 @@ public sealed class SurfaceManager : MonoBehaviour
     {
         surface.PlayDisableAnimation((target) =>
         {
+            target.isBeingRemoved = false;
             target.gameObject.SetActive(false);
 
             //surface destrouction events hanlder
