@@ -16,4 +16,6 @@ public class CustomerData : ScriptableObject
     public int maxActiveOrdersAtATime;
     [HideInInspector] public int activeOrders;
     public float timeBetweenSpawns;
+    [Range(0f, 100f)] public int mudTerrainSpawnChance;
+    [Range(0f, 100f)] public int icyTerrainSpawnChance;
 }

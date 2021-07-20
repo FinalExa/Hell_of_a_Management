@@ -43,9 +43,9 @@ public class CustomerWaitingForOrder : CustomerState
 
     private void RollForTerrain()
     {
-        if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish)
+        if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish && UnityEngine.Random.Range(1, 100) <= _customerStateMachine.customerController.customerReferences.customerData.mudTerrainSpawnChance)
             SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.MUD, _customerStateMachine.gameObject.transform);
-        else if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Drink)
+        else if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Drink && UnityEngine.Random.Range(1, 100) <= _customerStateMachine.customerController.customerReferences.customerData.icyTerrainSpawnChance)
             SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.ICE, _customerStateMachine.gameObject.transform);
     }
     private void PlaySoundDependingOnOrder()

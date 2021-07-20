@@ -19,6 +19,7 @@ public class Mop : MonoBehaviour
                 lastTerrainTouched = sc;
                 SurfaceManager.DeactivateSurface(ref sc);
                 Score.self.AddScore(scoreGiven);
+                lastTerrainTouched = null;
             }
         }
     }

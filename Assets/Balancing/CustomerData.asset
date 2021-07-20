@@ -24,3 +24,5 @@ MonoBehaviour:
   maxActiveOrdersAtATime: 3
   activeOrders: 1
   timeBetweenSpawns: 5
+  mudTerrainSpawnChance: 50
+  icyTerrainSpawnChance: 50
