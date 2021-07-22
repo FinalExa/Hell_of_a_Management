@@ -34,7 +34,7 @@
     #region ToDashState
     private void GoToDashState(PlayerInputs playerInputs)
     {
-        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied) _playerCharacter.SetState(new Dash(_playerCharacter));
+        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied && !_playerCharacter.playerController.DashLocked) _playerCharacter.SetState(new Dash(_playerCharacter));
     }
     #endregion
     #region ToHandsStates

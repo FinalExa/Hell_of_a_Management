@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject RightHand;
     public bool LeftHandOccupied { get; set; }
     public bool RightHandOccupied { get; set; }
+    public bool DashLocked { get; private set; }
     [HideInInspector] public float leftHandWeight;
     [HideInInspector] public float rightHandWeight;
     [HideInInspector] public float actualSpeed;
@@ -30,10 +31,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Terrain")) changeMovementData();
+        if (other.gameObject.CompareTag("Terrain"))
+        {
+            changeMovementData();
+            if (other.gameObject.GetComponent<SurfaceController>().Type == SurfaceManager.SurfaceType.MUD) DashLocked = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Terrain")) changeMovementData();
+        if (other.gameObject.CompareTag("Terrain"))
+        {
+            changeMovementData();
+            if (other.gameObject.GetComponent<SurfaceController>().Type == SurfaceManager.SurfaceType.MUD) DashLocked = false;
+        }
     }
 }

@@ -71,7 +71,7 @@ public class Moving : PlayerState
     #region ToDashState
     private void GoToDashState(PlayerInputs playerInputs)
     {
-        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied)
+        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied && !_playerCharacter.playerController.DashLocked)
         {
             StopMovementSound();
             _playerCharacter.SetState(new Dash(_playerCharacter));
