@@ -7,6 +7,7 @@ public class PlayerCharacter : StateMachine
     {
         base.SetState(state);
         thisStateName = state.ToString();
+        playerController.curState = thisStateName;
     }
     private void Awake()
     {
