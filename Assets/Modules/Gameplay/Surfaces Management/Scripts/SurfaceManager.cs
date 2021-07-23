@@ -118,14 +118,11 @@ public sealed class SurfaceManager : MonoBehaviour
         byte spotIndex = 0;
         while (!selected)
         {
-            Debug.Log("validate");
             spotIndex = (byte)UnityEngine.Random.Range(0, self.spots.Length);
             if (self.spots[spotIndex].IsActive) selected = true;
         }
-        Debug.Log($"Index: {spotIndex}");
         self.spots[spotIndex].Disable();
 
-        Debug.Log("process");
         SurfaceController surface = null;
         switch (type)
         {
