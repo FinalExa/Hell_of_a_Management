@@ -11,16 +11,19 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     private float flightTime;
     public ThrowableObjectData throwableObjectData;
     public GameObject thisGraphicsObject;
-    [HideInInspector] public bool isAttachedToHand;
+    [HideInInspector] public bool IsAttachedToHand { get; set; }
     [HideInInspector] public bool isFlying;
-    private BoxCollider physicsCollider;
+    protected BoxCollider physicsCollider;
     private GameObject baseContainer;
     [HideInInspector] public Rigidbody selfRB;
     [SerializeField] private string parentObjectTag;
 
-    void Awake()
+    public virtual void Awake()
     {
-        physicsCollider = this.gameObject.GetComponent<BoxCollider>();
+        foreach (BoxCollider collider in this.gameObject.GetComponents<BoxCollider>())
+        {
+            if (!collider.isTrigger) physicsCollider = collider;
+        }
         baseContainer = GameObject.FindGameObjectWithTag(parentObjectTag);
         Self = this.gameObject;
         selfRB = Self.GetComponent<Rigidbody>();
@@ -37,8 +40,7 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     public virtual void AttachToPlayer(GameObject playerHand)
     {
         StopForce();
-        isAttachedToHand = true;
-        gameObject.layer = 2;
+        IsAttachedToHand = true;
         ActivateConstraints();
         this.gameObject.transform.position = playerHand.transform.position;
         this.gameObject.transform.SetParent(playerHand.transform);
@@ -50,9 +52,8 @@ public class ThrowableObject : MonoBehaviour, IThrowable
         throwDistance = throwDistanceObtained;
         flightTime = flightTimeObtained;
         DeactivateConstraintsExceptGravity();
-        gameObject.layer = 0;
         this.gameObject.transform.SetParent(baseContainer.transform);
-        isAttachedToHand = false;
+        IsAttachedToHand = false;
         physicsCollider.enabled = true;
         LaunchSelf();
     }
@@ -91,7 +92,6 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     }
     public virtual void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && isAttachedToHand) Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), physicsCollider);
         if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Ground"))
         {
             StopForce();

@@ -26,7 +26,7 @@ using UnityEngine;
             if (levelManagerInstance == null)
             levelManagerInstance = this;
             else
-                DestroyObject(gameObject);
+                Destroy(gameObject);
 
             ui_Animator = GameObject.Find("UI_Manager").GetComponent<Animator>();
         }
@@ -38,7 +38,7 @@ using UnityEngine;
                 case "Main Menu":
                 levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 0));
                     break;
-                case "Level":
+                case "LevelCleaned":
                 levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 1));
                     break;
             }    
@@ -69,7 +69,6 @@ using UnityEngine;
             yield return new WaitForSeconds(1);
             loadingScreen.SetActive(false);
             isLoading = false;
-            Timer.ActivateTimer();
             ui_Animator.SetTrigger("SceneChanged");
         }
     }

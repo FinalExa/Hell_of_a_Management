@@ -11,6 +11,7 @@ namespace HOM
         {
             Time.timeScale = 1;
             animator.SetBool("Paused", false);
+            AudioManager.instance.StopAllSounds();
             GUIHandler.DeactivatesMenu("Pause Menu");
         }
     }

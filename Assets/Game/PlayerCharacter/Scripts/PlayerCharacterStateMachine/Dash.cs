@@ -11,8 +11,13 @@ public class Dash : PlayerState
 
     public override void Start()
     {
+        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         Cooldown cooldown = _playerCharacter.playerController.playerReferences.cooldown;
-        if (!cooldown.cooldowns.ContainsKey(Cooldown.CooldownType.Dash)) DashSetup();
+        if (!cooldown.cooldowns.ContainsKey(Cooldown.CooldownType.Dash))
+        {
+            AudioManager.instance.Play("Mc_Dash");
+            DashSetup();
+        }
         else Transitions();
     }
     public override void StateUpdate()
@@ -36,7 +41,7 @@ public class Dash : PlayerState
     }
     private void PerformDash()
     {
-        if (dashTimer > 0)
+        if (dashTimer > 0 && !_playerCharacter.playerController.DashLocked)
         {
             Rigidbody playerRb = _playerCharacter.playerController.playerReferences.playerRb;
             dashTimer -= Time.deltaTime;

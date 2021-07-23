@@ -1,25 +1,56 @@
-﻿public class PlayerAnimations : Animations
+﻿using UnityEngine;
+public class PlayerAnimations : Animations
 {
+    PlayerController playerController;
     PlayerCharacter playerCharacter;
+    [SerializeField] private float pauseAnimatorMaxTimer;
+    private float pauseAnimatorTimer;
+    public bool PauseAnimator { get; private set; }
+
     private void Awake()
     {
-        PlayerCharacter.playerStateChanged += UpdateAnimatorValues;
-        PlayerAnimationsBehaviour.onAnimationEnd += AnimationIsOver;
+        playerController = this.gameObject.GetComponent<PlayerController>();
         playerCharacter = this.gameObject.GetComponent<PlayerCharacter>();
     }
-    public override void AnimatorStateUpdate()
+    private void Start()
     {
-        HandsChecks();
-        base.AnimatorStateUpdate();
+        PauseAnimator = false;
+        pauseAnimatorTimer = pauseAnimatorMaxTimer;
+    }
+    private void Update()
+    {
+        if (PauseAnimator) PauseAnimatorTimer();
+    }
+    private void PauseAnimatorTimer()
+    {
+        if (pauseAnimatorTimer > 0) pauseAnimatorTimer -= Time.deltaTime;
+        else
+        {
+            pauseAnimatorTimer = pauseAnimatorMaxTimer;
+            PauseAnimator = false;
+            playerController.playerReferences.rotation.rotationEnabled = true;
+            PlayerAnimatorStateUpdate(playerCharacter.thisStateName);
+        }
+    }
+    public void PauseAnimatorStart()
+    {
+        PauseAnimator = true;
+        playerController.playerReferences.rotation.rotationEnabled = false;
+    }
+    public void PlayerAnimatorStateUpdate(string statePassed)
+    {
+        if (!PauseAnimator)
+        {
+            HandsChecks();
+            AnimatorStateUpdate(statePassed);
+        }
     }
     private void HandsChecks()
     {
-        PlayerController playerController = playerCharacter.playerController;
-        ActiveHand(playerController);
-        HandsStatus(playerController);
+        ActiveHand();
+        HandsStatus();
     }
-
-    private void ActiveHand(PlayerController playerController)
+    private void ActiveHand()
     {
         if (playerController.selectedHand == PlayerController.SelectedHand.Left && !animator.GetBool("LeftHandSelected"))
         {
@@ -32,7 +63,7 @@
             animator.SetBool("RightHandSelected", true);
         }
     }
-    private void HandsStatus(PlayerController playerController)
+    private void HandsStatus()
     {
         if (!playerController.LeftHandOccupied && !playerController.RightHandOccupied && !animator.GetBool("HandsFree"))
         {

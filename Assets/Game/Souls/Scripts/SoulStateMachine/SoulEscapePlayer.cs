@@ -9,6 +9,9 @@ public class SoulEscapePlayer : SoulState
     }
     public override void Start()
     {
+        AudioManager.instance.Play("Soul_SurprisedScream");
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = true;
+        _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsEscapingPlayer(_soulStateMachine.soulController);
         SetupEscape(false);
     }
@@ -51,7 +54,7 @@ public class SoulEscapePlayer : SoulState
     }
     private void GoToGrabbed()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.isAttachedToHand)
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand)
         {
             _soulStateMachine.SetState(new SoulGrabbed(_soulStateMachine));
         }

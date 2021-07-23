@@ -7,16 +7,17 @@ public class Throw : PlayerState
     }
     public override void Start()
     {
+        _playerCharacter.playerController.playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
         clickedPos = _playerCharacter.playerController.playerReferences.objectsOnMouse.GetMousePosition().point;
         _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = false;
         _playerCharacter.playerController.playerReferences.playerRb.velocity = Vector3.zero;
-        _playerCharacter.playerController.playerReferences.playerAnimations.waitForAnimation = true;
+        AudioManager.instance.Play("Mc_Throw");
         _playerCharacter.playerController.playerReferences.rotation.RotatePlayerToMousePosition();
+        _playerCharacter.playerController.playerReferences.playerAnimations.PauseAnimatorStart();
     }
     public override void StateUpdate()
     {
-        PlayerAnimations playerAnimations = _playerCharacter.playerController.playerReferences.playerAnimations;
-        if (!playerAnimations.waitForAnimation) CheckHand();
+        CheckHand();
     }
     #region Throw
     private void CheckHand()

@@ -8,21 +8,25 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
     [SerializeField] int recipeMaxLimit;
     [SerializeField] private GameObject thisOrder;
     [SerializeField] GameObject orderOutputPosition;
+    private HighlightableMachine highlightableMachine;
     private IHaveIngredientLights thisLightObject;
 
     private void Awake()
     {
+        highlightableMachine = this.gameObject.GetComponent<HighlightableMachine>();
         thisLightObject = this.gameObject.GetComponent<IHaveIngredientLights>();
     }
     private void Start()
     {
         Self = this.gameObject;
+        highlightableMachine.miniDialogueWithText.SetupPosition();
     }
 
     public void RecipeFill(OrdersData.OrderIngredients ingredientType, SoulController source)
     {
         if (source.soulReferences.soulThrowableObject.isFlying && recipe.Count < recipeMaxLimit)
         {
+            PlayMachineSound();
             recipe.Add(ingredientType);
             source.gameObject.SetActive(false);
             source.transform.localPosition = Vector3.zero;
@@ -31,12 +35,25 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
         }
     }
 
+    private void PlayMachineSound()
+    {
+        if (recipe.Count != recipeMaxLimit - 1) AudioManager.instance.Play("Machine_Soul_1_2");
+        else PlayDependingOnType();
+    }
+
+    private void PlayDependingOnType()
+    {
+        if (thisOrder.name == "Dish") AudioManager.instance.Play("Dish_LastSoul");
+        else AudioManager.instance.Play("Drink_LastSoul");
+    }
     public void ProduceOrder()
     {
+        PlayDependingOnType();
         GameObject obj = Instantiate(thisOrder, orderOutputPosition.transform);
         obj.GetComponent<Order>().SetupOrderIngredients(recipe);
         recipe.Clear();
         thisLightObject.ResetAllLights();
+        highlightableMachine.miniDialogueWithText.DeactivateDialogue();
     }
 
     public void Interaction()

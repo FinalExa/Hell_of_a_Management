@@ -1,14 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class PlayerCharacter : StateMachine
 {
     [HideInInspector] public PlayerController playerController;
-    public static Action playerStateChanged;
-
+    [HideInInspector] public string thisStateName;
     public override void SetState(State state)
     {
         base.SetState(state);
-        playerStateChanged();
+        thisStateName = state.ToString();
     }
     private void Awake()
     {

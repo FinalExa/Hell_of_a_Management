@@ -8,14 +8,16 @@ public class SoulStateMachine : StateMachine
         soulController = this.gameObject.GetComponent<SoulController>();
         SetState(new SoulIdle(this));
     }
+    public override void Start()
+    {
+        return;
+    }
+    private void OnEnable()
+    {
+        _state.Start();
+    }
     public override void SetState(State state)
     {
         base.SetState(state);
-        soulController.soulReferences.soulAnimations.UpdateAnimatorValues();
-    }
-
-    public void StateNamePrint()
-    {
-        print(stateRef);
     }
 }

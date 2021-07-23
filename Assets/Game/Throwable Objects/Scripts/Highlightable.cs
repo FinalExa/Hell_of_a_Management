@@ -2,43 +2,60 @@
 
 public class Highlightable : MonoBehaviour
 {
-    private MouseData mouseData;
-    private ThrowableObject throwableObject;
-    private ICanBeInteracted interactable;
+    protected ObjectsOnMouse mouseData;
     public Outline outline;
     public OutlineData outlineData;
     public GameObject thisGraphicsObject;
-    private void Awake()
+    protected bool isActive;
+    public virtual void Awake()
     {
-        mouseData = FindObjectOfType<MouseData>();
-        if (this.gameObject.GetComponent<ThrowableObject>() != null) throwableObject = this.gameObject.GetComponent<ThrowableObject>();
-        if (this.gameObject.GetComponent<ICanBeInteracted>() != null) interactable = this.gameObject.GetComponent<ICanBeInteracted>();
+        mouseData = FindObjectOfType<ObjectsOnMouse>();
     }
-    private void Start()
+    public virtual void Start()
     {
+        DeactivateGraphic();
         if (outline != null)
         {
             outline.OutlineColor = outlineData.highlightColor;
             outline.OutlineWidth = outlineData.outlineWidth;
         }
     }
-    void Update()
+
+    private void Update()
     {
         if (outline != null) HighlightSelf();
     }
 
-    public void HighlightSelf()
+    public virtual void HighlightSelf()
     {
-        Collider collider = mouseData.GetMousePosition().collider;
-        if (throwableObject != null)
+        if (mouseData.pointedGameObject == this.gameObject)
         {
-            if (collider != null && GameObject.ReferenceEquals(collider.gameObject, this.gameObject) && throwableObject.IsInsidePlayerRange) outline.enabled = true;
-            else outline.enabled = false;
+            if (!isActive) ActivateGraphic();
+            OtherActivateBehaviour();
         }
-        else
+        else if (mouseData.pointedGameObject != this.gameObject)
         {
-            if (collider != null && GameObject.ReferenceEquals(collider.gameObject, this.gameObject) && interactable.IsInsidePlayerRange) outline.enabled = true;
-            else outline.enabled = false;
+            if (isActive) DeactivateGraphic();
+            OtherDeactivateBehaviour();
         }
     }
+    public virtual void ActivateGraphic()
+    {
+        outline.enabled = true;
+        isActive = true;
+    }
+    public virtual void OtherActivateBehaviour()
+    {
+        return;
+    }
+    public virtual void DeactivateGraphic()
+    {
+        outline.enabled = false;
+        isActive = false;
+    }
+    public virtual void OtherDeactivateBehaviour()
+    {
+        return;
+    }
+
 }

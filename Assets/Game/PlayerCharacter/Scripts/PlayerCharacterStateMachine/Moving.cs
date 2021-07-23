@@ -6,7 +6,11 @@ public class Moving : PlayerState
     }
     public override void Start()
     {
-        _playerCharacter.playerController.playerReferences.rotation.rotationEnabled = true;
+        PlayerController.changeMovementData += UpdateSpeedValue;
+        AudioManager.instance.Play("Mc_Movement");
+        PlayerReferences playerReferences = _playerCharacter.playerController.playerReferences;
+        playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
+        if (!playerReferences.playerAnimations.PauseAnimator) playerReferences.rotation.rotationEnabled = true;
         UpdateSpeedValue();
     }
     public override void StateUpdate()
@@ -20,7 +24,7 @@ public class Moving : PlayerState
     {
         PlayerData playerData = _playerCharacter.playerController.playerReferences.playerData;
         PlayerController playerController = _playerCharacter.playerController;
-        playerController.actualSpeed = playerData.movementSpeed - (_playerCharacter.playerController.leftHandWeight + _playerCharacter.playerController.rightHandWeight);
+        playerController.actualSpeed = playerData.currentMovementSpeed - (_playerCharacter.playerController.leftHandWeight + _playerCharacter.playerController.rightHandWeight);
         if (playerController.actualSpeed < playerData.minSpeedValue) playerController.actualSpeed = playerData.minSpeedValue;
     }
     private void Movement()
@@ -57,13 +61,21 @@ public class Moving : PlayerState
     #region ToIdleState
     private void GoToIdleState(PlayerInputs playerInputs)
     {
-        if (playerInputs.MovementInput == Vector3.zero) _playerCharacter.SetState(new Idle(_playerCharacter));
+        if (playerInputs.MovementInput == Vector3.zero)
+        {
+            StopMovementSound();
+            _playerCharacter.SetState(new Idle(_playerCharacter));
+        }
     }
     #endregion
     #region ToDashState
     private void GoToDashState(PlayerInputs playerInputs)
     {
-        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied) _playerCharacter.SetState(new Dash(_playerCharacter));
+        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied && !_playerCharacter.playerController.DashLocked)
+        {
+            StopMovementSound();
+            _playerCharacter.SetState(new Dash(_playerCharacter));
+        }
     }
     #endregion
     #region ToHandsState
@@ -71,6 +83,7 @@ public class Moving : PlayerState
     {
         if (playerInputs.LeftHandInput || playerInputs.RightHandInput)
         {
+            StopMovementSound();
             if (playerInputs.LeftHandInput) _playerCharacter.playerController.selectedHand = PlayerController.SelectedHand.Left;
             else _playerCharacter.playerController.selectedHand = PlayerController.SelectedHand.Right;
             _playerCharacter.SetState(new Hands(_playerCharacter));
@@ -80,8 +93,17 @@ public class Moving : PlayerState
     #region ToInteractState
     private void GoToInteractState(PlayerInputs playerInputs)
     {
-        if (playerInputs.InteractionInput) _playerCharacter.SetState(new Interact(_playerCharacter));
+        if (playerInputs.InteractionInput)
+        {
+            StopMovementSound();
+            _playerCharacter.SetState(new Interact(_playerCharacter));
+        }
     }
+
     #endregion
+    private void StopMovementSound()
+    {
+        AudioManager.instance.Stop("Mc_Movement");
+    }
     #endregion
 }

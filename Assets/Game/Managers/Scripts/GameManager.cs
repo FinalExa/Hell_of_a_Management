@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +7,12 @@ public class GameManager : MonoBehaviour
     static GameManager self;
 
     [SerializeField] LevelData levelsData;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
+    }
     void Start()
     {
         Init();
@@ -17,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     void Init()
     {
+        AudioManager.instance.Play("InGame_Music");
         self = this;
         Timer.OnEndTimer += OnEndTimer;
         animator = gameObject.GetComponent<Animator>();
@@ -25,16 +29,17 @@ public class GameManager : MonoBehaviour
 
     void OnEndTimer(Timer sender, float currentTime)
     {
+        AudioManager.instance.StopAllSounds();
         if (Score.self.targetProgress >= levelsData.GetLevel(0).firstStarScore)
             WinLevel();
-        else if(Score.self.targetProgress < levelsData.GetLevel(0).firstStarScore)
+        else if (Score.self.targetProgress < levelsData.GetLevel(0).firstStarScore)
             LoseLevel();
     }
 
 
     public void LoseLevel()
     {
-        if(!LevelManager.levelManagerInstance.isLoading)
+        if (!LevelManager.levelManagerInstance.isLoading)
             ui_animator.SetTrigger("Defeat");
     }
 

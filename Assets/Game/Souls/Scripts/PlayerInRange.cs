@@ -3,12 +3,11 @@
 public class PlayerInRange : MonoBehaviour
 {
     private SoulController soulController;
-    private BoxCollider thisTrigger;
+    public BoxCollider thisTrigger;
 
     private void Awake()
     {
         soulController = this.gameObject.transform.parent.GetComponent<SoulController>();
-        thisTrigger = this.gameObject.GetComponent<BoxCollider>();
     }
     private void Start()
     {

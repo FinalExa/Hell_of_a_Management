@@ -5,9 +5,12 @@ public class UI_Score : MonoBehaviour
 {
     [SerializeField] LevelData levelData;
     [SerializeField] Text scoreText;
-    [SerializeField] Image star1;
-    [SerializeField] Image star2;
-    [SerializeField] Image star3;
+    [SerializeField] GameObject star1;
+    [SerializeField] GameObject star2;
+    [SerializeField] GameObject star3;
+    private Image star1Image;
+    private Image star2Image;
+    private Image star3Image;
     [SerializeField] Image fillImg;
     [SerializeField] GameObject scoreNumber;
     [SerializeField] GameObject scoreBar;
@@ -35,7 +38,9 @@ public class UI_Score : MonoBehaviour
         /* RESETS GFX */
         fillImg.fillAmount = 0;
         scoreText.text = $"Score: {0}";
-
+        star1Image = star1.GetComponent<Image>();
+        star2Image = star2.GetComponent<Image>();
+        star3Image = star3.GetComponent<Image>();
         Score.OnProgressChanged += UpdateGraphics;
     }
 
@@ -49,13 +54,13 @@ public class UI_Score : MonoBehaviour
                 scoreNumber.SetActive(true);
                 isActive = true;
             }
-            if (Time.timeScale == 0 && isPaused == false)
+            if (isPaused == false)
             {
                 scoreBar.SetActive(false);
                 scoreNumber.SetActive(false);
                 isPaused = true;
             }
-            if (Time.timeScale == 1 && isPaused == true)
+            if (isPaused == true)
             {
                 scoreBar.SetActive(true);
                 scoreNumber.SetActive(true);
@@ -76,24 +81,33 @@ public class UI_Score : MonoBehaviour
 
         else if (score < levelData.GetLevel(0).secondStarScore && score >= levelData.GetLevel(0).firstStarScore)
         {
-            if (star1.color != Color.white)
-                LightStar(ref star1, Color.white);
+            if (star1Image.color != Color.white)
+            {
+                LightStar(ref star1Image, Color.white);
+                star1.GetComponent<Animator>().SetTrigger("StarSpin");
+            }
 
             return;
         }
 
         else if (score < levelData.GetLevel(0).thirdStarScore && score >= levelData.GetLevel(0).secondStarScore)
         {
-            if (star2.color != Color.white)
-                LightStar(ref star2, Color.white);
+            if (star2Image.color != Color.white)
+            {
+                LightStar(ref star2Image, Color.white);
+                star2.GetComponent<Animator>().SetTrigger("StarSpin");
+            }
 
             return;
         }
 
         else if (score >= levelData.GetLevel(0).thirdStarScore)
         {
-            if (star3.color != Color.white)
-                LightStar(ref star3, Color.white);
+            if (star3Image.color != Color.white)
+            {
+                LightStar(ref star3Image, Color.white);
+                star3.GetComponent<Animator>().SetTrigger("StarSpin");
+            }
 
             return;
         }

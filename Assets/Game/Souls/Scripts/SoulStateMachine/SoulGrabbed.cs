@@ -8,6 +8,9 @@ public class SoulGrabbed : SoulState
     }
     public override void Start()
     {
+        AudioManager.instance.Play("Soul_DesperateScream");
+        _soulStateMachine.soulController.soulReferences.playerInRange.thisTrigger.enabled = false;
+        _soulStateMachine.soulController.soulReferences.soulAnimations.AnimatorStateUpdate(this.ToString());
         soulIsGrabbed(_soulStateMachine.soulController);
         if (_soulStateMachine.soulController.thisNavMeshAgent.isOnNavMesh) _soulStateMachine.soulController.thisNavMeshAgent.isStopped = true;
         _soulStateMachine.soulController.thisNavMeshAgent.enabled = false;
@@ -24,7 +27,7 @@ public class SoulGrabbed : SoulState
     }
     private void GoToFlying()
     {
-        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.isFlying) _soulStateMachine.SetState(new SoulFlying(_soulStateMachine));
+        if (_soulStateMachine.soulController.soulReferences.soulThrowableObject.isFlying || !_soulStateMachine.soulController.soulReferences.soulThrowableObject.IsAttachedToHand) _soulStateMachine.SetState(new SoulFlying(_soulStateMachine));
     }
     #endregion
 }

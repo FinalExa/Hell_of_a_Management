@@ -2,6 +2,7 @@
 
 public class Rotation : MonoBehaviour
 {
+    [SerializeField] private float rotationSpeed;
     public bool rotationEnabled;
     private PlayerInputs playerInputs;
     private ObjectsOnMouse objectsOnMouse;
@@ -34,7 +35,7 @@ public class Rotation : MonoBehaviour
         Vector3 playerVector = (playerInputs.MovementInput.x * forward) + (playerInputs.MovementInput.z * right);
         Vector3 direction = (playerVector).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
-        transform.rotation = lookRotation;
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed);
     }
     private float CalculateAngle(Vector3 player, Vector3 mouse)
     {
