@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class DrunkenChase : DrunkenState
+﻿public class DrunkenChase : DrunkenState
 {
     public DrunkenChase(DrunkenStateMachine drunkenStateMachine) : base(drunkenStateMachine)
     {
-
     }
 
     public override void StateUpdate()

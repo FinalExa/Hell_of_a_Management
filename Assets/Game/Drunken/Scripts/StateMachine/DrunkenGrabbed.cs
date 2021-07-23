@@ -1,18 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class DrunkenGrabbed : MonoBehaviour
+﻿public class DrunkenGrabbed : DrunkenState
 {
-    // Start is called before the first frame update
-    void Start()
+    public DrunkenGrabbed(DrunkenStateMachine drunkenStateMachine) : base(drunkenStateMachine)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class DrunkenController : MonoBehaviour
 {
-    [HideInInspector]public NavMeshAgent navMeshAgent;
-    [HideInInspector]public GameObject player;
+    [HideInInspector] public DrunkenReferences drunkenReferences;
+    [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public GameObject player;
 
     private void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        drunkenReferences = this.gameObject.GetComponent<DrunkenReferences>();
+        navMeshAgent = this.gameObject.GetComponent<NavMeshAgent>();
         player = FindObjectOfType<PlayerController>().gameObject;
     }
 }
