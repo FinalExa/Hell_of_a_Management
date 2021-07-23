@@ -29,12 +29,35 @@ public class PlayerController : MonoBehaviour
         playerReferences = this.gameObject.GetComponent<PlayerReferences>();
     }
 
+    private void FixedUpdate()
+    {
+        TerrainDashCheck();
+    }
+
+    private void TerrainDashCheck()
+    {
+        Collider[] colliders = Physics.OverlapSphere(this.gameObject.transform.position, 0.5f);
+        bool check = false;
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject.CompareTag("Terrain"))
+            {
+                if (colliders[i].GetComponent<SurfaceController>().Type == SurfaceManager.SurfaceType.MUD)
+                {
+                    check = true;
+                    DashLocked = true;
+                    break;
+                }
+            }
+        }
+        if (check == false) DashLocked = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Terrain"))
         {
             changeMovementData();
-            if (other.gameObject.GetComponent<SurfaceController>().Type == SurfaceManager.SurfaceType.MUD) DashLocked = true;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -42,7 +65,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Terrain"))
         {
             changeMovementData();
-            if (other.gameObject.GetComponent<SurfaceController>().Type == SurfaceManager.SurfaceType.MUD) DashLocked = false;
         }
     }
 }
