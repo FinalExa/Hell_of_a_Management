@@ -54,13 +54,13 @@ public class UI_Score : MonoBehaviour
                 scoreNumber.SetActive(true);
                 isActive = true;
             }
-            if (Time.timeScale == 0 && isPaused == false)
+            if (isPaused == false)
             {
                 scoreBar.SetActive(false);
                 scoreNumber.SetActive(false);
                 isPaused = true;
             }
-            if (Time.timeScale == 1 && isPaused == true)
+            if (isPaused == true)
             {
                 scoreBar.SetActive(true);
                 scoreNumber.SetActive(true);
