@@ -18,7 +18,7 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     [HideInInspector] public Rigidbody selfRB;
     [SerializeField] private string parentObjectTag;
 
-    void Awake()
+    public virtual void Awake()
     {
         foreach (BoxCollider collider in this.gameObject.GetComponents<BoxCollider>())
         {

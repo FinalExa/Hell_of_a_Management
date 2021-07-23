@@ -20,7 +20,9 @@ MonoBehaviour:
   - probabilityOfThisOrderSize: 40
     scoreGivenByThisOrderSize: 140
   - probabilityOfThisOrderSize: 12
-    scoreGivenByThisOrderSize: 200
+    scoreGivenByThisOrderSize: 240
   maxActiveOrdersAtATime: 3
-  activeOrders: 1
+  activeOrders: 0
   timeBetweenSpawns: 5
+  mudTerrainSpawnChance: 45
+  icyTerrainSpawnChance: 45

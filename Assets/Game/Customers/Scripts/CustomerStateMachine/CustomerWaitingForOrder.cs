@@ -15,11 +15,10 @@ public class CustomerWaitingForOrder : CustomerState
         _customerStateMachine.customerController.customerReferences.customerVignette.SetupVignette(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients, 0, true);
         _customerStateMachine.customerController.SendInfoToToDoList();
     }
-
     public override void StateUpdate()
     {
         if (!_customerStateMachine.customerController.waitingForOrder && !orderReceived) EndOrder();
-        if (orderReceived && _customerStateMachine.customerController.customerReferences.animations.animator.GetBool("Release")) GoToGoToLocation();
+        if (orderReceived && _customerStateMachine.customerController.customerReferences.animations.animator.GetBool("Release")) FinishEating();
     }
 
     private void EndOrder()
@@ -36,6 +35,19 @@ public class CustomerWaitingForOrder : CustomerState
         orderReceived = true;
     }
 
+    private void FinishEating()
+    {
+        RollForTerrain();
+        GoToGoToLocation();
+    }
+
+    private void RollForTerrain()
+    {
+        if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish && UnityEngine.Random.Range(1, 100) <= _customerStateMachine.customerController.customerReferences.customerData.mudTerrainSpawnChance)
+            SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.MUD, _customerStateMachine.gameObject.transform);
+        else if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Drink && UnityEngine.Random.Range(1, 100) <= _customerStateMachine.customerController.customerReferences.customerData.icyTerrainSpawnChance)
+            SurfaceManager.self.GeneratesSurfaceFromThrownPlate(SurfaceManager.SurfaceType.ICE, _customerStateMachine.gameObject.transform);
+    }
     private void PlaySoundDependingOnOrder()
     {
         if (_customerStateMachine.customerController.chosenType == OrdersData.OrderTypes.Dish) AudioManager.instance.Play("Customer_Consume_dish");

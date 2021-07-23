@@ -41,7 +41,7 @@ public class Dash : PlayerState
     }
     private void PerformDash()
     {
-        if (dashTimer > 0)
+        if (dashTimer > 0 && !_playerCharacter.playerController.DashLocked)
         {
             Rigidbody playerRb = _playerCharacter.playerController.playerReferences.playerRb;
             dashTimer -= Time.deltaTime;

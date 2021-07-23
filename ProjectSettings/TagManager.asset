@@ -8,16 +8,17 @@ TagManager:
   - SoulContainer
   - StorageRoom
   - Soul
-  - Machine
   - ThrowableObject
+  - Machine
   - Customer
   - CustomerSpawner
   - Ground
   - GenericObjectsContainer
-  - Exit
   - Occlusion
+  - Exit
   - OcclusionShader
   - Void
+  - Terrain
   layers:
   - Default
   - TransparentFX
