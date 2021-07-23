@@ -5,6 +5,5 @@ public class DrunkenState : State
     public DrunkenState(DrunkenStateMachine drunkenStateMachine)
     {
         _drunkenStateMachine = drunkenStateMachine;
-        Debug.Log(this);
     }
 }
