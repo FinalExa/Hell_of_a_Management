@@ -12,3 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375f57bf888deda40ba4b61b36dc59a0, type: 3}
   m_Name: DrunkenData
   m_EditorClassIdentifier: 
+  drunkenSpeed: 5
+  drunkenAcceleration: 5
+  rangeSize: 5
+  timerDeny: 2
