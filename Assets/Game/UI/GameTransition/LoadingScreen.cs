@@ -12,6 +12,6 @@ public class LoadingScreen : MonoBehaviour
         if (loadingScreenInstance == null)
             loadingScreenInstance = this;
         else
-            DestroyObject(gameObject);
+            Destroy(gameObject);
     }
 }

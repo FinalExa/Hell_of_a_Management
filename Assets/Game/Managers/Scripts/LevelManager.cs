@@ -26,7 +26,7 @@ using UnityEngine;
             if (levelManagerInstance == null)
             levelManagerInstance = this;
             else
-                DestroyObject(gameObject);
+                Destroy(gameObject);
 
             ui_Animator = GameObject.Find("UI_Manager").GetComponent<Animator>();
         }
