@@ -4,7 +4,10 @@
 public class PlayerData : ScriptableObject
 {
     [Header("Movement section")]
-    public float movementSpeed;
+    [HideInInspector]public float currentMovementSpeed;
+    public float defaultMovementSpeed;
+    public float slowMovementSpeed;
+    public float fastMovementSpeed;
     public float minSpeedValue;
     [Header("Hands section")]
     public float grabRange;

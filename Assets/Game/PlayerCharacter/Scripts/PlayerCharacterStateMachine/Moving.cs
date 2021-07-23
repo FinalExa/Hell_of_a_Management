@@ -6,6 +6,7 @@ public class Moving : PlayerState
     }
     public override void Start()
     {
+        PlayerController.changeMovementData += UpdateSpeedValue;
         AudioManager.instance.Play("Mc_Movement");
         PlayerReferences playerReferences = _playerCharacter.playerController.playerReferences;
         playerReferences.playerAnimations.PlayerAnimatorStateUpdate(this.ToString());
@@ -23,7 +24,7 @@ public class Moving : PlayerState
     {
         PlayerData playerData = _playerCharacter.playerController.playerReferences.playerData;
         PlayerController playerController = _playerCharacter.playerController;
-        playerController.actualSpeed = playerData.movementSpeed - (_playerCharacter.playerController.leftHandWeight + _playerCharacter.playerController.rightHandWeight);
+        playerController.actualSpeed = playerData.currentMovementSpeed - (_playerCharacter.playerController.leftHandWeight + _playerCharacter.playerController.rightHandWeight);
         if (playerController.actualSpeed < playerData.minSpeedValue) playerController.actualSpeed = playerData.minSpeedValue;
     }
     private void Movement()
@@ -70,7 +71,7 @@ public class Moving : PlayerState
     #region ToDashState
     private void GoToDashState(PlayerInputs playerInputs)
     {
-        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied)
+        if (playerInputs.DashInput && !_playerCharacter.playerController.LeftHandOccupied && !_playerCharacter.playerController.RightHandOccupied && !_playerCharacter.playerController.DashLocked)
         {
             StopMovementSound();
             _playerCharacter.SetState(new Dash(_playerCharacter));
