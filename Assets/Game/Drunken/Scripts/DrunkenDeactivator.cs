@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class DrunkenDeactivator : MonoBehaviour
 {
-    public static Action<float> giveScore;
+    public static Action<DrunkenController> drunkenDefeat;
+    public static Action<float> drunkenDefeated;
     private bool inThePub;
-    private DrunkenReferences drunkenReferences;
+    private DrunkenController drunkenController;
     [SerializeField] private float deleteTimer;
     private float timer;
     private bool deleteTimerOn;
     private void Awake()
     {
-        drunkenReferences = this.gameObject.GetComponent<DrunkenReferences>();
+        drunkenController = this.gameObject.GetComponent<DrunkenController>();
     }
     private void OnEnable()
     {
@@ -27,7 +28,7 @@ public class DrunkenDeactivator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Remover") && inThePub && !drunkenReferences.throwableObject.IsAttachedToHand)
+        if (other.gameObject.CompareTag("Remover") && inThePub && !drunkenController.drunkenReferences.throwableObject.IsAttachedToHand)
         {
             deleteTimerOn = true;
         }
@@ -39,7 +40,8 @@ public class DrunkenDeactivator : MonoBehaviour
         if (timer > 0) timer -= Time.deltaTime;
         else
         {
-            giveScore(drunkenReferences.drunkenData.scoreGiven);
+            drunkenDefeat(drunkenController);
+            drunkenDefeated(drunkenController.drunkenReferences.drunkenData.scoreGiven);
             this.gameObject.SetActive(false);
         }
     }

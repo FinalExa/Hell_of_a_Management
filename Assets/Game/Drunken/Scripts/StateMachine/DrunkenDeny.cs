@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using UnityEngine;
 public class DrunkenDeny : DrunkenState
 {
     public float timer;
@@ -13,7 +13,10 @@ public class DrunkenDeny : DrunkenState
     public override void Start()
     {
         timer = _drunkenStateMachine.drunkenController.drunkenReferences.drunkenData.timerDeny;
-        _drunkenStateMachine.drunkenController.navMeshAgent.enabled = false;
+        _drunkenStateMachine.drunkenController.navMeshAgent.enabled = true;
+        _drunkenStateMachine.drunkenController.navMeshAgent.isStopped = true;
+        _drunkenStateMachine.drunkenController.navMeshAgent.velocity = Vector3.zero;
+        _drunkenStateMachine.drunkenController.thisRb.velocity = Vector3.zero;
     }
 
     private void Deny()

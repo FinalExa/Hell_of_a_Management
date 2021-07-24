@@ -1,4 +1,4 @@
-﻿using System;
+﻿using UnityEngine;
 
 public class DrunkenGrabbed : DrunkenState
 {
@@ -10,6 +10,7 @@ public class DrunkenGrabbed : DrunkenState
     public override void Start()
     {
         _drunkenStateMachine.drunkenController.navMeshAgent.enabled = false;
+        _drunkenStateMachine.gameObject.transform.localPosition = new Vector3(_drunkenStateMachine.gameObject.transform.localPosition.x, _drunkenStateMachine.gameObject.transform.localPosition.y + _drunkenStateMachine.drunkenController.grabHeightOffset, _drunkenStateMachine.gameObject.transform.localPosition.z);
     }
 
     public override void StateUpdate()

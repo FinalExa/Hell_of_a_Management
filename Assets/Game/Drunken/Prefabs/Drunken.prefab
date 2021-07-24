@@ -140,8 +140,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5137183288047318238}
-  - component: {fileID: 1704886029228540418}
   - component: {fileID: 1318860227636787350}
+  - component: {fileID: 1704886029228540418}
   - component: {fileID: 9066917232402407250}
   - component: {fileID: 5966591034547258026}
   - component: {fileID: 5495617186168487938}
@@ -157,7 +157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5137183288047318238
 Transform:
   m_ObjectHideFlags: 0
@@ -175,19 +175,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1704886029228540418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3416940958650852573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da0caabdf74a37e4597c62e43d89af4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drunkenController: {fileID: 0}
 --- !u!114 &1318860227636787350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,9 +189,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drunkenReferences: {fileID: 0}
   navMeshAgent: {fileID: 0}
+  thisRb: {fileID: 0}
   player: {fileID: 0}
-  range: {fileID: 8270835363511200794}
   playerInRange: 0
+  grabHeightOffset: 1
+  range: {fileID: 8270835363511200794}
+--- !u!114 &1704886029228540418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416940958650852573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0caabdf74a37e4597c62e43d89af4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drunkenController: {fileID: 0}
 --- !u!114 &9066917232402407250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,8 +398,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5, z: 1}
-  m_Center: {x: 0, y: 1.15, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &9094487573152256166
 GameObject:
   m_ObjectHideFlags: 0

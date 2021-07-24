@@ -5,14 +5,17 @@ public class DrunkenController : MonoBehaviour
 {
     [HideInInspector] public DrunkenReferences drunkenReferences;
     [HideInInspector] public NavMeshAgent navMeshAgent;
+    [HideInInspector] public Rigidbody thisRb;
     [HideInInspector] public GameObject player;
+    [HideInInspector] public bool playerInRange;
+    public float grabHeightOffset;
     public BoxCollider range;
-    public bool playerInRange;
 
     private void Awake()
     {
         drunkenReferences = this.gameObject.GetComponent<DrunkenReferences>();
         navMeshAgent = this.gameObject.GetComponent<NavMeshAgent>();
+        thisRb = this.gameObject.GetComponent<Rigidbody>();
         player = FindObjectOfType<PlayerController>().gameObject;
     }
 

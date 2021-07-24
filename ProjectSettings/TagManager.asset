@@ -21,6 +21,7 @@ TagManager:
   - Terrain
   - Remover
   - InThePub
+  - DrunkenSpawner
   layers:
   - Default
   - TransparentFX
