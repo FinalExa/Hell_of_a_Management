@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &7379681421038770087
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330762401138776169}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a57108959a7abb54982dcdcdce20d1ca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4437618693704120868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +37,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!95 &5111968337123293553
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3022803955523818570}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f158c843f642a4a41b57db50674588c1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2771994130122694517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +145,8 @@ GameObject:
   - component: {fileID: 9066917232402407250}
   - component: {fileID: 7899614268964980318}
   - component: {fileID: 5495617186168487938}
+  - component: {fileID: 3696962433600394442}
+  - component: {fileID: 3657409131407252966}
   - component: {fileID: 7786932154586072896}
   - component: {fileID: 6197416470739931753}
   - component: {fileID: 1914855169873308044}
@@ -178,6 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drunkenData: {fileID: 11400000, guid: 0178b9ff54eb82a468fd71d9156f9caf, type: 2}
   throwableObject: {fileID: 0}
+  highlightable: {fileID: 0}
+  animations: {fileID: 0}
 --- !u!114 &7899614268964980318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwableObjectData: {fileID: 11400000, guid: c70efe89add97d640be7cc02f179c9e9, type: 2}
-  thisGraphicsObject: {fileID: 3022803955523818570}
+  thisGraphicsObject: {fileID: 0}
   isFlying: 0
   physicsCollider: {fileID: 6361197671343950730}
   selfRB: {fileID: 0}
@@ -208,9 +250,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6873a95489c9cd4daf976f84850bcbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outline: {fileID: 2771994130122694517}
+  outline: {fileID: 0}
   outlineData: {fileID: 11400000, guid: 0a7462d12ece4224bae0ef9a03356b88, type: 2}
-  thisGraphicsObject: {fileID: 3022803955523818570}
+  thisGraphicsObject: {fileID: 0}
+--- !u!114 &3696962433600394442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416940958650852573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9fd46ba8388f84badfe2b5114d2f19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drunkenGraphics:
+  - customerModel: {fileID: 3022803955523818570}
+    customerOutline: {fileID: 2771994130122694517}
+    customerAnimator: {fileID: 5111968337123293553}
+  - customerModel: {fileID: 1330762401138776169}
+    customerOutline: {fileID: 4437618693704120868}
+    customerAnimator: {fileID: 7379681421038770087}
+--- !u!114 &3657409131407252966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416940958650852573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd2d13e5ac352945ab2c8cd5aa866e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  waitForAnimation: 0
+  stateMachineToRead: {fileID: 1704886029228540418}
 --- !u!65 &7786932154586072896
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3490,7 +3566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 67bd99021fefe324d811c2572bb119bd, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 980902509190056748, guid: 67bd99021fefe324d811c2572bb119bd, type: 3}
       propertyPath: m_Layer

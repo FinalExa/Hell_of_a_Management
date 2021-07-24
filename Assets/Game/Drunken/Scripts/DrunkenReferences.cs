@@ -3,10 +3,15 @@
 public class DrunkenReferences : MonoBehaviour
 {
     public DrunkenData drunkenData;
-    public ThrowableObject throwableObject;
+    [HideInInspector] public ThrowableObject throwableObject;
+    [HideInInspector] public Highlightable highlightable;
+    [HideInInspector] public Animations animations;
+
 
     private void Awake()
     {
-        throwableObject = this.GetComponent<ThrowableObject>();
+        throwableObject = this.gameObject.GetComponent<ThrowableObject>();
+        highlightable = this.gameObject.GetComponent<Highlightable>();
+        animations = this.gameObject.GetComponent<Animations>();
     }
 }
