@@ -19,6 +19,8 @@ TagManager:
   - OcclusionShader
   - Void
   - Terrain
+  - Remover
+  - InThePub
   layers:
   - Default
   - TransparentFX

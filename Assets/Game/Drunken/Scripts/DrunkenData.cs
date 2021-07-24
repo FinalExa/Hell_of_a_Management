@@ -6,5 +6,6 @@ public class DrunkenData : ScriptableObject
     public float drunkenSpeed;
     public float drunkenAcceleration;
     public float rangeSize;
+    public float scoreGiven;
     public float timerDeny;
 }

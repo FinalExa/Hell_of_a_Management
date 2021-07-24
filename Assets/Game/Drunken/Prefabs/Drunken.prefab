@@ -143,9 +143,10 @@ GameObject:
   - component: {fileID: 1704886029228540418}
   - component: {fileID: 1318860227636787350}
   - component: {fileID: 9066917232402407250}
-  - component: {fileID: 7899614268964980318}
+  - component: {fileID: 5966591034547258026}
   - component: {fileID: 5495617186168487938}
   - component: {fileID: 3696962433600394442}
+  - component: {fileID: 2181863693656826787}
   - component: {fileID: 3657409131407252966}
   - component: {fileID: 7786932154586072896}
   - component: {fileID: 6197416470739931753}
@@ -220,7 +221,8 @@ MonoBehaviour:
   throwableObject: {fileID: 0}
   highlightable: {fileID: 0}
   animations: {fileID: 0}
---- !u!114 &7899614268964980318
+  drunkenStateMachine: {fileID: 0}
+--- !u!114 &5966591034547258026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,7 +231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3416940958650852573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 161f37d513038dc46afd11e424084fa8, type: 3}
+  m_Script: {fileID: 11500000, guid: c6eab28f24d4a094e89fcf5ffd6f3400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   throwableObjectData: {fileID: 11400000, guid: c70efe89add97d640be7cc02f179c9e9, type: 2}
@@ -238,6 +240,7 @@ MonoBehaviour:
   physicsCollider: {fileID: 6361197671343950730}
   selfRB: {fileID: 0}
   parentObjectTag: GenericObjectsContainer
+  isNotGrounded: 0
 --- !u!114 &5495617186168487938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,6 +275,19 @@ MonoBehaviour:
   - customerModel: {fileID: 1330762401138776169}
     customerOutline: {fileID: 4437618693704120868}
     customerAnimator: {fileID: 7379681421038770087}
+--- !u!114 &2181863693656826787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416940958650852573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d51ab47fb6dfdb4f9b824102bbe2bc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteTimer: 0.2
 --- !u!114 &3657409131407252966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,7 +396,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 2.3, z: 1}
+  m_Size: {x: 1, y: 0.5, z: 1}
   m_Center: {x: 0, y: 1.15, z: 0}
 --- !u!1 &9094487573152256166
 GameObject:
