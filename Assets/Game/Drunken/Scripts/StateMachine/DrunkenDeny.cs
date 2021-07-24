@@ -17,6 +17,7 @@ public class DrunkenDeny : DrunkenState
         _drunkenStateMachine.drunkenController.navMeshAgent.isStopped = true;
         _drunkenStateMachine.drunkenController.navMeshAgent.velocity = Vector3.zero;
         _drunkenStateMachine.drunkenController.thisRb.velocity = Vector3.zero;
+        _drunkenStateMachine.drunkenController.drunkenReferences.animations.AnimatorStateUpdate(this.ToString());
     }
 
     private void Deny()

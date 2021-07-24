@@ -4,6 +4,10 @@
     {
     }
 
+    public override void Start()
+    {
+        _drunkenStateMachine.drunkenController.drunkenReferences.animations.AnimatorStateUpdate(this.ToString());
+    }
     public override void StateUpdate()
     {
         Transitions();

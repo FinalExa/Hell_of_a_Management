@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class DrunkenGrabbed : DrunkenState
+﻿public class DrunkenGrabbed : DrunkenState
 {
     public DrunkenGrabbed(DrunkenStateMachine drunkenStateMachine) : base(drunkenStateMachine)
     {
@@ -10,7 +8,8 @@ public class DrunkenGrabbed : DrunkenState
     public override void Start()
     {
         _drunkenStateMachine.drunkenController.navMeshAgent.enabled = false;
-        _drunkenStateMachine.gameObject.transform.localPosition = new Vector3(_drunkenStateMachine.gameObject.transform.localPosition.x, _drunkenStateMachine.gameObject.transform.localPosition.y + _drunkenStateMachine.drunkenController.grabHeightOffset, _drunkenStateMachine.gameObject.transform.localPosition.z);
+        //_drunkenStateMachine.gameObject.transform.localPosition += new Vector3(0, _drunkenStateMachine.drunkenController.grabHeightOffset, 0);
+        _drunkenStateMachine.drunkenController.drunkenReferences.animations.AnimatorStateUpdate(this.ToString());
     }
 
     public override void StateUpdate()

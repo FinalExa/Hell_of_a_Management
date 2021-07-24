@@ -7,6 +7,7 @@
     public override void Start()
     {
         _drunkenStateMachine.drunkenController.navMeshAgent.enabled = true;
+        _drunkenStateMachine.drunkenController.drunkenReferences.animations.AnimatorStateUpdate(this.ToString());
     }
 
     public override void StateUpdate()
@@ -31,7 +32,7 @@
 
     private void GoToDeny()
     {
-        if(_drunkenStateMachine.drunkenController.playerInRange)
+        if (_drunkenStateMachine.drunkenController.playerInRange)
         {
             _drunkenStateMachine.SetState(new DrunkenDeny(_drunkenStateMachine));
         }
