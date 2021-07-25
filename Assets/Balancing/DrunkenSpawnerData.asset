@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5d0c3615bdfd7469d8e77fbb561e81, type: 3}
   m_Name: DrunkenSpawnerData
   m_EditorClassIdentifier: 
-  maxDrunkens: 4
-  timeBetweenSpawns: 2
-  drunkenSpawnChance: 100
+  maxDrunkens: 3
+  timeBetweenSpawns: 12
+  drunkenSpawnChance: 35
