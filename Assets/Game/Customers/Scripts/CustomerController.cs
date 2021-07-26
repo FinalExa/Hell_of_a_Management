@@ -91,7 +91,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     {
         if (other.CompareTag("Exit"))
         {
-            customerLeft(thisTable, thisTableSeatId, this);
+            if (!isTutorial) customerLeft(thisTable, thisTableSeatId, this);
             this.gameObject.SetActive(false);
         }
     }

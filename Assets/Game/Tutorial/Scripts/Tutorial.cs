@@ -13,6 +13,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] private GameObject tutorialScreen;
     [SerializeField] private Text tutorialTextBox;
     [SerializeField] private string[] tutorialTexts;
+    [SerializeField] private string tutorialWrongOrder;
     [SerializeField] private int[] followingIndexes;
     [SerializeField] private int[] arrowIndexes;
     [SerializeField] private GameObject[] arrowTargets;
@@ -21,6 +22,8 @@ public class Tutorial : MonoBehaviour
     private bool waitForClickToContinue;
     private bool openPrevious;
     private bool arrowActive;
+    private bool specialCase;
+    [SerializeField] private int doubleIndex;
 
     private void Awake()
     {
@@ -31,6 +34,12 @@ public class Tutorial : MonoBehaviour
         CustomerHighlightable.continueTutorial += ShowTutorialScreen;
         CustomerWaitingForOrder.continueTutorial += ShowTutorialScreen;
         Grab.continueTutorial += ShowTutorialScreen;
+        Machine.continueTutorialCheck += CheckIndex;
+        Machine.continueTutorial += ShowTutorialScreen;
+        Table.continueTutorial += ShowTutorialScreen;
+        Table.wrongOrderTutorial += WrongOrder;
+        MopThrowable.continueTutorial += ShowTutorialScreen;
+        Mop.continueTutorial += ShowTutorialScreen;
     }
 
     private void Start()
@@ -47,12 +56,17 @@ public class Tutorial : MonoBehaviour
 
     private void Update()
     {
-        if (waitForClickToContinue && (Input.GetButtonDown("Fire1") == true || Input.GetButtonDown("Fire2") == true)) ClickToContinue();
+        if (waitForClickToContinue && (Input.GetButtonDown("Fire1") == true || Input.GetButtonDown("Fire2") == true))
+        {
+            if (!specialCase) ClickToContinue();
+            else ClickToContinueSpecial();
+        }
         if (Input.GetKeyDown(showHintAgainKey)) ShowTutorialScreen(tutorialIndex - 1);
     }
 
     public void ShowTutorialScreen()
     {
+        specialCase = false;
         playerInputs.TutorialStop();
         playerInputs.enabled = false;
         tutorialScreen.SetActive(true);
@@ -61,12 +75,22 @@ public class Tutorial : MonoBehaviour
     }
     public void ShowTutorialScreen(int index)
     {
+        specialCase = false;
         openPrevious = true;
         playerInputs.TutorialStop();
         playerInputs.enabled = false;
         tutorialScreen.SetActive(true);
         tutorialTextBox.text = tutorialTexts[index];
         waitForClickToContinue = true;
+    }
+
+    private void CheckIndex()
+    {
+        if (tutorialIndex == doubleIndex)
+        {
+            tutorialIndex++;
+        }
+        ShowTutorialScreen();
     }
 
     private void ClickToContinue()
@@ -136,5 +160,24 @@ public class Tutorial : MonoBehaviour
             tutorialArrow.gameObject.SetActive(false);
             arrowActive = false;
         }
+    }
+
+    private void WrongOrder()
+    {
+        playerInputs.TutorialStop();
+        playerInputs.enabled = false;
+        tutorialScreen.SetActive(true);
+        tutorialTextBox.text = tutorialWrongOrder;
+        waitForClickToContinue = true;
+        specialCase = true;
+    }
+
+    private void ClickToContinueSpecial()
+    {
+        playerInputs.enabled = true;
+        waitForClickToContinue = false;
+        tutorialScreen.SetActive(false);
+        tutorialTextBox.text = string.Empty;
+        specialCase = false;
     }
 }

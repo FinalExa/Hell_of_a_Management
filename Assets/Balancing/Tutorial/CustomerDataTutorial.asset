@@ -22,7 +22,7 @@ MonoBehaviour:
   - probabilityOfThisOrderSize: 0
     scoreGivenByThisOrderSize: 240
   maxActiveOrdersAtATime: 3
-  activeOrders: 1
+  activeOrders: 0
   timeBetweenSpawns: 5
   mudTerrainSpawnChance: 100
-  icyTerrainSpawnChance: 0
+  icyTerrainSpawnChance: 100

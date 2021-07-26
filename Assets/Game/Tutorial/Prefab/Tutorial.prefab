@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f21dbff91c7ca4f92b20251eee9a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisActivationIndex: 11
+  thisActivationIndex: 14
 --- !u!65 &40626586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 1, z: 3}
+  m_Size: {x: 7, y: 1, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9048652271697719
 GameObject:
@@ -12484,20 +12484,26 @@ MonoBehaviour:
     automatically.
   - But, of course, if you have put all the ingredients needed in the machine and
     they are less than three, you can just press E to produce what you need.
-  - Sometimes when clients consume their order they can leave a dirt stain on the
+  - Now, take the produced order and throw it to the table where it was made!
+  - Sometimes when customers consume their order they can leave a dirt stain on the
     ground, you have to clean it up!
   - Go and pick up the mop!
+  - Use the mop to cleanup dirty terrains, you can throw it over them or pass over
+    them while keeping it in your hand!
   - "Be careful with that demon, he is totally drunk! Drunken demons are just annoying...
     they won\u2019t order anything and will only try to stop you from doing your
     job. Just pick them up and throw them away, nobody wants them!"
   - "That\u2019s it, now get to work, maggot!"
-  followingIndexes: 030000000400000006000000
-  arrowIndexes: 05000000070000000a000000
+  tutorialWrongOrder: Seems like you've missed the right order, the customers simply
+    ignore that, but you have lost time and paycheck, maggot.
+  followingIndexes: 030000000400000006000000090000000c000000
+  arrowIndexes: 05000000070000000d000000
   arrowTargets:
   - {fileID: 487176545}
   - {fileID: 2035656003}
   - {fileID: 40626583}
   showHintAgainKey: 104
+  doubleIndex: 8
 --- !u!1 &2785649892876956130
 GameObject:
   m_ObjectHideFlags: 0
@@ -20716,6 +20722,7 @@ MonoBehaviour:
     customer: {fileID: 0}
     thisTable: {fileID: 0}
     thisId: 0
+  isTutorial: 1
 --- !u!135 &6838697180212341440
 SphereCollider:
   m_ObjectHideFlags: 0

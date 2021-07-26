@@ -1,7 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
 {
+    public static Action continueTutorialCheck;
+    public static Action continueTutorial;
+    public static Action deactivateRecipeInstruction;
+    public static Action deactivateProduceOrderInstruction;
     [HideInInspector] public List<OrdersData.OrderIngredients> recipe;
     [HideInInspector] public GameObject Self { get; set; }
     [HideInInspector] public bool IsInsidePlayerRange { get; set; }
@@ -10,14 +15,21 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
     [SerializeField] GameObject orderOutputPosition;
     private HighlightableMachine highlightableMachine;
     private IHaveIngredientLights thisLightObject;
+    [SerializeField] private bool isTutorial;
+    private bool tutorialRecipeInstructionDone;
+    private bool tutorialProduceOrderInstructionDone;
 
     private void Awake()
     {
         highlightableMachine = this.gameObject.GetComponent<HighlightableMachine>();
         thisLightObject = this.gameObject.GetComponent<IHaveIngredientLights>();
+        deactivateRecipeInstruction += DeactivateRecipeInstruction;
+        deactivateProduceOrderInstruction += DeactivateProduceOrderInstruction;
     }
     private void Start()
     {
+        tutorialRecipeInstructionDone = false;
+        tutorialProduceOrderInstructionDone = false;
         Self = this.gameObject;
         highlightableMachine.miniDialogueWithText.SetupPosition();
     }
@@ -32,6 +44,11 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
             source.transform.localPosition = Vector3.zero;
             thisLightObject.ActivateLight(this);
             if (recipe.Count == recipeMaxLimit) ProduceOrder();
+            if (isTutorial && !tutorialRecipeInstructionDone)
+            {
+                continueTutorialCheck();
+                deactivateRecipeInstruction();
+            }
         }
     }
 
@@ -54,10 +71,24 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
         recipe.Clear();
         thisLightObject.ResetAllLights();
         highlightableMachine.miniDialogueWithText.DeactivateDialogue();
+        if (isTutorial && !tutorialProduceOrderInstructionDone)
+        {
+            continueTutorial();
+            deactivateProduceOrderInstruction();
+        }
     }
 
     public void Interaction()
     {
         if (recipe.Count > 0) ProduceOrder();
+    }
+
+    private void DeactivateRecipeInstruction()
+    {
+        tutorialRecipeInstructionDone = true;
+    }
+    private void DeactivateProduceOrderInstruction()
+    {
+        tutorialProduceOrderInstructionDone = true;
     }
 }
