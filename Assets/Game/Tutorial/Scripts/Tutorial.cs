@@ -10,6 +10,7 @@ public class Tutorial : MonoBehaviour
     private Timer timer;
     private TutorialArrow tutorialArrow;
     [HideInInspector] public int tutorialIndex;
+    [SerializeField] private GameObject drunken;
     [SerializeField] private GameObject tutorialScreen;
     [SerializeField] private Text tutorialTextBox;
     [SerializeField] private string[] tutorialTexts;
@@ -23,6 +24,7 @@ public class Tutorial : MonoBehaviour
     private bool openPrevious;
     private bool arrowActive;
     private bool specialCase;
+    private bool drunkenActivate;
     [SerializeField] private int doubleIndex;
 
     private void Awake()
@@ -39,7 +41,8 @@ public class Tutorial : MonoBehaviour
         Table.continueTutorial += ShowTutorialScreen;
         Table.wrongOrderTutorial += WrongOrder;
         MopThrowable.continueTutorial += ShowTutorialScreen;
-        Mop.continueTutorial += ShowTutorialScreen;
+        Mop.continueTutorial += FinalTutorialSetup;
+        DrunkenDeactivator.continueTutorial += ShowTutorialScreen;
     }
 
     private void Start()
@@ -105,6 +108,11 @@ public class Tutorial : MonoBehaviour
         if (!openPrevious) tutorialIndex++;
         else openPrevious = false;
         if (consecutive) ShowTutorialScreen();
+        if (drunkenActivate)
+        {
+            drunken.SetActive(true);
+            drunkenActivate = false;
+        }
         if (tutorialIndex == tutorialTexts.Length) EndTutorial();
     }
 
@@ -179,5 +187,11 @@ public class Tutorial : MonoBehaviour
         tutorialScreen.SetActive(false);
         tutorialTextBox.text = string.Empty;
         specialCase = false;
+    }
+
+    private void FinalTutorialSetup()
+    {
+        drunkenActivate = true;
+        ShowTutorialScreen();
     }
 }

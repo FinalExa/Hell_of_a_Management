@@ -5,11 +5,14 @@ public class DrunkenDeactivator : MonoBehaviour
 {
     public static Action<DrunkenController> drunkenDefeat;
     public static Action<float> drunkenDefeated;
+    public static Action continueTutorial;
     private bool inThePub;
     private DrunkenController drunkenController;
     [SerializeField] private float deleteTimer;
     private float timer;
     private bool deleteTimerOn;
+    [SerializeField] private bool isTutorial;
+    private bool tutorialHintGiven;
     private void Awake()
     {
         drunkenController = this.gameObject.GetComponent<DrunkenController>();
@@ -40,9 +43,14 @@ public class DrunkenDeactivator : MonoBehaviour
         if (timer > 0) timer -= Time.deltaTime;
         else
         {
-            drunkenDefeat(drunkenController);
+            if (!isTutorial) drunkenDefeat(drunkenController);
             drunkenDefeated(drunkenController.drunkenReferences.drunkenData.scoreGiven);
             this.gameObject.SetActive(false);
+            if (isTutorial && !tutorialHintGiven)
+            {
+                continueTutorial();
+                tutorialHintGiven = false;
+            }
         }
     }
 }
