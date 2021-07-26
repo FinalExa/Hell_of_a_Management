@@ -19,6 +19,7 @@ TagManager:
   - OcclusionShader
   - Void
   - Terrain
+  - DeactivateInTrigger
   layers:
   - Default
   - TransparentFX

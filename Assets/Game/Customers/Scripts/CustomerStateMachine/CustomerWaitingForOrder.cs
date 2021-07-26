@@ -2,6 +2,7 @@
 public class CustomerWaitingForOrder : CustomerState
 {
     public static Action<float> addScore;
+    public static Action continueTutorial;
     private bool orderReceived;
     public CustomerWaitingForOrder(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
@@ -14,6 +15,11 @@ public class CustomerWaitingForOrder : CustomerState
         _customerStateMachine.customerController.waitingForOrder = true;
         _customerStateMachine.customerController.customerReferences.customerVignette.SetupVignette(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients, 0, true);
         _customerStateMachine.customerController.SendInfoToToDoList();
+        if (_customerStateMachine.customerController.isTutorial && !_customerStateMachine.customerController.tutorialInteractionDone)
+        {
+            _customerStateMachine.customerController.tutorialInteractionDone = true;
+            continueTutorial();
+        }
     }
     public override void StateUpdate()
     {

@@ -28,6 +28,8 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     [HideInInspector] public CustomerReferences customerReferences;
     [HideInInspector] public string curState;
     public GameObject Self { get; set; }
+    public bool isTutorial;
+    public bool tutorialInteractionDone;
 
     private void Awake()
     {
