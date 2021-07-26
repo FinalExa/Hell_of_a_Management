@@ -1,6 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 public class Grab : PlayerState
 {
+    public static Action continueTutorial;
     public Grab(PlayerCharacter playerCharacter) : base(playerCharacter)
     {
     }
@@ -13,6 +15,11 @@ public class Grab : PlayerState
         AudioManager.instance.Play("Mc_Grab");
         _playerCharacter.playerController.playerReferences.rotation.RotatePlayerToMousePosition();
         _playerCharacter.playerController.playerReferences.playerAnimations.PauseAnimatorStart();
+        if (_playerCharacter.playerController.isTutorial && !_playerCharacter.playerController.tutorialInteractionDone)
+        {
+            _playerCharacter.playerController.tutorialInteractionDone = true;
+            continueTutorial();
+        }
     }
 
     public override void StateUpdate()

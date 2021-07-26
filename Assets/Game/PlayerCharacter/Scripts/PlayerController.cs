@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public float rightHandWeight;
     [HideInInspector] public float actualSpeed;
     [HideInInspector] public Collider objectClicked;
+    public bool isTutorial;
+    [HideInInspector] public bool tutorialInteractionDone;
     public enum SelectedHand
     {
         Left,

@@ -76872,6 +76872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7845207312148664838, guid: 1e4049fc1ce201b4fbe232a2e592ef0e, type: 3}
+      propertyPath: isTutorial
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8877571697949988489, guid: 1e4049fc1ce201b4fbe232a2e592ef0e, type: 3}
       propertyPath: m_Name
       value: PC_Garth

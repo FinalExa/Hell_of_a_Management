@@ -15,14 +15,14 @@ MonoBehaviour:
   customerMovementSpeed: 2.5
   customerAcceleration: 4
   orderSizesProbabilitiesAndScores:
-  - probabilityOfThisOrderSize: 80
+  - probabilityOfThisOrderSize: 0
     scoreGivenByThisOrderSize: 80
-  - probabilityOfThisOrderSize: 40
+  - probabilityOfThisOrderSize: 100
     scoreGivenByThisOrderSize: 140
-  - probabilityOfThisOrderSize: 12
+  - probabilityOfThisOrderSize: 0
     scoreGivenByThisOrderSize: 240
   maxActiveOrdersAtATime: 3
-  activeOrders: 0
+  activeOrders: 1
   timeBetweenSpawns: 5
   mudTerrainSpawnChance: 100
   icyTerrainSpawnChance: 0

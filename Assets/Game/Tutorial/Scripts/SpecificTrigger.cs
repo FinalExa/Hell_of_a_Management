@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpecificTrigger : MonoBehaviour
 {
-    public static Action tutorialAdvance;
+    public static Action continueTutorial;
     [SerializeField] private int thisActivationIndex;
     private Tutorial tutorial;
     private void Awake()
@@ -14,10 +14,10 @@ public class SpecificTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && tutorial.tutorialIndex == thisActivationIndex && !this.gameObject.CompareTag("DeactivateInTrigger"))
         {
-            tutorialAdvance();
+            continueTutorial();
             this.gameObject.SetActive(false);
         }
-        if (this.gameObject.CompareTag("DeactivateInTrigger"))
+        if (this.gameObject.CompareTag("DeactivateInTrigger") && tutorial.tutorialIndex == thisActivationIndex)
         {
             tutorial.ArrowDeactivate();
             this.gameObject.SetActive(false);

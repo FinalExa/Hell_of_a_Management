@@ -27,9 +27,10 @@ public class Tutorial : MonoBehaviour
         playerInputs = FindObjectOfType<PlayerInputs>();
         timer = FindObjectOfType<Timer>();
         tutorialArrow = this.gameObject.GetComponentInChildren<TutorialArrow>();
-        SpecificTrigger.tutorialAdvance += ShowTutorialScreen;
+        SpecificTrigger.continueTutorial += ShowTutorialScreen;
         CustomerHighlightable.continueTutorial += ShowTutorialScreen;
         CustomerWaitingForOrder.continueTutorial += ShowTutorialScreen;
+        Grab.continueTutorial += ShowTutorialScreen;
     }
 
     private void Start()
