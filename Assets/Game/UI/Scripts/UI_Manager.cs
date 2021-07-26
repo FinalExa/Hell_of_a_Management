@@ -28,7 +28,7 @@ using UnityEngine;
             if (uiManagerInstance == null)
                 uiManagerInstance = this;
             else
-                DestroyObject(gameObject);
+                Destroy(gameObject);
 
             animator = gameObject.GetComponent<Animator>();
             animator.SetInteger("Index", LevelManager.levelManagerInstance.currentIndex);

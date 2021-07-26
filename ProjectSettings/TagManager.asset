@@ -19,6 +19,9 @@ TagManager:
   - OcclusionShader
   - Void
   - Terrain
+  - Remover
+  - InThePub
+  - DrunkenSpawner
   - DeactivateInTrigger
   layers:
   - Default

@@ -13,6 +13,7 @@ public class Score : MonoBehaviour
     {
         CustomerWaitingForOrder.addScore += AddScore;
         Tutorial.tutorialAddScore += AddScore;
+        DrunkenDeactivator.drunkenDefeated += AddScore;
     }
     void Start()
     {

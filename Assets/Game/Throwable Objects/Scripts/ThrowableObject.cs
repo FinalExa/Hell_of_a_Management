@@ -13,7 +13,7 @@ public class ThrowableObject : MonoBehaviour, IThrowable
     public GameObject thisGraphicsObject;
     [HideInInspector] public bool IsAttachedToHand { get; set; }
     [HideInInspector] public bool isFlying;
-    protected BoxCollider physicsCollider;
+    [SerializeField]protected BoxCollider physicsCollider;
     private GameObject baseContainer;
     [HideInInspector] public Rigidbody selfRB;
     [SerializeField] private string parentObjectTag;

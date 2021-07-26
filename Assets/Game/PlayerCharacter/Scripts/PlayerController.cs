@@ -25,15 +25,52 @@ public class PlayerController : MonoBehaviour
         Right
     }
     [HideInInspector] public SelectedHand selectedHand;
+    [HideInInspector] public string curState;
 
     private void Awake()
     {
+        DrunkenDeny.removeItemFromHand += RemoveFromHand;
         playerReferences = this.gameObject.GetComponent<PlayerReferences>();
     }
 
     private void FixedUpdate()
     {
         TerrainDashCheck();
+    }
+
+    private void RemoveFromHand()
+    {
+        IThrowable objectToDetach;
+        if (LeftHandOccupied && RightHandOccupied)
+        {
+            int randHand = UnityEngine.Random.Range(0, 1);
+            if (randHand == 0)
+            {
+                objectToDetach = LeftHand.GetComponentInChildren<IThrowable>();
+                LeftHandOccupied = false;
+            }
+            else
+            {
+                objectToDetach = RightHand.GetComponentInChildren<IThrowable>();
+                RightHandOccupied = false;
+            }
+        }
+        else if (LeftHandOccupied && !RightHandOccupied)
+        {
+            objectToDetach = LeftHand.GetComponentInChildren<IThrowable>();
+            LeftHandOccupied = false;
+        }
+        else if (!LeftHandOccupied && RightHandOccupied)
+        {
+            objectToDetach = RightHand.GetComponentInChildren<IThrowable>();
+            RightHandOccupied = false;
+        }
+        else objectToDetach = null;
+        if (objectToDetach != null)
+        {
+            objectToDetach.DetachFromPlayer(0.1f, 0.1f);
+            playerReferences.playerAnimations.PlayerAnimatorStateUpdate(curState);
+        }
     }
 
     private void TerrainDashCheck()
