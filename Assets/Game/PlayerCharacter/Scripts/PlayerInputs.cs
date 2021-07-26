@@ -45,4 +45,12 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E)) InteractionInput = true;
         else InteractionInput = false;
     }
+    public void TutorialStop()
+    {
+        LeftHandInput = false;
+        RightHandInput = false;
+        MovementInput = Vector3.zero;
+        InteractionInput = false;
+        DashInput = false;
+    }
 }

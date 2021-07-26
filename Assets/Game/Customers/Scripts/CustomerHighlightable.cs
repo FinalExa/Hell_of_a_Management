@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 public class CustomerHighlightable : Highlightable
 {
+    public static Action continueTutorial;
     [SerializeField] private MiniDialogueWithText miniDialogue;
     private CustomerController customerController;
-    [SerializeField] private string stateToActivateMiniDialogue;
+    [SerializeField] private string stateToActivateHighlight;
+    private bool tutorialDoItOnce;
+    [SerializeField] private bool isTutorial;
 
     public override void Awake()
     {
@@ -12,13 +16,21 @@ public class CustomerHighlightable : Highlightable
     }
     public override void ActivateGraphic()
     {
-        base.ActivateGraphic();
-        if (customerController.curState == stateToActivateMiniDialogue) miniDialogue.SetupDialogue(customerController.chosenIngredients.Count.ToString());
+        if (customerController.curState == stateToActivateHighlight)
+        {
+            base.ActivateGraphic();
+            miniDialogue.SetupDialogue(customerController.chosenIngredients.Count.ToString());
+            if (!tutorialDoItOnce && isTutorial)
+            {
+                tutorialDoItOnce = true;
+                continueTutorial();
+            }
+        }
     }
 
     public override void DeactivateGraphic()
     {
         base.DeactivateGraphic();
-        if (customerController.curState == stateToActivateMiniDialogue) miniDialogue.DeactivateDialogue();
+        if (customerController.curState == stateToActivateHighlight) miniDialogue.DeactivateDialogue();
     }
 }
