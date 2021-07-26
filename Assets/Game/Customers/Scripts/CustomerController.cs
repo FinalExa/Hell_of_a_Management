@@ -13,11 +13,11 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     private float interactionTimer;
     private Vector3 startingPos;
     private CustomerVignetteToDoList uiToDoList;
-    [HideInInspector] public GameObject seatToTake;
+    public GameObject seatToTake;
+    public int thisTableSeatId;
+    public Table thisTable;
     [HideInInspector] public GameObject exitDoor;
     [HideInInspector] public GameObject targetedLocation;
-    [HideInInspector] public Table thisTable;
-    [HideInInspector] public int thisTableSeatId;
     [HideInInspector] public bool interactionReceived;
     [HideInInspector] public bool waitingForOrder;
     [HideInInspector] public bool leave;
