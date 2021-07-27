@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f21dbff91c7ca4f92b20251eee9a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisActivationIndex: 14
+  thisActivationIndex: 15
 --- !u!65 &40626586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f21dbff91c7ca4f92b20251eee9a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisActivationIndex: 6
+  thisActivationIndex: 7
 --- !u!65 &487176547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f21dbff91c7ca4f92b20251eee9a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisActivationIndex: 8
+  thisActivationIndex: 9
 --- !u!65 &1136575046
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f21dbff91c7ca4f92b20251eee9a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisActivationIndex: 8
+  thisActivationIndex: 9
 --- !u!65 &2035656005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2839,7 +2839,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: af3d6b15795b7fb4c98efff11ac1b322, type: 3}
     m_FontSize: 100
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 300
@@ -12478,6 +12478,7 @@ MonoBehaviour:
     which can be a drink or dish.'
   - In order to take your soul ingredients, you need to go to the storage room and
     pick up the required souls.
+  - Hurry up and go to the storage room! You can dash by pressing space to move faster.
   - You can also pick up two items at the same time, using the mouse right and left
     button.
   - To process an ingredient you need to throw it into a machine.
@@ -12499,14 +12500,14 @@ MonoBehaviour:
   - "That\u2019s it, now get to work, maggot!"
   tutorialWrongOrder: Seems like you've missed the right order, the customers simply
     ignore that, but you have lost time and paycheck, maggot.
-  followingIndexes: 030000000400000006000000090000000c0000000f000000
-  arrowIndexes: 05000000070000000d000000
+  followingIndexes: 030000000400000005000000070000000a0000000d00000010000000
+  arrowIndexes: 06000000080000000e000000
   arrowTargets:
   - {fileID: 487176545}
   - {fileID: 2035656003}
   - {fileID: 40626583}
   showHintAgainKey: 104
-  doubleIndex: 8
+  doubleIndex: 9
 --- !u!1 &2785649892876956130
 GameObject:
   m_ObjectHideFlags: 0
@@ -15536,6 +15537,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5086510870787911029}
+  - {fileID: 2915030536452147357}
   m_Father: {fileID: 707621504996715122}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37004,6 +37006,85 @@ Transform:
   m_Father: {fileID: 7863175494895360476}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8866498522593009049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2915030536452147357}
+  - component: {fileID: 592439873268793894}
+  - component: {fileID: 1021882295892698288}
+  m_Layer: 2
+  m_Name: ClickAnywhere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2915030536452147357
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866498522593009049}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7735517030124189476}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -335}
+  m_SizeDelta: {x: 900, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &592439873268793894
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866498522593009049}
+  m_CullTransparentMesh: 1
+--- !u!114 &1021882295892698288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866498522593009049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.3529412, g: 0.1882353, b: 0.07450981, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: af3d6b15795b7fb4c98efff11ac1b322, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: click anywhere to continue
 --- !u!1 &8879939420318140848
 GameObject:
   m_ObjectHideFlags: 0
