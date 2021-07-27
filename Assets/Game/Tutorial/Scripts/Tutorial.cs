@@ -4,9 +4,10 @@ using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
+    public static Tutorial instance;
     [SerializeField] private CustomerData customerDataTutorial;
     public static Action<float> tutorialAddScore;
-    private PlayerInputs playerInputs;
+    [SerializeField] private PlayerInputs playerInputs;
     private Timer timer;
     private TutorialArrow tutorialArrow;
     [HideInInspector] public int tutorialIndex;
@@ -29,20 +30,10 @@ public class Tutorial : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         playerInputs = FindObjectOfType<PlayerInputs>();
         timer = FindObjectOfType<Timer>();
         tutorialArrow = this.gameObject.GetComponentInChildren<TutorialArrow>();
-        SpecificTrigger.continueTutorial += ShowTutorialScreen;
-        CustomerHighlightable.continueTutorial += ShowTutorialScreen;
-        CustomerWaitingForOrder.continueTutorial += ShowTutorialScreen;
-        Grab.continueTutorial += ShowTutorialScreen;
-        Machine.continueTutorialCheck += CheckIndex;
-        Machine.continueTutorial += ShowTutorialScreen;
-        Table.continueTutorial += ShowTutorialScreen;
-        Table.wrongOrderTutorial += WrongOrder;
-        MopThrowable.continueTutorial += ShowTutorialScreen;
-        Mop.continueTutorial += FinalTutorialSetup;
-        DrunkenDeactivator.continueTutorial += ShowTutorialScreen;
     }
 
     private void Start()
@@ -87,7 +78,7 @@ public class Tutorial : MonoBehaviour
         waitForClickToContinue = true;
     }
 
-    private void CheckIndex()
+    public void CheckIndex()
     {
         if (tutorialIndex == doubleIndex)
         {
@@ -170,7 +161,7 @@ public class Tutorial : MonoBehaviour
         }
     }
 
-    private void WrongOrder()
+    public void WrongOrder()
     {
         playerInputs.TutorialStop();
         playerInputs.enabled = false;
@@ -189,7 +180,7 @@ public class Tutorial : MonoBehaviour
         specialCase = false;
     }
 
-    private void FinalTutorialSetup()
+    public void FinalTutorialSetup()
     {
         drunkenActivate = true;
         ShowTutorialScreen();

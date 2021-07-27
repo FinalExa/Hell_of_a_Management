@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class Table : MonoBehaviour
 {
-    public static Action wrongOrderTutorial;
-    public static Action continueTutorial;
     public SeatInfo[] seatInfo;
     [SerializeField] private bool isTutorial;
     private bool tutorialInstructionDone;
@@ -49,7 +46,7 @@ public class Table : MonoBehaviour
                     if (isTutorial && !tutorialInstructionDone)
                     {
                         tutorialInstructionDone = true;
-                        continueTutorial();
+                        Tutorial.instance.ShowTutorialScreen();
                     }
                     break;
                 }
@@ -58,7 +55,7 @@ public class Table : MonoBehaviour
         if (!gotOrder && isTutorial && !tutorialWrongOrderDone)
         {
             tutorialWrongOrderDone = true;
-            wrongOrderTutorial();
+            Tutorial.instance.WrongOrder();
         }
     }
 

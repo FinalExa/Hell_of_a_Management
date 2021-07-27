@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class Grab : PlayerState
 {
-    public static Action continueTutorial;
     public Grab(PlayerCharacter playerCharacter) : base(playerCharacter)
     {
     }
@@ -18,7 +16,7 @@ public class Grab : PlayerState
         if (_playerCharacter.playerController.isTutorial && !_playerCharacter.playerController.tutorialInteractionDone)
         {
             _playerCharacter.playerController.tutorialInteractionDone = true;
-            continueTutorial();
+            Tutorial.instance.ShowTutorialScreen();
         }
     }
 

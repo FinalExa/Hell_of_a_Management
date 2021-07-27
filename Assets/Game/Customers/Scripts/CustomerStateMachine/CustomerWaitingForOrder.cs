@@ -2,7 +2,6 @@
 public class CustomerWaitingForOrder : CustomerState
 {
     public static Action<float> addScore;
-    public static Action continueTutorial;
     private bool orderReceived;
     public CustomerWaitingForOrder(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
@@ -18,7 +17,7 @@ public class CustomerWaitingForOrder : CustomerState
         if (_customerStateMachine.customerController.isTutorial && !_customerStateMachine.customerController.tutorialInteractionDone)
         {
             _customerStateMachine.customerController.tutorialInteractionDone = true;
-            continueTutorial();
+            Tutorial.instance.ShowTutorialScreen();
         }
     }
     public override void StateUpdate()

@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class CustomerHighlightable : Highlightable
 {
-    public static Action continueTutorial;
     [SerializeField] private MiniDialogueWithText miniDialogue;
     private CustomerController customerController;
     [SerializeField] private string stateToActivateHighlight;
@@ -23,7 +21,7 @@ public class CustomerHighlightable : Highlightable
             if (!tutorialDoItOnce && isTutorial)
             {
                 tutorialDoItOnce = true;
-                continueTutorial();
+                Tutorial.instance.ShowTutorialScreen();
             }
         }
     }

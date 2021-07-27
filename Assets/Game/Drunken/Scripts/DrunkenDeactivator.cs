@@ -5,7 +5,6 @@ public class DrunkenDeactivator : MonoBehaviour
 {
     public static Action<DrunkenController> drunkenDefeat;
     public static Action<float> drunkenDefeated;
-    public static Action continueTutorial;
     private bool inThePub;
     private DrunkenController drunkenController;
     [SerializeField] private float deleteTimer;
@@ -48,7 +47,7 @@ public class DrunkenDeactivator : MonoBehaviour
             this.gameObject.SetActive(false);
             if (isTutorial && !tutorialHintGiven)
             {
-                continueTutorial();
+                Tutorial.instance.ShowTutorialScreen();
                 tutorialHintGiven = false;
             }
         }

@@ -1,8 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 public class Mop : MonoBehaviour
 {
-    public static Action continueTutorial;
     [SerializeField] private MopData mopData;
     [SerializeField] private bool isTutorial;
     private bool tutorialHintGiven;
@@ -23,7 +21,7 @@ public class Mop : MonoBehaviour
                 Score.self.AddScore(scoreGiven);
                 if (isTutorial && !tutorialHintGiven)
                 {
-                    continueTutorial();
+                    Tutorial.instance.FinalTutorialSetup();
                     tutorialHintGiven = true;
                 }
             }

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
 {
-    public static Action continueTutorialCheck;
-    public static Action continueTutorial;
     public static Action deactivateRecipeInstruction;
     public static Action deactivateProduceOrderInstruction;
     [HideInInspector] public List<OrdersData.OrderIngredients> recipe;
@@ -46,7 +44,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
             if (recipe.Count == recipeMaxLimit) ProduceOrder();
             if (isTutorial && !tutorialRecipeInstructionDone)
             {
-                continueTutorialCheck();
+                Tutorial.instance.CheckIndex();
                 deactivateRecipeInstruction();
             }
         }
@@ -73,7 +71,7 @@ public class Machine : MonoBehaviour, ICanUseIngredients, ICanBeInteracted
         highlightableMachine.miniDialogueWithText.DeactivateDialogue();
         if (isTutorial && !tutorialProduceOrderInstructionDone)
         {
-            continueTutorial();
+            Tutorial.instance.ShowTutorialScreen();
             deactivateProduceOrderInstruction();
         }
     }
