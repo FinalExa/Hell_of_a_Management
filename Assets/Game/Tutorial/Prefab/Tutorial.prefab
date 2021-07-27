@@ -12498,9 +12498,10 @@ MonoBehaviour:
     order anything and will only try to stop you from doing your job. Just pick them
     up and throw them outside of the pub, nobody wants them!"
   - "That\u2019s it, now get to work, maggot!"
+  - "That\u2019s it, now get to work, maggot!"
   tutorialWrongOrder: Seems like you've missed the right order, the customers simply
     ignore that, but you have lost time and paycheck, maggot.
-  followingIndexes: 030000000400000005000000070000000a0000000d00000010000000
+  followingIndexes: 030000000400000005000000070000000a0000000d0000001000000012000000
   arrowIndexes: 06000000080000000e000000
   arrowTargets:
   - {fileID: 487176545}
