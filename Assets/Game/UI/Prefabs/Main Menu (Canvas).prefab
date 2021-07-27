@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4048150155418320969}
   - component: {fileID: 7196637359345904854}
   m_Layer: 5
-  m_Name: Controls (Button)
+  m_Name: Tutorial (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,8 +123,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7431474251130659711}
-        m_TargetAssemblyTypeName: HOM.MainMenu, Assembly-CSharp
-        m_MethodName: GoToControls
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: GoToTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -616,7 +616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Controls
+  m_Text: Tutorial
 --- !u!1 &6238372292459070545
 GameObject:
   m_ObjectHideFlags: 0
