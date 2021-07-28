@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour
         else objectToDetach = null;
         if (objectToDetach != null)
         {
+            AudioManager.instance.Play("DrunkenDemon_Displace");
             objectToDetach.DetachFromPlayer(0.1f, 0.1f);
             playerReferences.playerAnimations.PlayerAnimatorStateUpdate(curState);
         }

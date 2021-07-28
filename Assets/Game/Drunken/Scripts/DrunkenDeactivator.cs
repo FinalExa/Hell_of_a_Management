@@ -42,6 +42,7 @@ public class DrunkenDeactivator : MonoBehaviour
         if (timer > 0) timer -= Time.deltaTime;
         else
         {
+            AudioManager.instance.Play("DrunkenDemon_Despawn");
             if (!isTutorial) drunkenDefeat(drunkenController);
             drunkenDefeated(drunkenController.drunkenReferences.drunkenData.scoreGiven);
             this.gameObject.SetActive(false);
