@@ -12472,7 +12472,8 @@ MonoBehaviour:
   - "Hello there, maggot! Don\u2019t just stand there, move around with \u201C<b>WASD</b>\u201D!
     (Press H to view the last hint again)"
   - 'Interact with something by pointing the cursor over it: if an item becomes highlighted
-    it means it can be interacted with.'
+    it means it can be interacted with. Try pointing the mouse on that customer over
+    here.'
   - "The customers can be interacted with by pressing \u201C<b>E</b>\u201D. Hurry
     up, I don\u2019t have time to waste!"
   - "These are your active orders. When an order is taken it will appear on the \u201C<b>To-Do
