@@ -95,10 +95,10 @@ MonoBehaviour:
   maxInteractionTimer: 1
   thisNavMeshAgent: {fileID: 7233830989049600199}
   seatToTake: {fileID: 0}
+  thisTableSeatId: 0
+  thisTable: {fileID: 0}
   exitDoor: {fileID: 0}
   targetedLocation: {fileID: 0}
-  thisTable: {fileID: 0}
-  thisTableSeatId: 0
   interactionReceived: 0
   waitingForOrder: 0
   leave: 0
@@ -199,7 +199,8 @@ MonoBehaviour:
   outlineData: {fileID: 11400000, guid: 0a7462d12ece4224bae0ef9a03356b88, type: 2}
   thisGraphicsObject: {fileID: 0}
   miniDialogue: {fileID: 5025062069981384182}
-  stateToActivateMiniDialogue: CustomerWaitingForInteraction
+  stateToActivateHighlight: CustomerWaitingForInteraction
+  isTutorial: 0
 --- !u!114 &3394192095285962491
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,6 +5,9 @@ using UnityEngine;
 public class Table : MonoBehaviour
 {
     public SeatInfo[] seatInfo;
+    [SerializeField] private bool isTutorial;
+    private bool tutorialInstructionDone;
+    private bool tutorialWrongOrderDone;
 
     private void Start()
     {
@@ -30,17 +33,29 @@ public class Table : MonoBehaviour
 
     public void RecipeCheck(Order order)
     {
+        bool gotOrder = false;
         for (int i = 0; i < seatInfo.Length; i++)
         {
             if (seatInfo[i].orderType == order.thisOrderType && seatInfo[i].ingredients.Count == order.thisOrderIngredients.Count && seatInfo[i].customer.waitingForOrder)
             {
                 if (ArrayContentsAreTheSame(i, order))
                 {
+                    gotOrder = true;
                     seatInfo[i].customer.waitingForOrder = false;
                     order.gameObject.SetActive(false);
+                    if (isTutorial && !tutorialInstructionDone)
+                    {
+                        tutorialInstructionDone = true;
+                        Tutorial.instance.ShowTutorialScreen();
+                    }
                     break;
                 }
             }
+        }
+        if (!gotOrder && isTutorial && !tutorialWrongOrderDone)
+        {
+            tutorialWrongOrderDone = true;
+            Tutorial.instance.WrongOrder();
         }
     }
 

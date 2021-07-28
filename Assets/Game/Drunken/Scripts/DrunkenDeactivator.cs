@@ -10,6 +10,8 @@ public class DrunkenDeactivator : MonoBehaviour
     [SerializeField] private float deleteTimer;
     private float timer;
     private bool deleteTimerOn;
+    [SerializeField] private bool isTutorial;
+    private bool tutorialHintGiven;
     private void Awake()
     {
         drunkenController = this.gameObject.GetComponent<DrunkenController>();
@@ -40,9 +42,14 @@ public class DrunkenDeactivator : MonoBehaviour
         if (timer > 0) timer -= Time.deltaTime;
         else
         {
-            drunkenDefeat(drunkenController);
+            if (!isTutorial) drunkenDefeat(drunkenController);
             drunkenDefeated(drunkenController.drunkenReferences.drunkenData.scoreGiven);
             this.gameObject.SetActive(false);
+            if (isTutorial && !tutorialHintGiven)
+            {
+                Tutorial.instance.ShowTutorialScreen();
+                tutorialHintGiven = false;
+            }
         }
     }
 }

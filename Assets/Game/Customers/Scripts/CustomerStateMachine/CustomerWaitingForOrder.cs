@@ -14,6 +14,11 @@ public class CustomerWaitingForOrder : CustomerState
         _customerStateMachine.customerController.waitingForOrder = true;
         _customerStateMachine.customerController.customerReferences.customerVignette.SetupVignette(_customerStateMachine.customerController.chosenType, _customerStateMachine.customerController.chosenIngredients, 0, true);
         _customerStateMachine.customerController.SendInfoToToDoList();
+        if (_customerStateMachine.customerController.isTutorial && !_customerStateMachine.customerController.tutorialInteractionDone)
+        {
+            _customerStateMachine.customerController.tutorialInteractionDone = true;
+            Tutorial.instance.ShowTutorialScreen();
+        }
     }
     public override void StateUpdate()
     {

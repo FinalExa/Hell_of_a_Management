@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-
 public class Mop : MonoBehaviour
 {
     [SerializeField] private MopData mopData;
+    [SerializeField] private bool isTutorial;
+    private bool tutorialHintGiven;
     private float scoreGiven;
     private void Start()
     {
@@ -18,6 +19,11 @@ public class Mop : MonoBehaviour
                 sc.isBeingRemoved = true;
                 SurfaceManager.DeactivateSurface(ref sc);
                 Score.self.AddScore(scoreGiven);
+                if (isTutorial && !tutorialHintGiven)
+                {
+                    Tutorial.instance.FinalTutorialSetup();
+                    tutorialHintGiven = true;
+                }
             }
         }
     }

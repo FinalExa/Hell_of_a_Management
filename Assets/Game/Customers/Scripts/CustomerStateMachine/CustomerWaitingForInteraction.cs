@@ -27,7 +27,7 @@ public class CustomerWaitingForInteraction : CustomerState
     {
         CustomerController customerController = _customerStateMachine.customerController;
         float totalProbability = CalculateTotalProbability();
-        float roll = Random.Range(0, totalProbability + 1);
+        float roll = Random.Range(1, totalProbability + 1);
         int orderSize = CheckForRollResult(roll);
         customerController.chosenType = customerController.possibleTypes[Random.Range(0, customerController.possibleTypes.Length)];
         for (int i = 0; i < orderSize; i++)

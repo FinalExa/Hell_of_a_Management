@@ -13,6 +13,11 @@ public class Grab : PlayerState
         AudioManager.instance.Play("Mc_Grab");
         _playerCharacter.playerController.playerReferences.rotation.RotatePlayerToMousePosition();
         _playerCharacter.playerController.playerReferences.playerAnimations.PauseAnimatorStart();
+        if (_playerCharacter.playerController.isTutorial && !_playerCharacter.playerController.tutorialInteractionDone)
+        {
+            _playerCharacter.playerController.tutorialInteractionDone = true;
+            Tutorial.instance.ShowTutorialScreen();
+        }
     }
 
     public override void StateUpdate()
