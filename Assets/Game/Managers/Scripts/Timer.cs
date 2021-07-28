@@ -4,6 +4,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private LevelData thisLevelData;
+    [SerializeField] private bool isTutorialLevel;
     public static Timer self;
     [HideInInspector] public float totaltime;
     public float currentTime;
@@ -27,7 +28,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (IsActive) UpdateTime();
+        if (IsActive && !isTutorialLevel) UpdateTime();
     }
 
     void UpdateTime()
@@ -36,9 +37,14 @@ public class Timer : MonoBehaviour
         OnTimeUpdate?.Invoke(this, currentTime / totaltime);
         if (currentTime == 0)
         {
-            DeactivateTimer();
-            OnEndTimer?.Invoke(this, currentTime / totaltime);
+            TimerFinish();
         }
+    }
+
+    public void TimerFinish()
+    {
+        DeactivateTimer();
+        OnEndTimer?.Invoke(this, currentTime / totaltime);
     }
 
     public static void ActivateTimer() => self.IsActive = true;

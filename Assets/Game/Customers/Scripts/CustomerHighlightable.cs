@@ -3,7 +3,9 @@ public class CustomerHighlightable : Highlightable
 {
     [SerializeField] private MiniDialogueWithText miniDialogue;
     private CustomerController customerController;
-    [SerializeField] private string stateToActivateMiniDialogue;
+    [SerializeField] private string stateToActivateHighlight;
+    private bool tutorialDoItOnce;
+    [SerializeField] private bool isTutorial;
 
     public override void Awake()
     {
@@ -12,13 +14,21 @@ public class CustomerHighlightable : Highlightable
     }
     public override void ActivateGraphic()
     {
-        base.ActivateGraphic();
-        if (customerController.curState == stateToActivateMiniDialogue) miniDialogue.SetupDialogue(customerController.chosenIngredients.Count.ToString());
+        if (customerController.curState == stateToActivateHighlight)
+        {
+            base.ActivateGraphic();
+            miniDialogue.SetupDialogue(customerController.chosenIngredients.Count.ToString());
+            if (!tutorialDoItOnce && isTutorial)
+            {
+                tutorialDoItOnce = true;
+                Tutorial.instance.ShowTutorialScreen();
+            }
+        }
     }
 
     public override void DeactivateGraphic()
     {
         base.DeactivateGraphic();
-        if (customerController.curState == stateToActivateMiniDialogue) miniDialogue.DeactivateDialogue();
+        if (customerController.curState == stateToActivateHighlight) miniDialogue.DeactivateDialogue();
     }
 }

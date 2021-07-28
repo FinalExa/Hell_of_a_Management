@@ -29,9 +29,9 @@ using UnityEngine;
         /// <summary>
         /// This is used by the controls button to open the controls.
         /// </summary>
-        public void GoToControls()
+        public void GoToTutorial()
         {
-            animator.SetTrigger("Controls");
+            animator.SetTrigger("StartTutorial");
         }
 
         /// <summary>

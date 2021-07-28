@@ -41,6 +41,9 @@ using UnityEngine;
                 case "LevelCleaned":
                 levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 1));
                     break;
+                case "LevelTutorial":
+                levelManagerInstance.StartCoroutine(levelManagerInstance.ExecuteLevelTransition(levelManagerInstance.loadingDuration, 2));
+                    break;
             }    
         }
 
@@ -51,10 +54,15 @@ using UnityEngine;
                 ui_Animator.SetInteger("Index", 0);
                 currentIndex = 0;
             }
-            else
+            if(level == 1)
             {
                 ui_Animator.SetInteger("Index", 1);
                 currentIndex = 1;
+            }
+            if(level == 2)
+            {
+                ui_Animator.SetInteger("Index", 2);
+                currentIndex = 2;
             }
         }
 

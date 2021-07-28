@@ -13,11 +13,11 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     private float interactionTimer;
     private Vector3 startingPos;
     private CustomerVignetteToDoList uiToDoList;
-    [HideInInspector] public GameObject seatToTake;
+    public GameObject seatToTake;
+    public int thisTableSeatId;
+    public Table thisTable;
     [HideInInspector] public GameObject exitDoor;
     [HideInInspector] public GameObject targetedLocation;
-    [HideInInspector] public Table thisTable;
-    [HideInInspector] public int thisTableSeatId;
     [HideInInspector] public bool interactionReceived;
     [HideInInspector] public bool waitingForOrder;
     [HideInInspector] public bool leave;
@@ -28,6 +28,8 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     [HideInInspector] public CustomerReferences customerReferences;
     [HideInInspector] public string curState;
     public GameObject Self { get; set; }
+    public bool isTutorial;
+    public bool tutorialInteractionDone;
 
     private void Awake()
     {
@@ -89,7 +91,7 @@ public class CustomerController : MonoBehaviour, ICanBeInteracted
     {
         if (other.CompareTag("Exit"))
         {
-            customerLeft(thisTable, thisTableSeatId, this);
+            if (!isTutorial) customerLeft(thisTable, thisTableSeatId, this);
             this.gameObject.SetActive(false);
         }
     }

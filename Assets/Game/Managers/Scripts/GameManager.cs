@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     void Init()
     {
+        AudioManager.instance.Play("Customer_Enter");
         AudioManager.instance.Play("InGame_Music");
         self = this;
         Timer.OnEndTimer += OnEndTimer;
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     void OnEndTimer(Timer sender, float currentTime)
     {
         AudioManager.instance.StopAllSounds();
+        AudioManager.instance.Play("Customer_Enter");
         if (Score.self.targetProgress >= levelsData.GetLevel(0).firstStarScore)
             WinLevel();
         else if (Score.self.targetProgress < levelsData.GetLevel(0).firstStarScore)
