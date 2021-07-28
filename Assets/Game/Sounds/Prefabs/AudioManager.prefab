@@ -177,3 +177,24 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: DrunkenDemon_Enter
+    clip: {fileID: 8300000, guid: d5ebc1b73d319bf41b6be08ac970ec5d, type: 3}
+    audioMixerGroup: {fileID: 0}
+    volume: 0.01
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DrunkenDemon_Displace
+    clip: {fileID: 8300000, guid: 0e1824951e37f4948b692dc4d7559f04, type: 3}
+    audioMixerGroup: {fileID: 0}
+    volume: 0.01
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: DrunkenDemon_Despawn
+    clip: {fileID: 8300000, guid: c958e238266842748b2f85c81468afaa, type: 3}
+    audioMixerGroup: {fileID: 0}
+    volume: 0.01
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
