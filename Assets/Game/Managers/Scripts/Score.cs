@@ -12,9 +12,6 @@ public class Score : MonoBehaviour
     private void Awake()
     {
         targetProgress = 0;
-        CustomerWaitingForOrder.addScore += AddScore;
-        Tutorial.tutorialAddScore += AddScore;
-        DrunkenDeactivator.drunkenDefeated += AddScore;
     }
     void Start()
     {

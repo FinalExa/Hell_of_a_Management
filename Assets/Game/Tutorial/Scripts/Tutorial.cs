@@ -1,12 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Tutorial : MonoBehaviour
 {
     public static Tutorial instance;
     [SerializeField] private CustomerData customerDataTutorial;
-    public static Action<float> tutorialAddScore;
     [SerializeField] private PlayerInputs playerInputs;
     private Timer timer;
     private TutorialArrow tutorialArrow;
@@ -109,7 +107,7 @@ public class Tutorial : MonoBehaviour
 
     private void EndTutorial()
     {
-        tutorialAddScore(10000);
+        Score.self.AddScore(10000);
         timer.currentTime = 0;
         timer.TimerFinish();
     }
