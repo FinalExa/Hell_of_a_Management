@@ -7,6 +7,7 @@
     public override void Start()
     {
         _drunkenStateMachine.drunkenController.navMeshAgent.enabled = true;
+        _drunkenStateMachine.drunkenController.navMeshAgent.isStopped = false;
         _drunkenStateMachine.drunkenController.drunkenReferences.animations.AnimatorStateUpdate(this.ToString());
     }
 
