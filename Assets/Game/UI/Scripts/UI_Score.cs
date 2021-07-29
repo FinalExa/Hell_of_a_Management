@@ -92,6 +92,12 @@ public class UI_Score : MonoBehaviour
 
         else if (score < levelData.GetLevel(0).thirdStarScore && score >= levelData.GetLevel(0).secondStarScore)
         {
+            if (star1Image.color != Color.white)
+            {
+                LightStar(ref star1Image, Color.white);
+                star1.GetComponent<Animator>().SetTrigger("StarSpin");
+            }
+
             if (star2Image.color != Color.white)
             {
                 LightStar(ref star2Image, Color.white);
@@ -103,6 +109,18 @@ public class UI_Score : MonoBehaviour
 
         else if (score >= levelData.GetLevel(0).thirdStarScore)
         {
+            if (star1Image.color != Color.white)
+            {
+                LightStar(ref star1Image, Color.white);
+                star1.GetComponent<Animator>().SetTrigger("StarSpin");
+            }
+
+            if (star2Image.color != Color.white)
+            {
+                LightStar(ref star2Image, Color.white);
+                star2.GetComponent<Animator>().SetTrigger("StarSpin");
+            }
+
             if (star3Image.color != Color.white)
             {
                 LightStar(ref star3Image, Color.white);

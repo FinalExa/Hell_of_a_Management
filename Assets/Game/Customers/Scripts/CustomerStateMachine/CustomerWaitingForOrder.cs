@@ -1,7 +1,5 @@
-﻿using System;
-public class CustomerWaitingForOrder : CustomerState
+﻿public class CustomerWaitingForOrder : CustomerState
 {
-    public static Action<float> addScore;
     private bool orderReceived;
     public CustomerWaitingForOrder(CustomerStateMachine customerStateMachine) : base(customerStateMachine)
     {
@@ -29,7 +27,7 @@ public class CustomerWaitingForOrder : CustomerState
     private void EndOrder()
     {
         PlaySoundDependingOnOrder();
-        addScore(_customerStateMachine.customerController.customerReferences.customerData.orderSizesProbabilitiesAndScores[_customerStateMachine.customerController.chosenIngredients.Count - 1].scoreGivenByThisOrderSize);
+        Score.self.AddScore(_customerStateMachine.customerController.customerReferences.customerData.orderSizesProbabilitiesAndScores[_customerStateMachine.customerController.chosenIngredients.Count - 1].scoreGivenByThisOrderSize);
         _customerStateMachine.customerController.targetedLocation = _customerStateMachine.customerController.exitDoor;
         _customerStateMachine.customerController.thisTable.TableClear(_customerStateMachine.customerController.thisTableSeatId);
         _customerStateMachine.customerController.customerReferences.customerVignette.DeactivateVignette(0);

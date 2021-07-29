@@ -10,6 +10,7 @@ namespace HOM
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             Time.timeScale = 1;
+            Score.self.targetProgress = 0;
             animator.SetBool("Paused", false);
             AudioManager.instance.StopAllSounds();
             GUIHandler.DeactivatesMenu("Pause Menu");

@@ -4,7 +4,6 @@ using UnityEngine;
 public class DrunkenDeactivator : MonoBehaviour
 {
     public static Action<DrunkenController> drunkenDefeat;
-    public static Action<float> drunkenDefeated;
     private bool inThePub;
     private DrunkenController drunkenController;
     [SerializeField] private float deleteTimer;
@@ -44,7 +43,7 @@ public class DrunkenDeactivator : MonoBehaviour
         {
             AudioManager.instance.Play("DrunkenDemon_Despawn");
             if (!isTutorial) drunkenDefeat(drunkenController);
-            drunkenDefeated(drunkenController.drunkenReferences.drunkenData.scoreGiven);
+            Score.self.AddScore(drunkenController.drunkenReferences.drunkenData.scoreGiven);
             this.gameObject.SetActive(false);
             if (isTutorial && !tutorialHintGiven)
             {
