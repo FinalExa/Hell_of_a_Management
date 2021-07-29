@@ -4,7 +4,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public static Score self;
-    public float targetProgress { private set; get; } = 0;
+    public float targetProgress { set; get; } = 0;
 
     #region Events
     public static event Action<Score, float> OnProgressChanged;
