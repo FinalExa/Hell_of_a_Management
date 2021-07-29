@@ -45,6 +45,7 @@ public class DrunkenSpawner : Spawner
     }
     private void SpawnDrunken()
     {
+        AudioManager.instance.Play("DrunkenDemon_Enter");
         StartupDrunken((DrunkenController)inactiveDrunkens[0]);
         activeObjects.Add(inactiveDrunkens[0]);
         inactiveDrunkens.RemoveAt(0);
