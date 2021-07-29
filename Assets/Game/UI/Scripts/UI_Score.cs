@@ -79,7 +79,7 @@ public class UI_Score : MonoBehaviour
             return;
         }
 
-        else if (score < levelData.GetLevel(0).secondStarScore && score >= levelData.GetLevel(0).firstStarScore)
+        if (score < levelData.GetLevel(0).secondStarScore && score >= levelData.GetLevel(0).firstStarScore)
         {
             if (star1Image.color != Color.white)
             {
@@ -90,7 +90,7 @@ public class UI_Score : MonoBehaviour
             return;
         }
 
-        else if (score < levelData.GetLevel(0).thirdStarScore && score >= levelData.GetLevel(0).secondStarScore)
+        if (score < levelData.GetLevel(0).thirdStarScore && score >= levelData.GetLevel(0).secondStarScore)
         {
             if (star1Image.color != Color.white)
             {
@@ -107,7 +107,7 @@ public class UI_Score : MonoBehaviour
             return;
         }
 
-        else if (score >= levelData.GetLevel(0).thirdStarScore)
+        if (score >= levelData.GetLevel(0).thirdStarScore)
         {
             if (star1Image.color != Color.white)
             {
