@@ -336,7 +336,10 @@ MonoBehaviour:
   rightHandWeight: 0
   actualSpeed: 0
   objectClicked: {fileID: 0}
+  isTutorial: 0
+  tutorialInteractionDone: 0
   selectedHand: 0
+  curState: 
 --- !u!114 &7061543828600889953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +355,7 @@ MonoBehaviour:
   animator: {fileID: 3957953130347433435}
   waitForAnimation: 0
   stateMachineToRead: {fileID: 1673490640784394817}
-  pauseAnimatorMaxTimer: 0.3
+  pauseAnimatorMaxTimer: 0.24
 --- !u!114 &5935098799575821376
 MonoBehaviour:
   m_ObjectHideFlags: 0
