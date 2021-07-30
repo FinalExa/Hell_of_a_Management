@@ -23,6 +23,7 @@ TagManager:
   - InThePub
   - DrunkenSpawner
   - DeactivateInTrigger
+  - PlayerRange
   layers:
   - Default
   - TransparentFX

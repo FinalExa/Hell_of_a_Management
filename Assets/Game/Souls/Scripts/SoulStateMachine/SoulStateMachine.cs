@@ -3,6 +3,7 @@
 public class SoulStateMachine : StateMachine
 {
     [HideInInspector] public SoulController soulController;
+    public string currentState;
     private void Awake()
     {
         soulController = this.gameObject.GetComponent<SoulController>();
@@ -19,5 +20,6 @@ public class SoulStateMachine : StateMachine
     public override void SetState(State state)
     {
         base.SetState(state);
+        currentState = state.ToString();
     }
 }
