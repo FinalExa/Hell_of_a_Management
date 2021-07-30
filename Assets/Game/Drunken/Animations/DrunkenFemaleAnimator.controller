@@ -88,14 +88,14 @@ AnimatorStateMachine:
   m_EntryTransitions:
   - {fileID: -1990826364395804568}
   m_StateMachineTransitions:
-  - first: {fileID: 3875032832373066033}
-    second:
-    - {fileID: 444035754536139168}
-    - {fileID: -8780349134782516880}
   - first: {fileID: -4878561874929848876}
     second:
     - {fileID: 6864714643198633733}
     - {fileID: -5817467050113968730}
+  - first: {fileID: 3875032832373066033}
+    second:
+    - {fileID: 444035754536139168}
+    - {fileID: -8780349134782516880}
   - first: {fileID: -8770243348067387635}
     second:
     - {fileID: 7072496000410358264}
@@ -186,7 +186,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Drunk Shove
-  m_Speed: 1
+  m_Speed: 1.25
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4618066160223343863}
