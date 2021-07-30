@@ -44,6 +44,12 @@ public class SoulSpawner : Spawner
         sc.gameObject.SetActive(true);
         sc.soulReferences.soulStateMachine.SetState(new SoulIdle(sc.soulReferences.soulStateMachine));
         sc.thisNavMeshAgent.enabled = true;
+        sc.isInsideExitDoorCollider = false;
+        sc.collidedWithOther = false;
+        sc.soulReferences.soulThrowableObject.isFlying = false;
+        sc.soulReferences.soulThrowableObject.IsInsidePlayerRange = false;
+        sc.soulReferences.soulThrowableObject.isNotGrounded = false;
+        sc.soulReferences.soulThrowableObject.IsAttachedToHand = false;
         sc.soulReferences.soulAnimations.animator = sc.soulTypes[soulIndex].soulAnimator;
         sc.thisSoulTypeIndex = soulIndex;
         sc.soulReferences.highlightable.thisGraphicsObject = sc.soulTypes[soulIndex].soulMeshContainer;

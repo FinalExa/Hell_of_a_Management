@@ -29,10 +29,15 @@ public class PlayerRange : MonoBehaviour
             Collider otherCol = otherObject.Self.GetComponent<Collider>();
             if (!playerController.throwablesInPlayerRange.Contains(otherCol))
             {
-                otherObject.IsInsidePlayerRange = true;
-                playerController.throwablesInPlayerRange.Add(otherCol);
+                AddToPlayerRange(otherObject, otherCol);
             }
         }
+    }
+
+    public void AddToPlayerRange(IThrowable otherObject, Collider otherCol)
+    {
+        otherObject.IsInsidePlayerRange = true;
+        playerController.throwablesInPlayerRange.Add(otherCol);
     }
 
     private void GetICanBeInteracted(Collider other)

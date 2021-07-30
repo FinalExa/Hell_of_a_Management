@@ -34,14 +34,12 @@ public class ObjectsOnMouse : MonoBehaviour
         {
             IThrowable throwable = objectsInMouseRange[i].gameObject.GetComponent<IThrowable>();
             ICanBeInteracted interactable = objectsInMouseRange[i].gameObject.GetComponent<ICanBeInteracted>();
-            bool check = false;
             if ((throwable != null && !throwable.IsAttachedToHand && throwable.IsInsidePlayerRange) || (interactable != null && interactable.IsInsidePlayerRange))
             {
                 pointedGameObject = objectsInMouseRange[i].gameObject;
-                check = true;
                 break;
             }
-            if (!check) pointedGameObject = this.gameObject;
+            else pointedGameObject = this.gameObject;
         }
     }
     public RaycastHit GetMousePosition()

@@ -34,15 +34,6 @@ public class SoulController : MonoBehaviour
         thisNavMeshAgent.speed = soulReferences.soulData.soulMovementSpeed;
         thisNavMeshAgent.acceleration = soulReferences.soulData.soulAcceleration;
     }
-    private void OnDisable()
-    {
-        isInsideExitDoorCollider = false;
-        collidedWithOther = false;
-        soulReferences.soulThrowableObject.isFlying = false;
-        soulReferences.soulThrowableObject.IsInsidePlayerRange = false;
-        soulReferences.soulThrowableObject.isNotGrounded = false;
-        soulReferences.soulThrowableObject.IsAttachedToHand = false;
-    }
     public void DeactivateAllSoulModels()
     {
         for (int i = 0; i < soulTypes.Length; i++)
@@ -59,6 +50,7 @@ public class SoulController : MonoBehaviour
     {
         if (other.CompareTag("Exit")) isInsideExitDoorCollider = true;
         if (other.CompareTag("Machine")) AttemptToEnterMachine(other);
+        if (other.CompareTag("PlayerRange")) other.GetComponent<PlayerRange>().AddToPlayerRange(soulReferences.soulThrowableObject.GetComponent<IThrowable>(), thisCollider);
     }
     public bool SoulIsInsideStorage()
     {
@@ -66,7 +58,7 @@ public class SoulController : MonoBehaviour
         bool xTrue = false;
         bool zTrue = false;
         Vector3 thisPos = this.gameObject.transform.position;
-        Vector3 storageRoomPos = storageRoom.gameObject.transform.position;
+        Vector3 storageRoomPos = storageRoom.gameObject.transform.position + storageRoom.center;
         if ((thisPos.x <= storageRoomPos.x + storageRoom.size.x / 2) && (thisPos.x >= storageRoomPos.x - storageRoom.size.x / 2)) xTrue = true;
         if ((thisPos.z <= storageRoomPos.z + storageRoom.size.z / 2) && (thisPos.z >= storageRoomPos.z - storageRoom.size.z / 2)) zTrue = true;
         if (xTrue && zTrue) isInside = true;
