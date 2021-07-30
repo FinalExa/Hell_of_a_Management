@@ -91,9 +91,10 @@ public class PlayerController : MonoBehaviour
             }
         }
         if (check == false) DashLocked = false;
+        if (curState == "Moving") changeMovementData();
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Terrain"))
         {
@@ -106,5 +107,5 @@ public class PlayerController : MonoBehaviour
         {
             changeMovementData();
         }
-    }
+    }*/
 }
