@@ -16,4 +16,4 @@ MonoBehaviour:
   drunkenAcceleration: 5
   rangeSize: 3
   scoreGiven: 30
-  timerDeny: 1
+  timerDeny: 0.5
