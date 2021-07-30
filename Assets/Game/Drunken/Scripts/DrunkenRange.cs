@@ -3,25 +3,23 @@
 public class DrunkenRange : MonoBehaviour
 {
     private DrunkenController drunkenController;
+    private GameObject player;
 
     private void Awake()
     {
         drunkenController = GetComponentInParent<DrunkenController>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if(other.CompareTag("Player"))
-        {
-            drunkenController.playerInRange = true;
-        }
+        Range();
     }
 
-    private void OnTriggerExit(Collider other)
+    private void Range()
     {
-        if (other.CompareTag("Player"))
-        {
-            drunkenController.playerInRange = false;
-        }
+        float distance = Vector2.Distance(new Vector2(drunkenController.gameObject.transform.position.x, drunkenController.gameObject.transform.position.z), new Vector2(player.transform.position.x, player.transform.position.z));
+        if (distance >= drunkenController.drunkenReferences.drunkenData.rangeSize) drunkenController.playerInRange = false;
+        else drunkenController.playerInRange = true;
     }
 }
