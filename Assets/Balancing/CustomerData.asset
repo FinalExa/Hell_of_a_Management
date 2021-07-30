@@ -17,12 +17,12 @@ MonoBehaviour:
   orderSizesProbabilitiesAndScores:
   - probabilityOfThisOrderSize: 80
     scoreGivenByThisOrderSize: 60
-  - probabilityOfThisOrderSize: 40
+  - probabilityOfThisOrderSize: 30
     scoreGivenByThisOrderSize: 140
   - probabilityOfThisOrderSize: 12
     scoreGivenByThisOrderSize: 220
   maxActiveOrdersAtATime: 3
-  activeOrders: 2
+  activeOrders: 1
   timeBetweenSpawns: 5
   mudTerrainSpawnChance: 45
   icyTerrainSpawnChance: 45
