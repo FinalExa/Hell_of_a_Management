@@ -93,19 +93,4 @@ public class PlayerController : MonoBehaviour
         if (check == false) DashLocked = false;
         if (curState == "Moving") changeMovementData();
     }
-
-    /*private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Terrain"))
-        {
-            changeMovementData();
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Terrain"))
-        {
-            changeMovementData();
-        }
-    }*/
 }
